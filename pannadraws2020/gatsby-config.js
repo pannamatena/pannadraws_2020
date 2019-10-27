@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `PannaDraws - Artwork by Panna Zsamba`,
-    description: `Watercolor art portfolio of Panna Zsamba. Watercolour paintings of landscapes, animals, and the world.`,
+    description: `Watercolor art portfolio of Panna Zsamba. Watercolour paintings of landscapes, animals, and the world around us.`,
     author: `@pannamatena`,
   },
   plugins: [
@@ -31,4 +31,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
