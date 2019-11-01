@@ -6,24 +6,11 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { css } from "@emotion/core"
 import '../resources/index.css';
-import { colours } from '../resources/colors';
-import { fonts } from '../resources/fonts';
 import Header from './Header';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   const style = {
     layoutContainer: css`
       flex: 1;
@@ -34,11 +21,11 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className={style.layoutContainer}>
+    <div css={style.layoutContainer}>
       <Header />
       <div>
         <main>{children}</main>
-        <div className={style.footerContainer}>
+        <div css={style.footerContainer}>
           &copy; {new Date().getFullYear()} Panna Zsamba
         </div>
       </div>
