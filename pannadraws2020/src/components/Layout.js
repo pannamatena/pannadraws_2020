@@ -14,6 +14,13 @@ const Layout = ({ children }) => {
   const style = {
     layoutContainer: css`
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: 100vh;
+    `,
+    page: css`
+      flex: 1;
     `,
     footerContainer: css`
       
@@ -23,11 +30,9 @@ const Layout = ({ children }) => {
   return (
     <div css={style.layoutContainer}>
       <Header />
-      <div>
-        <main>{children}</main>
-        <div css={style.footerContainer}>
-          &copy; {new Date().getFullYear()} Panna Zsamba
-        </div>
+      <main css={style.page}>{children}</main>
+      <div css={style.footerContainer}>
+        &copy; {new Date().getFullYear()} Panna Zsamba
       </div>
     </div>
   )

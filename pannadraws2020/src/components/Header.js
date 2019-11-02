@@ -1,11 +1,11 @@
+import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { css } from "@emotion/core"
+import { css } from '@emotion/core';
 import { logo, instagram, twitter, deviantart } from '../resources/icons';
 import { colours } from '../resources/colors';
 import { breakPoints } from '../resources/breakPoints';
 import { fonts } from '../resources/fonts';
-import React from 'react';
 
 const Header = () => {
   const style = {
