@@ -69,6 +69,10 @@ const Header = () => {
         &.printShop {
           color: ${colours.c1};
         }
+        
+        &[aria-current="page"] {
+          border-bottom: 1px solid ${colours.c1};
+        }
       }
     `,
     menuRight: css`

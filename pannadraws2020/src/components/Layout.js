@@ -53,6 +53,7 @@ const Layout = ({ children }) => {
     footerContainerInner: css`
       max-width: 1500px;
       margin: 0 auto;
+      font-family: ${fonts.f2};
       
       a {
         color: ${colours.c1};
@@ -82,6 +83,12 @@ const Layout = ({ children }) => {
           }
           @media ${breakPoints.desktopSmall} {
             padding: 0 20px;
+          }
+        }
+        
+        :first-child {
+          a {
+            padding-left: 0;
           }
         }
         
