@@ -89,15 +89,11 @@ const Gallery = () => {
     `,
     imageGridElement: css`
       @media ${breakPoints.tabletLandscape} {
-        width: 33%;
-      }
-      @media ${breakPoints.desktopSmall} {
-        width: 33%;
-      }
-      @media ${breakPoints.desktopLarge} {
-        width: 520px;
+        margin: 1%;
+        width: 31%;
       }
       @media ${breakPoints.desktopXLarge} {
+        margin: 12px;
         width: 525px;
       }
     `
