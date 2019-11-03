@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
-import { breakPoints } from '../resources/breakPoints';
+import { breakPoints } from '../resources/breakpoints';
 import { fonts } from '../resources/fonts';
 import Image from '../components/Image';
 import Layout from '../components/Layout';

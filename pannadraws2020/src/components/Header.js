@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { logo, instagram, twitter, deviantart } from '../resources/icons';
 import { colours } from '../resources/colors';
-import { breakPoints } from '../resources/breakPoints';
+import { breakPoints } from '../resources/breakpoints';
 import { fonts } from '../resources/fonts';
 
 const Header = () => {

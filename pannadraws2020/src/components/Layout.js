@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from "@emotion/core"
-import { breakPoints } from '../resources/breakPoints';
+import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
 import '../resources/index.css';
