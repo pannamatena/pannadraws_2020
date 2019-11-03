@@ -13,7 +13,13 @@ const Header = () => {
       background: ${colours.c3};
       display: flex;
       flex-direction: row;
+      justify-content: center;
       font-family: ${fonts.f1};
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
       
       padding: 10px;
       @media ${breakPoints.tabletPortrait} {
@@ -22,6 +28,12 @@ const Header = () => {
       @media ${breakPoints.desktopSmall} {
         padding: 20px;
       }
+    `,
+    headerContainerInner: css`
+      flex: 1;
+      max-width: 1500px;
+      display: flex;
+      flex-direction: row;
     `,
     menuLeft: css`
       display: flex;
@@ -51,6 +63,10 @@ const Header = () => {
         
         :hover,
         :active {
+          color: ${colours.c1};
+        }
+        
+        &.printShop {
           color: ${colours.c1};
         }
       }
@@ -112,20 +128,22 @@ const Header = () => {
 
   return (
       <div css={style.headerContainer}>
-        <div css={style.menuLeft}>
-          <Link to="/">Art</Link>
-          <Link to="/about/">About</Link>
-          <Link to="/contact/">Contact</Link>
-        </div>
-        <div css={style.logo}>
-          <Link to="/">
-            {logo()}
-          </Link>
-        </div>
-        <div css={style.menuRight}>
-          <a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="Panna's Instagram">{instagram()}</a>
-          <a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">{deviantart()}</a>
-          <a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">{twitter()}</a>
+        <div css={style.headerContainerInner}>
+          <div css={style.menuLeft}>
+            <Link to="/">Art</Link>
+            <Link to="/about/">About</Link>
+            <a className="printShop" href="https://www.deviantart.com/matena/shop/prints" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">Print Shop</a>
+          </div>
+          <div css={style.logo}>
+            <Link to="/" className="rotateOnHover">
+              {logo()}
+            </Link>
+          </div>
+          <div css={style.menuRight}>
+            <a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="Panna's Instagram">{instagram()}</a>
+            <a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">{deviantart()}</a>
+            <a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">{twitter()}</a>
+          </div>
         </div>
       </div>
   );
