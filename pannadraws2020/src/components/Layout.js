@@ -7,13 +7,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from "@emotion/core"
+import {graphql, useStaticQuery} from "gatsby";
+import BackgroundImage from 'gatsby-background-image';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
+import '@reach/dialog/styles.css';
 import '../resources/index.css';
 import Header from './Header';
 
 const Layout = ({ children }) => {
+  const backgroundImg = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "pannadraws_bg.png" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 3644) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   const style = {
     layoutContainer: css`
       flex: 1;
@@ -24,7 +39,6 @@ const Layout = ({ children }) => {
     `,
     page: css`
       color: ${colours.c2};
-      background: ${colours.c3};
       flex: 1;
       
       padding-top: 74px;
@@ -34,8 +48,12 @@ const Layout = ({ children }) => {
         padding-bottom: 15px;
       }
       @media ${breakPoints.desktopSmall} {
-        padding-top: 145px;
+        padding-top: 106px;
         padding-bottom: 20px;
+      }
+      
+      @media only screen and (max-width: 799px) {
+        background: ${colours.c3};
       }
     `,
     footerContainer: css`
@@ -86,7 +104,7 @@ const Layout = ({ children }) => {
           }
         }
         
-        :first-child {
+        :first-of-type {
           a {
             padding-left: 0;
           }
@@ -109,12 +127,44 @@ const Layout = ({ children }) => {
         }
       }
     `,
+    backgroundImg: css`
+      @media only screen and (max-width: 799px) {
+        background-image: none !important;
+      }
+      &:before {
+        @media only screen and (max-width: 799px) {
+          background-image: none !important;
+        }
+      }
+      &:after {
+        @media only screen and (max-width: 799px) {
+          background-image: none !important;
+        }
+      }
+    `,
   };
 
   return (
-    <div css={style.layoutContainer}>
+    <div id="layoutContainer" css={style.layoutContainer}>
       <Header />
-      <main css={style.page}>{children}</main>
+      {window.location.pathname === '/' ? (
+          <BackgroundImage
+              className="backgroundImage"
+              css={style.backgroundImg}
+              style={{
+                opacity: 1,
+                backgroundSize: '80%',
+                backgroundPosition: 'right 50px',
+                backgroundRepeat: 'no-repeat',
+              }}
+              fluid={backgroundImg.desktop.childImageSharp.fluid}
+              backgroundColor={colours.c3}
+          >
+            <main css={style.page}>{children}</main>
+          </BackgroundImage>
+      ) : (
+          <main css={style.page}>{children}</main>
+      )}
       <div css={style.footerContainer}>
       <div css={style.footerContainerInner}>
         <p>Artwork and content &copy; {new Date().getFullYear()} Panna Zsamba</p>

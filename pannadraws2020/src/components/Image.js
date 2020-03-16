@@ -18,11 +18,11 @@ const Image = ({ img }) => {
 };
 
 Image.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.object,
 };
 
 Image.defaultProps = {
-  img: ``,
+  img: {},
 };
 
 export default Image

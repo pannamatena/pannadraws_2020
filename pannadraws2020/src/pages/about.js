@@ -10,7 +10,7 @@ import SEO from '../components/Seo';
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "me.png" }) {
+      placeholderImage: file(relativePath: { eq: "me.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -95,12 +95,17 @@ const AboutPage = () => {
         <Image img={data.placeholderImage.childImageSharp.fluid}/>
       </div>
       <div css={style.textContainer}>
-        <h1>I'm a software developer who paints.</h1>
-        <p>And builds wooden ship models. And cooks, bakes, and likes gardening.</p>
+        <h1>I paint and draw fantasy creatures and farm animals.</h1>
         <p>
-          I was born and raised in Hungary, now I live in Ireland. I started as a web designer, then eventually turned into
-          a front-end engineer, but I kept my passion for fine art. I used to paint digitally a lot, but the ups and downs
-          of traditional media (and the challenge of the lack of cmd+z) drove me towards watercolours.
+          I was born and raised in Hungary, now I live in Dublin, Ireland. Mythology and magical creatures had always been in my interest,
+          and I have always had a want and drive to create. I got my bachelor's degree with a major in English Literature and Culture, and
+          wrote my thesis on Dragons in Celtic Mythology and Literature. While I'm working as a software engineer my passion for art
+          and creation remains a significant part of my creative life.
+        </p>
+        <p>
+          I mostly work with traditional mediums like watercolour, ink and coloured pencils. My main subjects are farm animals and
+          fantasy creatures, as I want to show the beauty I see in the simplicity of the former, whereas I enjoy the freedom from
+          rules when designing the imaginary.
         </p>
       </div>
     </div>
