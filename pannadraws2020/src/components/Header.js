@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const setTopScrollVal = () => {
-    const scrollY = window.scrollY;
+    const scrollY = window ? window.scrollY : 0;
     setTopPos(scrollY);
   };
 
@@ -27,13 +27,15 @@ const Header = () => {
     setTopScrollVal();
   });
 
-  window.addEventListener("resize", setWidth);
-  window.addEventListener("scroll", setTopScrollVal);
+  if (window) {
+    window.addEventListener("resize", setWidth);
+    window.addEventListener("scroll", setTopScrollVal);
+  }
 
-  const isArtMenuActive = window.location.pathname === '/'
+  const isArtMenuActive = window ? (window.location.pathname === '/'
       || window.location.pathname === '/art_2019/'
       || window.location.pathname === '/art_2020/'
-      || window.location.pathname === '/sketchbook/';
+      || window.location.pathname === '/sketchbook/') : false;
 
   const style = {
     headerContainer: css`

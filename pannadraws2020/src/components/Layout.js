@@ -147,7 +147,7 @@ const Layout = ({ children }) => {
   return (
     <div id="layoutContainer" css={style.layoutContainer}>
       <Header />
-      {window.location.pathname === '/' ? (
+      {window && window.location.pathname === '/' ? (
           <BackgroundImage
               className="backgroundImage"
               css={style.backgroundImg}

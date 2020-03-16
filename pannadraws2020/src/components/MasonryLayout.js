@@ -161,14 +161,16 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
   };
 
   const resizeGridItem = (item, index) => {
-    const grid = document.getElementById('artGridContainer');
-    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-    const rowSpan = Math.ceil(
-        (item.querySelector('.artGridItem__content').getBoundingClientRect().height + rowGap)
-        / (rowHeight + rowGap)
-    );
-    item.style.gridRowEnd = 'span ' + rowSpan;
+    if (window) {
+      const grid = document.getElementById('artGridContainer');
+      const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+      const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+      const rowSpan = Math.ceil(
+          (item.querySelector('.artGridItem__content').getBoundingClientRect().height + rowGap)
+          / (rowHeight + rowGap)
+      );
+      item.style.gridRowEnd = 'span ' + rowSpan;
+    }
   };
 
   const resizeAllGridItems = () => {
@@ -188,8 +190,10 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     calculateHeaderHeight();
   });
 
-  window.addEventListener('resize', resizeAllGridItems);
-  window.addEventListener('resize', calculateHeaderHeight);
+  if (window) {
+    window.addEventListener('resize', resizeAllGridItems);
+    window.addEventListener('resize', calculateHeaderHeight);
+  }
 
   const openDialog = (imgData) => {
     setDialogImgData(imgData);
@@ -233,7 +237,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
         <Dialog css={style.dialog} aria-label="dialog" isOpen={showDialog} onDismiss={closeDialog}>
           <Img
               fluid={dialogImgData.childImageSharp ? dialogImgData.childImageSharp.fluid : {}}
-              style={{ maxHeight: `${window.innerHeight - (headerH + 20)}px` }}
+              style={{ maxHeight: `${window ? (window.innerHeight - (headerH + 20)) : 100}px` }}
               imgStyle={{ objectFit: 'contain' }}
           />
           <button css={style.dialogClose} onClick={closeDialog}>{close()}</button>
