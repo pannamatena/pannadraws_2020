@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import { css } from "@emotion/core"
 import {graphql, useStaticQuery} from "gatsby";
@@ -17,6 +17,7 @@ import '../resources/index.css';
 import Header from './Header';
 
 const Layout = ({ children }) => {
+  const [windowLoc, setWindowLoc] = useState('');
   const backgroundImg = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "pannadraws_bg.png" }) {
@@ -28,6 +29,10 @@ const Layout = ({ children }) => {
       }
     }
   `);
+
+  useEffect(() => {
+    setWindowLoc(window.location.pathname);
+  });
 
   const style = {
     layoutContainer: css`
@@ -147,7 +152,7 @@ const Layout = ({ children }) => {
   return (
     <div id="layoutContainer" css={style.layoutContainer}>
       <Header />
-      {window && window.location.pathname === '/' ? (
+      {windowLoc === '/' ? (
           <BackgroundImage
               className="backgroundImage"
               css={style.backgroundImg}

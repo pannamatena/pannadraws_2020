@@ -17,6 +17,7 @@ import { close } from '../resources/icons';
 import Image from './Image';
 
 const MasonryLayout = ({ imgData, imgMeta }) => {
+  const [windowInnerH, setWindowInnerH] = useState(0);
   const [headerH, setHeaderH] = useState(0);
   const [showDialog, setShowDialog] = useState(false);
   const [dialogImgData, setDialogImgData] = useState({});
@@ -186,14 +187,17 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
   };
 
   useEffect(() => {
+    setWindowInnerH(window.innerHeight);
     resizeAllGridItems();
     calculateHeaderHeight();
-  });
 
-  if (window) {
     window.addEventListener('resize', resizeAllGridItems);
     window.addEventListener('resize', calculateHeaderHeight);
-  }
+    return () => {
+      window.removeEventListener('resize', resizeAllGridItems);
+      window.removeEventListener('resize', calculateHeaderHeight);
+    }
+  });
 
   const openDialog = (imgData) => {
     setDialogImgData(imgData);
@@ -237,7 +241,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
         <Dialog css={style.dialog} aria-label="dialog" isOpen={showDialog} onDismiss={closeDialog}>
           <Img
               fluid={dialogImgData.childImageSharp ? dialogImgData.childImageSharp.fluid : {}}
-              style={{ maxHeight: `${window ? (window.innerHeight - (headerH + 20)) : 100}px` }}
+              style={{ maxHeight: `${windowInnerH - (headerH + 20)}px` }}
               imgStyle={{ objectFit: 'contain' }}
           />
           <button css={style.dialogClose} onClick={closeDialog}>{close()}</button>

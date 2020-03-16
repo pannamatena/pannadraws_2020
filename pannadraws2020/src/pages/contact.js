@@ -198,10 +198,10 @@ const ContactPage = (props) => {
   };
 
   const getValue = () => {
-    if (props.location.state.printImg) {
+    if (props.location.state && props.location.state.printImg) {
       return `Inquiry about art print ${props.location.state.printImg}`;
     }
-    if (props.location.state.originalImg) {
+    if (props.location.state && props.location.state.originalImg) {
       return `Inquiry about original art ${props.location.state.originalImg}`;
     }
     return '';

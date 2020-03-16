@@ -8,14 +8,15 @@ import { breakPoints } from '../resources/breakpoints';
 import { fonts } from '../resources/fonts';
 
 const Header = () => {
-  const [headerElWidth, setHeaderElWidth] = useState(0);
+  //const [headerElWidth, setHeaderElWidth] = useState(0);
+  const [isArtMenuActive, setIsArtMenuActive] = useState(false);
   const [topPos, setTopPos] = useState(0);
 
-  const setWidth = () => {
+  /*const setWidth = () => {
     const headerEl = document.getElementById("headerContainer");
     const width = headerEl ? headerEl.offsetWidth : 0;
     setHeaderElWidth(width);
-  };
+  };*/
 
   const setTopScrollVal = () => {
     const scrollY = window ? window.scrollY : 0;
@@ -23,19 +24,20 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setWidth();
+    //setWidth();
     setTopScrollVal();
+    const isActive = window.location.pathname === '/'
+        || window.location.pathname === '/art_2019/'
+        || window.location.pathname === '/art_2020/'
+        || window.location.pathname === '/sketchbook/';
+    setIsArtMenuActive(isActive);
+
+    //window.addEventListener("resize", setWidth);
+    window.addEventListener('scroll', setTopScrollVal);
+    return () => {
+      window.removeEventListener('scroll', setTopScrollVal)
+    }
   });
-
-  if (window) {
-    window.addEventListener("resize", setWidth);
-    window.addEventListener("scroll", setTopScrollVal);
-  }
-
-  const isArtMenuActive = window ? (window.location.pathname === '/'
-      || window.location.pathname === '/art_2019/'
-      || window.location.pathname === '/art_2020/'
-      || window.location.pathname === '/sketchbook/') : false;
 
   const style = {
     headerContainer: css`

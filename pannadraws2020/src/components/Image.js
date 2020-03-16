@@ -18,7 +18,7 @@ const Image = ({ img }) => {
 };
 
 Image.propTypes = {
-  img: PropTypes.object,
+  img: PropTypes.object || PropTypes.string,
 };
 
 Image.defaultProps = {
