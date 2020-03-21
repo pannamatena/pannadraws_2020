@@ -226,7 +226,8 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {imgMeta[img].prints === 'AVAILABLE' ? (
                   <div css={style.printBuy}>
-                    <Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>
+                    {/*<Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>*/}
+                    <a css={style.buyPBtn} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
                   </div>
               ) : (<p css={style.pSold}>Prints are no longer available.</p>)}
             </div>

@@ -90,7 +90,7 @@ const App = () => {
       description: 'Ink and watercolour on cold pressed watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
       price: 900,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     reindeer_and_dragonflies: {
       title: 'Reindeer and Dragonflies',
@@ -98,7 +98,7 @@ const App = () => {
       description: 'Coloured pencil on cartridge paper. 297 x 210 mm ( 11.69 x 8.27 in), 2020.',
       price: 350,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     rooster_II: {
       title: 'Rooster II',
@@ -114,7 +114,7 @@ const App = () => {
       description: 'Ink and coloured pencil on paper. 420 x 297 mm ( 16.53 x 11.69 in), 2020.',
       price: 850,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     the_dragon_and_the_kirin: {
       title: 'The Dragon and The Kirin',

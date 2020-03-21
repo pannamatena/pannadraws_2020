@@ -195,6 +195,15 @@ const ContactPage = (props) => {
         cursor: pointer;
       }
     `,
+    printShopLink: css`
+      color: ${colours.c1};
+      transition: color 0.3s ease-out;
+      
+      &:hover,
+      &:active {
+        color: ${colours.c1_h};
+      }
+    `,
   };
 
   const getValue = () => {
@@ -251,7 +260,8 @@ const ContactPage = (props) => {
           <p>All art is shipped without a frame, but fit in standard sized frames.</p>
 
           <h2>Buying Art Prints</h2>
-          <p>There is no price marked for art prints at the moment, as they are made on-demand and only a limited number is available (they generally range from €50 - €70). If you are interested please get in touch! </p>
+          <p>Prints (and other merchandise, such as laptop and phone cases, mugs, etc) are sold through my <a css={style.printShopLink} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Society6 shop</a>. They
+          take care of packaging and shipping as well.</p>
           <p>The print won't have the PannaDraws logo and the watermark on it, only my signature as it's part of the original picture.</p>
 
           <h2>Caring for Art</h2>

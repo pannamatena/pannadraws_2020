@@ -261,7 +261,7 @@ const Header = () => {
             </div>
             <div><Link to="/about/">About</Link></div>
             <div><Link to="/contact/">Contact & FAQ</Link></div>
-            {/*<div><a className="printShop" href="https://www.deviantart.com/matena/shop/prints" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">Print Shop</a></div>*/}
+            <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
           </nav>
           <div>
             <Link to="/">

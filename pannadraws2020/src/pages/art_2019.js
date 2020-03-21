@@ -178,7 +178,7 @@ const App = () => {
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 650,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     csodaszarvas: {
       title: 'Csodaszarvas',
@@ -187,7 +187,6 @@ const App = () => {
       price: 950,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
-      orintUrl: 'https://www.deviantart.com/print/view/826731587',
     },
     ellen_trechend: {
       title: 'Ellén Trechend',
@@ -195,7 +194,7 @@ const App = () => {
       description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm (16.53 x 11.69 in), 2019.',
       price: 950,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     puffin: {
       title: 'Puffin',
@@ -211,7 +210,7 @@ const App = () => {
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 650,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     staring_tiger: {
       title: 'Staring Tiger',
@@ -259,7 +258,7 @@ const App = () => {
       description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 400,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     bunclody: {
       title: 'Bunclody',
@@ -275,7 +274,7 @@ const App = () => {
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 650,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     grinning_long: {
       title: 'A Grinning Long',
@@ -307,7 +306,7 @@ const App = () => {
       description: 'Watercolour on cold-pressed watercolour paper. 360 mm x 260 mm (14 x 10 in), 2019.',
       price: 750,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     phoenix_park: {
       title: 'Phoenix Park',
@@ -315,7 +314,7 @@ const App = () => {
       description: 'Watercolour on cold-pressed watercolour paper. 250 mm x 250 mm (11.69 x 16.53 in), 2019.',
       price: 500,
       original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      prints: 'SOLD',
     },
     dog_portrait: {
       title: 'Dog Portrait',
