@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import { logo, logoText, instagram, twitter, deviantart } from '../resources/icons';
+import { logo, logoText, instagram, facebook, deviantart } from '../resources/icons';
 import { colours } from '../resources/colors';
 import { breakPoints } from '../resources/breakpoints';
 import { fonts } from '../resources/fonts';
@@ -270,9 +270,10 @@ const Header = () => {
             </Link>
           </div>
           <div css={style.menuRight}>
-            <a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="Panna's Instagram">{instagram()}</a>
+            <a href="https://www.facebook.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Facebook">{facebook()}</a>
+            <a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="PannaDraws on Instagram">{instagram()}</a>
             <a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">{deviantart()}</a>
-            <a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">{twitter()}</a>
+            {/*<a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">{twitter()}</a>*/}
           </div>
 
         </div>

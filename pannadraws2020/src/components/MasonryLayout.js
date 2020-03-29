@@ -209,6 +209,29 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     setShowDialog(false);
   };
 
+  const getPrintStatus = (printVal) => {
+    switch (printVal) {
+      case 'AVAILABLE': {
+        return (
+            <div css={style.printBuy}>
+              {/*<Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>*/}
+              <a css={style.buyPBtn} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
+            </div>
+        )
+      }
+      case 'NOTYET': {
+        return (
+            <p css={style.pSold}>Prints are not released yet.</p>
+        )
+      }
+      default: {
+        return (
+            <p css={style.pSold}>Prints are no longer available.</p>
+        )
+      }
+    }
+  };
+
   const renderGridItems = () => {
     return imgData && Object.keys(imgData).map((img, index) => (
         <div className="artGridItem" css={style.artGridItem} key={index}>
@@ -224,12 +247,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
                     <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>(€ {imgMeta[img].price})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
-              {imgMeta[img].prints === 'AVAILABLE' ? (
-                  <div css={style.printBuy}>
-                    {/*<Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>*/}
-                    <a css={style.buyPBtn} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
-                  </div>
-              ) : (<p css={style.pSold}>Prints are no longer available.</p>)}
+              {getPrintStatus(imgMeta[img].prints)}
             </div>
           </div>
         </div>

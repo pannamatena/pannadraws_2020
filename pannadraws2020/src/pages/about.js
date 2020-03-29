@@ -91,6 +91,9 @@ const AboutPage = () => {
   <Layout>
     <SEO title="About" />
     <div css={style.pageContainer}>
+      <script>
+        fbq('track', 'About');
+      </script>
       <div css={style.imgContainer}>
         <Image img={data.placeholderImage.childImageSharp.fluid}/>
       </div>

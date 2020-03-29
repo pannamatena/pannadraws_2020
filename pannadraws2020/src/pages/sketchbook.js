@@ -16,6 +16,9 @@ const SketchbookPage = () => {
   return (
   <Layout>
     <SEO title="Sketchbook" />
+    <script>
+      fbq('track', 'Art_sketch');
+    </script>
     <div css={style.galleryContainer}>
       <Gallery />
     </div>

@@ -15,6 +15,13 @@ const App = () => {
           }
         }
       },
+      the_sunbender: file(relativePath: { eq: "2020/the_sunbender_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       two_geese: file(relativePath: { eq: "2020/two_geese_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -78,10 +85,18 @@ const App = () => {
     peacock_girls: {
       title: 'Peacock Girls',
       year: '2020',
-      description: 'Colored pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      description: 'Ink and colored pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
       price: 1000,
       original: 'AVAILABLE',
-      prints: 'SOLD',
+      prints: 'NOTYET',
+    },
+    the_sunbender: {
+      title: 'The Sunbender',
+      year: '2020',
+      description: 'Ink and coloured pencil on paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 850,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
     },
     two_geese: {
       title: 'Two Geese',

@@ -220,6 +220,9 @@ const ContactPage = (props) => {
       <Layout>
         <SEO title="Contact" />
         <div css={style.pageContainer}>
+          <script>
+            fbq('track', 'Contact');
+          </script>
           <h1>Get in touch!</h1>
           <p>Please send a message if you're interested in buying either an original or an art print. Some guidelines are below the form!</p>
 
