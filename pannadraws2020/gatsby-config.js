@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-theme-gallery`,
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '533210237614788',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
