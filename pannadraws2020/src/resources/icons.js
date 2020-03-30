@@ -268,6 +268,12 @@ export const close = () => (
     </svg>
 );
 
+export const check = () => (
+    <svg id="Capa_1" viewBox="0 0 515.556 515.556">
+      <path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"/>
+    </svg>
+);
+
 export const facebook = () => (
     <svg className="icon-facebook" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
          width="792px" height="792px" viewBox="0 0 792 792">

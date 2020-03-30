@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { css } from '@emotion/core';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
 import Layout from '../components/Layout';
+import Checkbox from '../components/Checkbox';
 import SEO from '../components/Seo';
+import {Link} from "gatsby";
 
 const ContactPage = (props) => {
+  const getValue = () => {
+    if (props.location.state && props.location.state.printImg) {
+      return `Inquiry about art print ${props.location.state.printImg}`;
+    }
+    if (props.location.state && props.location.state.originalImg) {
+      return `Inquiry about original art ${props.location.state.originalImg}`;
+    }
+    return '';
+  };
+  const [subjectVal, setSubjectVal] = useState(getValue());
+  const [consentVal, setConsentVal] = useState(false);
+
   const style = {
     pageContainer: css`
       max-width: 800px;
@@ -81,6 +95,14 @@ const ContactPage = (props) => {
     contactForm: css`
       display: block;
       width: 100%;
+      
+      a {
+        color: ${colours.c1};
+        
+        &:hover {
+          color: ${colours.c1_h};
+        }
+      }
     `,
     contactFormRow: css`
       margin-bottom: 10px;
@@ -170,6 +192,35 @@ const ContactPage = (props) => {
         cursor: pointer;
       }
     `,
+    checkbox: css`
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      
+      span {
+        padding-left: 10px;
+        @media ${breakPoints.tabletPortrait} {
+          padding-left: 15px;
+        }
+        @media ${breakPoints.desktopSmall} {
+          padding-left: 20px;
+        }
+      
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    `,
+    infoText: css`
+      margin-top: 10px;
+      @media ${breakPoints.tabletPortrait} {
+        margin-top: 15px;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin-top: 20px;
+      }
+    `,
     clearBtn: css`
       display: block;
       background: ${colours.c2};
@@ -206,14 +257,12 @@ const ContactPage = (props) => {
     `,
   };
 
-  const getValue = () => {
-    if (props.location.state && props.location.state.printImg) {
-      return `Inquiry about art print ${props.location.state.printImg}`;
-    }
-    if (props.location.state && props.location.state.originalImg) {
-      return `Inquiry about original art ${props.location.state.originalImg}`;
-    }
-    return '';
+  const handleSubjectChange = (event) => {
+    setSubjectVal(event.target.value);
+  };
+
+  const handleCheckboxChange = (event) => {
+    setConsentVal(event.target.checked);
   };
 
   return (
@@ -231,22 +280,32 @@ const ContactPage = (props) => {
             <input type="hidden" name="form-name" value="contact" />
             <div css={style.contactFormRow}>
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
             </div>
             <div css={style.contactFormRow}>
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="text" name="email" id="email" required />
             </div>
             <div css={style.contactFormRow}>
               <label htmlFor="subject">Subject</label>
-              <input type="text" name="subject" id="subject" value={getValue()} />
+              <input type="text" name="subject" id="subject" required value={subjectVal} onChange={(e) => handleSubjectChange(e)} />
             </div>
             <div css={style.contactFormRow}>
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="6" />
+              <textarea name="message" id="message" rows="6" required />
+            </div>
+            <div css={style.contactFormRow}>
+              <label css={style.checkbox}>
+                <Checkbox
+                    checked={consentVal}
+                    onChange={handleCheckboxChange}
+                />
+                <span>I agree that my email address and name can be used to enable replying to my message.</span>
+              </label>
+              <p css={style.infoText}>All personal data is handled according to the <Link to="/privacy_policy">Privacy Policy</Link>.</p>
             </div>
             <div css={style.contactFormActions}>
-              <input css={style.clearBtn} type="reset" value="Clear" />
+              {/*<input css={style.clearBtn} type="reset" value="Clear" />*/}
               <input css={style.submitBtn} type="submit" value="Send Message" />
             </div>
           </form>
