@@ -273,7 +273,7 @@ const ContactPage = (props) => {
           <h1>Get in touch!</h1>
           <p>Please send a message if you're interested in buying either an original or an art print. Some guidelines are below the form!</p>
 
-          <form css={style.contactForm} name="contact" action="/success" method="post" data-netlify="true" data-netlify-recaptcha="true" data-netlify-honeypot="bot-field">
+          <form css={style.contactForm} name="contact" action="/success" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div css={style.contactFormRow}>
@@ -301,9 +301,6 @@ const ContactPage = (props) => {
                 <span>I agree that my email address and name can be used to enable replying to my message.</span>
               </label>
               <p css={style.infoText}>All personal data is handled according to the <Link to="/privacy_policy">Privacy Policy</Link>.</p>
-            </div>
-            <div css={style.contactFormRow}>
-              <div data-netlify-recaptcha="true" />
             </div>
             <div css={style.contactFormActions}>
               {/*<input css={style.clearBtn} type="reset" value="Clear" />*/}
