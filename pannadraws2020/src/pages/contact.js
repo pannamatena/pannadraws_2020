@@ -306,7 +306,7 @@ const ContactPage = (props) => {
               <p css={style.infoText}>All personal data is handled according to the <Link to="/privacy_policy">Privacy Policy</Link>.</p>
             </div>
             <div css={style.contactFormRow}>
-              <div data-netlify-recaptcha="true"></div>
+              <div data-netlify-recaptcha="true" />
             </div>
             <div css={style.contactFormActions}>
               {/*<input css={style.clearBtn} type="reset" value="Clear" />*/}
