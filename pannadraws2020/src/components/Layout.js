@@ -7,8 +7,9 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import { css } from "@emotion/core"
-import {graphql, Link, useStaticQuery} from "gatsby";
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import CookieConsent from 'react-cookie-consent';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
@@ -147,10 +148,34 @@ const Layout = ({ children }) => {
         }
       }
     `,
+    cookiePP: css`
+      color: ${colours.c1};
+      font-weight: bold;
+        
+      &:hover {
+        color: ${colours.c1_h};
+      }
+    `,
   };
 
   return (
     <div id="layoutContainer" css={style.layoutContainer}>
+      <CookieConsent
+          location="bottom"
+          buttonText="Accept"
+          cookieName="gatsby-gdpr-facebook-pixel"
+          style={{ background: colours.c2, fontSize: "1em" }}
+          buttonStyle={{
+            color: colours.c3,
+            fontSize: "1em",
+            background: colours.c1,
+            fontFamily: fonts.f1,
+            textTransform: 'uppercase',
+          }}
+      >
+        This site uses cookies to enhance user experience. To learn more about how PannaDraws
+        uses cookies please read my <Link css={style.cookiePP} to="/privacy_policy">Privacy Policy</Link>.
+      </CookieConsent>
       <Header />
       {windowLoc === '/' ? (
           <BackgroundImage
