@@ -93,7 +93,7 @@ const App = () => {
     the_sunbender: {
       title: 'The Sunbender',
       year: '2020',
-      description: 'Ink and coloured pencil on paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      description: 'Ink, watercolour and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
       price: 850,
       original: 'AVAILABLE',
       prints: 'NOTYET',

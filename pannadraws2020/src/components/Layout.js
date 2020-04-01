@@ -197,6 +197,7 @@ const Layout = ({ children }) => {
       )}
       <div css={style.footerContainer}>
       <div css={style.footerContainerInner}>
+        <p>All prices indicated include VAT. Shipping costs are not included.</p>
         <p>Artwork and content &copy; {new Date().getFullYear()} Panna Zsamba</p>
         <div css={style.socialMenu}>
           <span><a href="https://www.facebook.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Facebook">Facebook</a></span>

@@ -80,6 +80,25 @@ const ContactPage = (props) => {
         }
       }
       
+      h3 {        
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @media ${breakPoints.tabletPortrait} {
+          font-size: 1.4em;
+        }
+        @media ${breakPoints.desktopSmall} {
+          font-size: 1.4em;
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+        @media ${breakPoints.desktopLarge} {
+          font-size: 1.6em;
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+      }
+      
       p {
         font-size: 1.2em;
         
@@ -247,7 +266,7 @@ const ContactPage = (props) => {
         cursor: pointer;
       }
     `,
-    printShopLink: css`
+    faqLink: css`
       color: ${colours.c1};
       transition: color 0.3s ease-out;
       
@@ -255,6 +274,10 @@ const ContactPage = (props) => {
       &:active {
         color: ${colours.c1_h};
       }
+    `,
+    attention: css`
+      color: ${colours.c1};
+      font-weight: 600;
     `,
   };
 
@@ -271,7 +294,10 @@ const ContactPage = (props) => {
         <SEO title="Contact" />
         <div css={style.pageContainer}>
           <h1>Get in touch!</h1>
-          <p>Please send a message if you're interested in buying either an original or an art print. Some guidelines are below the form!</p>
+          <p>Please send a message if you're interested in buying one of my pictures. Some further guidelines are below the form!</p>
+
+          <p css={style.attention}>Please note that delivery of all parcels to the United States are suspended due to COVID-19. Currently
+          only A4 sized pictures can be posted there as I pack those in A4 envelopes!</p>
 
           <form css={style.contactForm} name="contact" action="/success" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="bot-field" />
@@ -309,19 +335,33 @@ const ContactPage = (props) => {
           </form>
 
           <h2>Buying Original Art</h2>
-          <p>Each piece is individually wrapped and signed by me. There is usually a smaller signiture in the front,
-          and a detailed one including the title at the back.</p>
+
           <p>All pictures are treated with UV resistant coating as watercolour tends to fade if exposed to direct sunlight. This
           varnish may give a slightly glossy finish in some places where the paint is thicker.</p>
           <p>There is a natural curl to paintings created with water based media. Once framed it's not visible.</p>
           <p>Some of the paintings have a white border around them. This is the blank space masked by the tape I
             use to hold the paper in place when working with wet media. It provides some extra space to hold the picture
             behind a mount.</p>
+
+          <h3>Payment</h3>
+          <p>The prices displayed for each piece are in Euro, include VAT, but does not include postage.</p>
+          <p>Payment is accepted only through Paypal. When you would like to purchase a painting I create a payment request that is
+            sent to your email address. When you click it, you can use a debit or credit card to complete the payment - just as if
+            you were paying at a webshop. The invoice will be emailed to you.</p>
+
+          <h3>Postage</h3>
+          <p>I post watercolours packed flat, while larger dry media pieces are rolled up in a tube. Insurance and tracking is added to each parcel.</p>
+          <p>Each piece is individually wrapped and signed by me. There is usually a smaller signature in the front,
+            and a detailed one including the title at the back.</p>
           <p>All art is shipped without a frame, but fit in standard sized frames.</p>
 
+          <h3>Returns</h3>
+          <p>In case there's damage to the picture due to handling it during delivery, or you're unhappy with it, you can return it
+          to me in 2 weeks, contact me using the form above and I refund the cost of the piece (the postage fee cannot be refunded).</p>
+
           <h2>Buying Art Prints</h2>
-          <p>Prints (and other merchandise, such as laptop and phone cases, mugs, etc) are sold through my <a css={style.printShopLink} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Society6 shop</a>. They
-          take care of packaging and shipping as well.</p>
+          <p>Prints (and other merchandise, such as laptop and phone cases, mugs, etc) are sold through my <a css={style.faqLink} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Society6 shop</a>. They
+          take care of packaging and shipping as well. You can read more about their Terms of Service at their <a css={style.faqLink} href="https://society6.com/terms" target="_blank" rel="noopener noreferrer" title="Society6 Terms of Service">website</a>.</p>
           <p>The print won't have the PannaDraws logo and the watermark on it, only my signature as it's part of the original picture.</p>
 
           <h2>Caring for Art</h2>
