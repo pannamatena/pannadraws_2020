@@ -8,6 +8,13 @@ import MasonryLayout from "../components/MasonryLayout";
 const App = () => {
   const imgData = useStaticQuery(graphql`
     query {
+      deer_in_phoenix_park: file(relativePath: { eq: "2020/deer_in_phoenix_park_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       peacock_girls: file(relativePath: { eq: "2020/peacock_girls_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -82,6 +89,14 @@ const App = () => {
   `);
 
   const imgMeta = {
+    deer_in_phoenix_park: {
+      title: 'Deer in Phoenix Park',
+      year: '2020',
+      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
+      price: 650,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+    },
     peacock_girls: {
       title: 'Peacock Girls',
       year: '2020',
