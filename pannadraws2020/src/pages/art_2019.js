@@ -49,13 +49,6 @@ const App = () => {
           }
         }
       },
-      the_cat: file(relativePath: { eq: "2019/the_cat_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       the_kirin: file(relativePath: { eq: "2019/the_kirin_2019_web.png" }) {
         childImageSharp {
           fluid {
@@ -84,13 +77,6 @@ const App = () => {
           }
         }
       },
-      bunclody: file(relativePath: { eq: "2019/bunclody_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       champion: file(relativePath: { eq: "2019/champion_2019_web.png" }) {
         childImageSharp {
           fluid {
@@ -106,20 +92,6 @@ const App = () => {
         }
       },
       horse_portrait: file(relativePath: { eq: "2019/horse_portrait_2018_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      ross_castle_view: file(relativePath: { eq: "2019/ross_castle_view_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      phoenix_park: file(relativePath: { eq: "2019/phoenix_park_2019_web.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -176,153 +148,136 @@ const App = () => {
       title: 'Blondie',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 650,
+      price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     csodaszarvas: {
       title: 'Csodaszarvas',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm (16.53 x 11.69 in), 2019.',
-      price: 950,
+      price: 850,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
     },
     ellen_trechend: {
       title: 'Ellén Trechend',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm (16.53 x 11.69 in), 2019.',
-      price: 950,
+      price: 650,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     puffin: {
       title: 'Puffin',
       year: '2019',
       description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 350,
+      price: 200,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     red_pompoms: {
       title: 'Red Pompoms',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 650,
+      price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     staring_tiger: {
       title: 'Staring Tiger',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 16.53 x 11.69 in), 2019.',
-      price: 750,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-    },
-    the_cat: {
-      title: 'The Cat',
-      year: '2019',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 650,
       original: 'AVAILABLE',
-      prints: 'SOLD',
+      prints: 'AVAILABLE',
+      discount: 25,
     },
     the_kirin: {
       title: 'The Kirin',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2019.',
-      price: 900,
+      price: 800,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
     },
     turkey_portrait: {
       title: 'Turkey Portrait',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 650,
+      price: 550,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
     },
     unicorn_portrait: {
       title: 'Unicorn Portrait',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 650,
+      price: 550,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
     },
     wet_raven: {
       title: 'Wet Raven',
       year: '2019',
       description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 400,
+      price: 300,
       original: 'AVAILABLE',
       prints: 'SOLD',
-    },
-    bunclody: {
-      title: 'Bunclody',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 250 mm x 250 mm (11.69 x 16.53 in), 2019.',
-      price: 500,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
+      discount: 25,
     },
     champion: {
       title: 'Champion',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 650,
+      price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     grinning_long: {
       title: 'A Grinning Long',
       year: '2019',
       description: 'Ink on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 400,
+      price: 250,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
     },
     bunnies: {
       title: 'Bunnies',
       year: '2019',
       description: 'Watercolour on cold-pressed watercolour paper. 260 mm x 360 mm (10 x 14 in), 2019.',
-      price: 500,
+      price: 250,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     horse_portrait: {
       title: 'Horse Portrait',
       year: '2019',
       description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 350,
+      price: 100,
       original: 'AVAILABLE',
       prints: 'SOLD',
-    },
-    ross_castle_view: {
-      title: 'Ross Castle View',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 360 mm x 260 mm (14 x 10 in), 2019.',
-      price: 750,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-    },
-    phoenix_park: {
-      title: 'Phoenix Park',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 250 mm x 250 mm (11.69 x 16.53 in), 2019.',
-      price: 500,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
+      discount: 25,
     },
     dog_portrait: {
       title: 'Dog Portrait',
       year: '2019',
       description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 350,
+      price: 100,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     rooster_portrait: {
       title: 'Rooster Portrait',
@@ -331,6 +286,7 @@ const App = () => {
       price: 500,
       original: 'SOLD',
       prints: 'SOLD',
+      discount: 25,
     },
     wandering_rooster: {
       title: 'Wandering Rooster',
@@ -339,6 +295,7 @@ const App = () => {
       price: 500,
       original: 'SOLD',
       prints: 'SOLD',
+      discount: 25,
     },
     rising_wisdom: {
       title: 'Rising Wisdom 2019',
@@ -347,6 +304,7 @@ const App = () => {
       price: 400,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      discount: 25,
     },
     sails: {
       title: 'Sails',
@@ -355,6 +313,7 @@ const App = () => {
       price: 500,
       original: 'SOLD',
       prints: 'SOLD',
+      discount: 25,
     },
   };
 

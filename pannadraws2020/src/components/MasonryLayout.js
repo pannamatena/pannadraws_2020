@@ -159,6 +159,10 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
         }
       }
     `,
+    discount: css`
+      text-decoration: line-through;
+      padding-right: 3px;
+    `,
   };
 
   const resizeGridItem = (item, index) => {
@@ -232,6 +236,19 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     }
   };
 
+  const getPrice = (img) => {
+    const price = imgMeta[img].price;
+    if (imgMeta[img].discount) {
+      return (
+          <span>
+            <span css={style.discount}>€ {price}</span>
+            € {(price / 100) * (100 - imgMeta[img].discount)}
+          </span>
+      );
+    }
+    return `€ ${price}`;
+  };
+
   const renderGridItems = () => {
     return imgData && Object.keys(imgData).map((img, index) => (
         <div className="artGridItem" css={style.artGridItem} key={index}>
@@ -244,7 +261,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
               <p css={style.artGridMetaDesc}>{imgMeta[img].description}</p>
               {imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>(€ {imgMeta[img].price})</span></Link>
+                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(img)})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {getPrintStatus(imgMeta[img].prints)}
