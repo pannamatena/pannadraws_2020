@@ -213,13 +213,13 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     setShowDialog(false);
   };
 
-  const getPrintStatus = (printVal) => {
+  const getPrintStatus = (printVal, printUrl) => {
     switch (printVal) {
       case 'AVAILABLE': {
         return (
             <div css={style.printBuy}>
               {/*<Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>*/}
-              <a css={style.buyPBtn} href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
+              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
             </div>
         )
       }
@@ -264,7 +264,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
                     <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(img)})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
-              {getPrintStatus(imgMeta[img].prints)}
+              {getPrintStatus(imgMeta[img].prints, imgMeta[img].printUrl)}
             </div>
           </div>
         </div>

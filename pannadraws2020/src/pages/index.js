@@ -145,6 +145,7 @@ const App = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      printUrl: '',
       discount: 25,
     },
     peacock_girls: {
@@ -154,6 +155,7 @@ const App = () => {
       price: 900,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      printUrl: '',
       discount: 25,
     },
     two_geese: {
@@ -163,6 +165,7 @@ const App = () => {
       price: 900,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/two-geese2700843_print',
       discount: 25,
     },
     hen_and_rooster: {
@@ -172,6 +175,7 @@ const App = () => {
       price: 750,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/hen-and-rooster2700884_print',
       discount: 25,
     },
     rooster_II: {
@@ -181,6 +185,7 @@ const App = () => {
       price: 450,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/rooster-ii2702198_print',
       discount: 25,
     },
     wingspan: {
@@ -190,6 +195,7 @@ const App = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/wingspan2702266_print',
       discount: 25,
     },
     red_pompoms: {
@@ -199,6 +205,7 @@ const App = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     staring_tiger: {
@@ -208,6 +215,7 @@ const App = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/staring-tiger_print',
       discount: 25,
     },
     champion: {
@@ -217,6 +225,7 @@ const App = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     blondie: {
@@ -226,6 +235,7 @@ const App = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     wet_raven: {
@@ -235,6 +245,7 @@ const App = () => {
       price: 300,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     turkey_portrait: {
@@ -244,6 +255,7 @@ const App = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/turkey-portrait2702379_print',
       discount: 25,
     },
     puffin: {
@@ -253,6 +265,7 @@ const App = () => {
       price: 200,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     horse_portrait: {
@@ -262,6 +275,7 @@ const App = () => {
       price: 100,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     dog_portrait: {
@@ -271,6 +285,7 @@ const App = () => {
       price: 100,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     bunnies: {
@@ -280,6 +295,7 @@ const App = () => {
       price: 250,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     rooster_portrait: {
@@ -289,6 +305,7 @@ const App = () => {
       price: 500,
       original: 'SOLD',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     wandering_rooster: {
@@ -298,6 +315,7 @@ const App = () => {
       price: 500,
       original: 'SOLD',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
   };

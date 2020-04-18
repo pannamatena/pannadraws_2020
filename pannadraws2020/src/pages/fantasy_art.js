@@ -95,6 +95,7 @@ const FantasyArt = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      printUrl: '',
       discount: 25,
     },
     statement: {
@@ -104,6 +105,7 @@ const FantasyArt = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     the_dragon_and_the_kirin: {
@@ -113,6 +115,7 @@ const FantasyArt = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/the-dragon-and-the-kirin_print',
       discount: 25,
     },
     morozovas_stag: {
@@ -122,6 +125,7 @@ const FantasyArt = () => {
       price: 800,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     reindeer_and_dragonflies: {
@@ -131,6 +135,7 @@ const FantasyArt = () => {
       price: 250,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     grinning_long: {
@@ -140,6 +145,7 @@ const FantasyArt = () => {
       price: 250,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/a-grinning-long_print',
       discount: 25,
     },
     the_kirin: {
@@ -149,6 +155,7 @@ const FantasyArt = () => {
       price: 800,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/the-kirin2702415_print',
       discount: 25,
     },
     unicorn_portrait: {
@@ -158,6 +165,7 @@ const FantasyArt = () => {
       price: 550,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/unicorn-portrait2702350_print',
       discount: 25,
     },
     csodaszarvas: {
@@ -167,6 +175,7 @@ const FantasyArt = () => {
       price: 850,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/csodaszarvas-white-stag_print',
       discount: 25,
     },
     ellen_trechend: {
@@ -176,6 +185,7 @@ const FantasyArt = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
     rising_wisdom: {
@@ -185,6 +195,7 @@ const FantasyArt = () => {
       price: 400,
       original: 'AVAILABLE',
       prints: 'SOLD',
+      printUrl: '',
       discount: 25,
     },
   };
