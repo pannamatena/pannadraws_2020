@@ -22,13 +22,6 @@ const App = () => {
           }
         }
       },
-      the_sunbender: file(relativePath: { eq: "2020/the_sunbender_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       two_geese: file(relativePath: { eq: "2020/two_geese_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -43,20 +36,6 @@ const App = () => {
           }
         }
       },
-      morozovas_stag: file(relativePath: { eq: "2020/morozovas_stag_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      reindeer_and_dragonflies: file(relativePath: { eq: "2020/reindeer_and_dragonflies_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       rooster_II: file(relativePath: { eq: "2020/rooster_II_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -64,21 +43,91 @@ const App = () => {
           }
         }
       },
-      statement: file(relativePath: { eq: "2020/statement_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      the_dragon_and_the_kirin: file(relativePath: { eq: "2020/the_dragon_and_the_kirin_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       wingspan: file(relativePath: { eq: "2020/wingspan_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      red_pompoms: file(relativePath: { eq: "2019/red_pompoms_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      staring_tiger: file(relativePath: { eq: "2019/staring_tiger_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      champion: file(relativePath: { eq: "2019/champion_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      blondie: file(relativePath: { eq: "2019/blondie_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      wet_raven: file(relativePath: { eq: "2019/wet_raven_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      turkey_portrait: file(relativePath: { eq: "2019/turkey_portrait_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      puffin: file(relativePath: { eq: "2019/puffin_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      horse_portrait: file(relativePath: { eq: "2019/horse_portrait_2018_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      dog_portrait: file(relativePath: { eq: "2019/dog_portrait_2018_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      bunnies: file(relativePath: { eq: "2019/bunnies_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      rooster_portrait: file(relativePath: { eq: "2019/rooster_portrait_2019_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      wandering_rooster: file(relativePath: { eq: "2019/wandering_rooster_2019_web.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -107,15 +156,6 @@ const App = () => {
       prints: 'NOTYET',
       discount: 25,
     },
-    the_sunbender: {
-      title: 'The Sunbender',
-      year: '2020',
-      description: 'Ink, watercolour and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
-      price: 650,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      discount: 25,
-    },
     two_geese: {
       title: 'Two Geese',
       year: '2020',
@@ -134,47 +174,11 @@ const App = () => {
       prints: 'AVAILABLE',
       discount: 25,
     },
-    morozovas_stag: {
-      title: 'Morozova\'s Stag',
-      year: '2020',
-      description: 'Ink and watercolour on cold pressed watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
-      price: 800,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-      discount: 25,
-    },
-    reindeer_and_dragonflies: {
-      title: 'Reindeer and Dragonflies',
-      year: '2020',
-      description: 'Coloured pencil on cartridge paper. 297 x 210 mm ( 11.69 x 8.27 in), 2020.',
-      price: 250,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-      discount: 25,
-    },
     rooster_II: {
       title: 'Rooster II',
       year: '2020',
       description: 'Coloured pencil on paper. 210 x 297 mm ( 8.27 x 11.69 in), 2020.',
       price: 450,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      discount: 25,
-    },
-    statement: {
-      title: 'Statement',
-      year: '2020',
-      description: 'Ink and coloured pencil on paper. 420 x 297 mm ( 16.53 x 11.69 in), 2020.',
-      price: 650,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-      discount: 25,
-    },
-    the_dragon_and_the_kirin: {
-      title: 'The Dragon and The Kirin',
-      year: '2020',
-      description: 'Ink and watercolour on cold pressed watercolour paper. 297 x 420 mm (16.53 x 11.69 in), 2020.',
-      price: 650,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       discount: 25,
@@ -186,6 +190,114 @@ const App = () => {
       price: 650,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      discount: 25,
+    },
+    red_pompoms: {
+      title: 'Red Pompoms',
+      year: '2019',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 550,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    staring_tiger: {
+      title: 'Staring Tiger',
+      year: '2019',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 16.53 x 11.69 in), 2019.',
+      price: 650,
+      original: 'AVAILABLE',
+      prints: 'AVAILABLE',
+      discount: 25,
+    },
+    champion: {
+      title: 'Champion',
+      year: '2019',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 550,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    blondie: {
+      title: 'Blondie',
+      year: '2019',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 550,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    wet_raven: {
+      title: 'Wet Raven',
+      year: '2019',
+      description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 300,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    turkey_portrait: {
+      title: 'Turkey Portrait',
+      year: '2019',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 550,
+      original: 'AVAILABLE',
+      prints: 'AVAILABLE',
+      discount: 25,
+    },
+    puffin: {
+      title: 'Puffin',
+      year: '2019',
+      description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 200,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    horse_portrait: {
+      title: 'Horse Portrait',
+      year: '2019',
+      description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 100,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    dog_portrait: {
+      title: 'Dog Portrait',
+      year: '2019',
+      description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 100,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    bunnies: {
+      title: 'Bunnies',
+      year: '2019',
+      description: 'Watercolour on cold-pressed watercolour paper. 260 mm x 360 mm (10 x 14 in), 2019.',
+      price: 250,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    rooster_portrait: {
+      title: 'Rooster Portrait',
+      year: '2019',
+      description: 'Watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 500,
+      original: 'SOLD',
+      prints: 'SOLD',
+      discount: 25,
+    },
+    wandering_rooster: {
+      title: 'Wandering Rooster',
+      year: '2019',
+      description: 'Watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
+      price: 500,
+      original: 'SOLD',
+      prints: 'SOLD',
       discount: 25,
     },
   };

@@ -27,8 +27,7 @@ const Header = () => {
     //setWidth();
     setTopScrollVal();
     const isActive = window.location.pathname === '/'
-        || window.location.pathname === '/art_2019/'
-        || window.location.pathname === '/art_2020/'
+        || window.location.pathname === '/fantasy_art/'
         || window.location.pathname === '/sketchbook/';
     setIsArtMenuActive(isActive);
 
@@ -254,8 +253,8 @@ const Header = () => {
           <nav role="navigation" css={style.menuLeft}>
             <div><span css={style.currentPage}>Art</span>
               <ul>
-                <li><Link to="/">2020</Link></li>
-                <li><Link to="/art_2019/">2019</Link></li>
+                <li><Link to="/">Birds & Wildlife</Link></li>
+                <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
                 <li><Link to="/sketchbook/">Sketchbook</Link></li>
               </ul>
             </div>

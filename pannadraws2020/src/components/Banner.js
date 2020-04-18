@@ -125,7 +125,7 @@ const Banner = () => {
         <div css={style.bannerText}>
           <h1><span>The girl who draws</span><span>dragons and unicorns</span></h1>
           <h3>(and chickens)</h3>
-        <h2>I'm Panna, a watercolor fantasy artist.</h2>
+        <h2>I'm Panna, a watercolor fantasy and animal artist.</h2>
         </div>
       </div>
   );
