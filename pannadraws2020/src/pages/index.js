@@ -144,8 +144,8 @@ const App = () => {
       description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
       price: 550,
       original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printUrl: '',
+      prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/deer-in-phoenix-park_print',
       discount: 25,
     },
     peacock_girls: {
@@ -154,8 +154,8 @@ const App = () => {
       description: 'Ink and colored pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
       price: 900,
       original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printUrl: '',
+      prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/peacock-girls_print',
       discount: 25,
     },
     two_geese: {

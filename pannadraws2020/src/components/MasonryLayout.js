@@ -13,7 +13,7 @@ import { Dialog } from '@reach/dialog';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
-import { close } from '../resources/icons';
+import { close, arrow } from '../resources/icons';
 import Image from './Image';
 
 const MasonryLayout = ({ imgData, imgMeta }) => {
@@ -90,9 +90,23 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       font-size: 1em;
       text-transform: uppercase;
       
+      span {
+        svg {
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          fill: ${colours.c2};
+          transition: fill 0.3s ease-out;
+        }
+      }
+      
       &:hover {
         cursor: pointer;
-        color: ${colours.c1}
+        color: ${colours.c1};
+        
+        svg {
+          fill: ${colours.c1};
+        }
       }
     `,
     oSold: css`
@@ -218,8 +232,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       case 'AVAILABLE': {
         return (
             <div css={style.printBuy}>
-              {/*<Link css={style.buyPBtn} to="/contact" state={{ printImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy prints</Link>*/}
-              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints</a>
+              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints <span>{arrow()}</span></a>
             </div>
         )
       }

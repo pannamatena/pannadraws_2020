@@ -296,7 +296,7 @@ const ContactPage = (props) => {
           <h1>Get in touch!</h1>
           <p>Please send a message if you're interested in buying one of my pictures. Some further guidelines are below the form!</p>
 
-          <p css={style.attention}>Please note that delivery of all parcels to the United States are suspended due to COVID-19. Currently
+          <p css={style.attention}>Please note that delivery of all parcels to the United States is suspended due to COVID-19. Currently
           only A4 sized pictures can be posted there as I pack those in A4 envelopes!</p>
 
           <form css={style.contactForm} name="contact" action="/success" method="post" data-netlify="true" data-netlify-honeypot="bot-field">

@@ -7,6 +7,13 @@ import MasonryLayout from "../components/MasonryLayout";
 const FantasyArt = () => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_summoning: file(relativePath: { eq: "2020/the_summoning_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       the_sunbender: file(relativePath: { eq: "2020/the_sunbender_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -88,14 +95,24 @@ const FantasyArt = () => {
   `);
 
   const imgMeta = {
+    the_summoning: {
+      title: 'The Summoning',
+      year: '2020',
+      description: 'Ink and watercolour on cold pressed watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      price: 650,
+      original: 'AVAILABLE',
+      prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/the-summoning2790424_print',
+      discount: 25,
+    },
     the_sunbender: {
       title: 'The Sunbender',
       year: '2020',
       description: 'Ink, watercolour and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
       price: 650,
       original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printUrl: '',
+      prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/the-sunbender_print',
       discount: 25,
     },
     statement: {
@@ -134,8 +151,8 @@ const FantasyArt = () => {
       description: 'Coloured pencil on cartridge paper. 297 x 210 mm ( 11.69 x 8.27 in), 2020.',
       price: 250,
       original: 'AVAILABLE',
-      prints: 'SOLD',
-      printUrl: '',
+      prints: 'AVAILABLE',
+      printUrl: 'https://society6.com/product/reindeer-and-dragonflies_print',
       discount: 25,
     },
     grinning_long: {
