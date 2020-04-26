@@ -98,18 +98,19 @@ const AboutPage = () => {
         <Image img={data.placeholderImage.childImageSharp.fluid}/>
       </div>
       <div css={style.textContainer}>
-        <h1>I paint and draw fantasy creatures and farm animals.</h1>
-        <p>
-          I was born and raised in Hungary, now I live in Dublin, Ireland. Mythology and magical creatures had always been in my interest,
-          and I have always had a want and drive to create. I got my bachelor's degree with a major in English Literature and Culture, and
-          wrote my thesis on Dragons in Celtic Mythology and Literature. While I'm working as a software engineer my passion for art
-          and creation remains a significant part of my creative life.
-        </p>
-        <p>
-          I mostly work with traditional mediums like watercolour, ink and coloured pencils. My main subjects are farm animals and
-          fantasy creatures, as I want to show the beauty I see in the simplicity of the former, whereas I enjoy the freedom from
-          rules when designing the imaginary.
-        </p>
+        <h1>I paint and draw fantasy creatures, birds and wildlife.</h1>
+
+        <p>I work as a fantasy and animal artist because I have always been fascinated by
+        the beasts of stories of my childhood and myths in my readings in later life.</p>
+        <p>Part of my inspiration comes from novels and stories, but wildlife constantly affects me
+        in almost all everyday situations, like a walk to the grocery store, or just
+        looking at my bird feeder through the kitchen window.</p>
+        <p>I choose watercolour and ink as materials to capture my subjects because these light mediums
+          provide a fairy-tale-like atmosphere to my work. This lightness is balanced by the sharp
+          outlines of figures, inspired by superhero comic and manga books of my childhood.</p>
+        <p>A bird is a symbol of freedom. The supernatural lets you escape reality.
+          When painting, my subjects work as a stress relief for me, so I can get lost in the magical world I create.</p>
+
       </div>
     </div>
   </Layout>

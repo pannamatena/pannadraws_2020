@@ -7,6 +7,13 @@ import MasonryLayout from "../components/MasonryLayout";
 const FantasyArt = () => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_climbing_rose_gate: file(relativePath: { eq: "2020/the_climbing_rose_gate_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       the_summoning: file(relativePath: { eq: "2020/the_summoning_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -95,6 +102,16 @@ const FantasyArt = () => {
   `);
 
   const imgMeta = {
+    the_climbing_rose_gate: {
+      title: 'The Climbing Rose Gate',
+      year: '2020',
+      description: 'Ink and watercolour on cold pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2020.',
+      price: 300,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printUrl: '',
+      discount: 25,
+    },
     the_summoning: {
       title: 'The Summoning',
       year: '2020',
