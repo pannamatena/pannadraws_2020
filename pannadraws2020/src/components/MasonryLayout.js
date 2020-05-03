@@ -274,7 +274,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
               <p css={style.artGridMetaDesc}>{imgMeta[img].description}</p>
               {imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `${imgMeta[img].title} - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(img)})</span></Link>
+                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${imgMeta[img].title}" - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(img)})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {getPrintStatus(imgMeta[img].prints, imgMeta[img].printUrl)}

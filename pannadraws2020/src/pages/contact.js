@@ -293,8 +293,8 @@ const ContactPage = (props) => {
       <Layout>
         <SEO title="Contact" />
         <div css={style.pageContainer}>
-          <h1>Get in touch!</h1>
-          <p>Please send a message if you're interested in buying one of my pictures. Some further guidelines are below the form!</p>
+          <h1>{props.location.state && props.location.state.originalImg ? 'Buy original art' : 'Get in touch!'}</h1>
+          <p>Please send a message if you're interested in one of my pictures. Some further guidelines are below the form!</p>
 
           <p css={style.attention}>Please note that delivery of all parcels to the United States is suspended due to COVID-19. Currently
           only A4 sized pictures can be posted there as I pack those in A4 envelopes!</p>
