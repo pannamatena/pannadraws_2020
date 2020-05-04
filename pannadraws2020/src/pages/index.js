@@ -252,7 +252,7 @@ const App = () => {
       title: 'Turkey Portrait',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 550,
+      price: 120,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/turkey-portrait2702379_print',

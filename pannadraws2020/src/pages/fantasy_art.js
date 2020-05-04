@@ -143,7 +143,7 @@ const FantasyArt = () => {
       title: 'The Sunbender',
       year: '2020',
       description: 'Ink, watercolour and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
-      price: 650,
+      price: 320,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-sunbender_print',
