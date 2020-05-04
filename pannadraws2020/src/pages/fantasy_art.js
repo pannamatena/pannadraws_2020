@@ -118,6 +118,7 @@ const FantasyArt = () => {
       prints: 'NOTYET',
       printUrl: '',
       discount: 25,
+      story: 'Sometimes I don\'t feel like using reference images. This painting was born on such an occiasion, I just started drawing straight to the blank paper, and the result is this little illustration.',
     },
     the_climbing_rose_gate: {
       title: 'The Climbing Rose Gate',
@@ -128,6 +129,7 @@ const FantasyArt = () => {
       prints: 'NOTYET',
       printUrl: '',
       discount: 0,
+      story: 'Normally I don\'t procrastinate when it comes to my art life. But when I do, I procrastinate by making another painting :). This piece was created while I was working on "The Summoning", a piece that took quite long to finish.',
     },
     the_summoning: {
       title: 'The Summoning',
@@ -138,6 +140,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-summoning2790424_print',
       discount: 0,
+      story: 'Considering the preparations, this painting took me the longest ever to finish. When I had the idea of the subject, I knew I had to go to Phoenix Park to take reference photos of the deer there. But even when I started planning the painting I had no idea about the composition... it all came to life on the paper eventually, no matter how many sketches I made to plan it.',
     },
     the_sunbender: {
       title: 'The Sunbender',
@@ -148,6 +151,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-sunbender_print',
       discount: 0,
+      story: 'I was travelling when the idea of this image came to me. I wanted to create a dragon that shines on the sky with bright, joyful colours.',
     },
     statement: {
       title: 'Statement',
@@ -158,6 +162,7 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
+      story: 'This drawing was made to be used as a lead image on my website.',
     },
     the_dragon_and_the_kirin: {
       title: 'The Dragon and The Kirin',
@@ -168,6 +173,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-dragon-and-the-kirin_print',
       discount: 0,
+      story: 'I played around with chinese style dragon drawings so much I ended up painting a fighting scene. I wanted to show the dynamic movement and energy of a moment before collision.',
     },
     morozovas_stag: {
       title: 'Morozova\'s Stag',
@@ -178,6 +184,7 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
+      story: 'Art inspired by Leigh Bardugo\'s "Shadow and bone".',
     },
     reindeer_and_dragonflies: {
       title: 'Reindeer and Dragonflies',
@@ -188,6 +195,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/reindeer-and-dragonflies_print',
       discount: 0,
+      story: 'Practicing coloured pencils and ink working together. I used coloured ink for this one.',
     },
     grinning_long: {
       title: 'A Grinning Long',
@@ -198,6 +206,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/a-grinning-long_print',
       discount: 0,
+      story: 'I have a big pile of thin cartridge paper, and I really wanted to create something on them. Since the paper is thin all kinds of wet media was out of the question, so I decided to use coloured fine liners I have from my college years.',
     },
     the_kirin: {
       title: 'The Kirin',
@@ -208,6 +217,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-kirin2702415_print',
       discount: 0,
+      story: 'When I was at highschool I had a habit to draw a kirin for every Chinese new year celebration. I wanted to bring back this habit by painting a real fairy-tale like scene featuring that creature.',
     },
     unicorn_portrait: {
       title: 'Unicorn Portrait',
@@ -218,6 +228,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/unicorn-portrait2702350_print',
       discount: 0,
+      story: 'Quick painting from a period when I was reluctant to paint real-life subjects.',
     },
     csodaszarvas: {
       title: 'Csodaszarvas',
@@ -228,6 +239,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/csodaszarvas-white-stag_print',
       discount: 0,
+      story: 'I had great scenery of a forest that I took on a hiking, and to add it a twist I incorporated a little Hungarian mythology to it. The white stag plays an important role in the myths of the origins of Hungarians.',
     },
     ellen_trechend: {
       title: 'Ellén Trechend',
@@ -238,6 +250,7 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
+      story: '',
     },
     rising_wisdom: {
       title: 'Rising Wisdom 2019',
@@ -248,6 +261,7 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
+      story: '',
     },
   };
 

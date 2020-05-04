@@ -21,6 +21,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
   const [headerH, setHeaderH] = useState(0);
   const [showDialog, setShowDialog] = useState(false);
   const [dialogImgData, setDialogImgData] = useState({});
+  const [dialogImgMeta, setDialogImgMeta] = useState({});
 
   const style = {
     artGrid: css`
@@ -138,11 +139,11 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       width: 90vw;
       @media ${breakPoints.tabletPortrait} {
         margin-top: 95px;
-        width: 70vw;
+        width: 80vw;
       }
       @media ${breakPoints.desktopSmall} {
         margin-top: 106px;
-        width: 50vw;
+        width: 70vw;
       }
     `,
     dialogClose: css`
@@ -176,6 +177,81 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     discount: css`
       text-decoration: line-through;
       padding-right: 3px;
+    `,
+    dialogContent: css`
+      display: flex;
+      
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      @media ${breakPoints.tabletLandscape} {
+        flex-direction: row;
+      }
+    `,
+    dialogImg: css`
+      width: 100%;
+      flex: 1;
+      
+      @media ${breakPoints.tabletLandscape} {
+        width: auto;
+      }
+    `,
+    dialogMeta: css`
+      color: ${colours.c2};
+      min-width: 30%;
+      
+      padding: 10px 10px 0;
+      @media ${breakPoints.tabletPortrait} {
+        padding: 15px 15px 0;
+      }
+      @media ${breakPoints.tabletLandscape} {
+        max-width: 35%;
+      }
+      @media ${breakPoints.desktopSmall} {
+        padding: 20px 20px 0;
+      }
+      
+      h2 {
+        font-size: 1.2em;
+        font-family: ${fonts.f1};
+        text-transform: uppercase;
+      }
+      
+      p {
+        margin-bottom: 10px;
+        @media ${breakPoints.tabletPortrait} {
+          margin-bottom: 15px;
+        }
+        @media ${breakPoints.desktopSmall} {
+          margin-bottom: 20px;
+        }
+      }
+    `,
+    dialogMetaYear: css`
+      color: ${colours.c4};
+      display: block;
+      margin-bottom: 10px;
+      @media ${breakPoints.tabletPortrait} {
+        margin-bottom: 15px;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin-bottom: 20px;
+      }
+    `,
+    dialogActionBtns: css`
+      background: ${colours.c5};
+      padding: 5px 0;
+      @media ${breakPoints.tabletPortrait} {
+        padding: 10px 0;
+      }
+      @media ${breakPoints.desktopSmall} {
+        padding: 15px 5px;
+      }
+      
+      & > div,
+      p {
+        margin: 0 !important;
+      }
     `,
   };
 
@@ -217,13 +293,15 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     }
   });
 
-  const openDialog = (imgData) => {
+  const openDialog = (imgData, imgMeta) => {
     setDialogImgData(imgData);
+    setDialogImgMeta(imgMeta);
     setShowDialog(true);
   };
 
   const closeDialog = () => {
     setDialogImgData({});
+    setDialogImgMeta({});
     setShowDialog(false);
   };
 
@@ -249,13 +327,13 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     }
   };
 
-  const getPrice = (img) => {
-    const price = imgMeta[img].price;
-    if (imgMeta[img].discount) {
+  const getPrice = (imgMeta) => {
+    const price = imgMeta.price;
+    if (imgMeta.discount) {
       return (
           <span>
             <span css={style.discount}>€ {price}</span>
-            € {(price / 100) * (100 - imgMeta[img].discount)}
+            € {(price / 100) * (100 - imgMeta.discount)}
           </span>
       );
     }
@@ -266,7 +344,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     return imgData && Object.keys(imgData).map((img, index) => (
         <div className="artGridItem" css={style.artGridItem} key={index}>
           <div className="artGridItem__content">
-            <div css={style.artGridImg} onClick={() => openDialog(imgData[img])}>
+            <div css={style.artGridImg} onClick={() => openDialog(imgData[img], imgMeta[img])}>
               <Image img={imgData[img].childImageSharp.fluid}/>
             </div>
             <div css={style.artGridMeta}>
@@ -274,7 +352,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
               <p css={style.artGridMetaDesc}>{imgMeta[img].description}</p>
               {imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${imgMeta[img].title}" - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(img)})</span></Link>
+                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${imgMeta[img].title}" - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(imgMeta[img])})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {getPrintStatus(imgMeta[img].prints, imgMeta[img].printUrl)}
@@ -288,11 +366,29 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       <div id="artGridContainer" css={style.artGrid}>
         {renderGridItems()}
         <Dialog css={style.dialog} aria-label="dialog" isOpen={showDialog} onDismiss={closeDialog}>
-          <Img
-              fluid={dialogImgData.childImageSharp ? dialogImgData.childImageSharp.fluid : {}}
-              style={{ maxHeight: `${windowInnerH - (headerH + 20)}px` }}
-              imgStyle={{ objectFit: 'contain' }}
-          />
+          <div css={style.dialogContent}>
+            <div css={style.dialogImg}>
+              <Img
+                  fluid={dialogImgData.childImageSharp ? dialogImgData.childImageSharp.fluid : {}}
+                  style={{ maxHeight: `${windowInnerH - (headerH + 20)}px` }}
+                  imgStyle={{ objectFit: 'contain' }}
+              />
+            </div>
+            <div css={style.dialogMeta}>
+              <h2>{dialogImgMeta.title}</h2>
+              <span css={style.dialogMetaYear}>{dialogImgMeta.year}</span>
+              <p>{dialogImgMeta.description}</p>
+              {dialogImgMeta.story !== '' && (<p>{dialogImgMeta.story}</p>)}
+              <div css={style.dialogActionBtns}>
+                {dialogImgMeta.original === 'AVAILABLE' ? (
+                    <div css={style.originalBuy}>
+                      <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${dialogImgMeta.title}" - ${dialogImgMeta.year}` }}>Buy Original <span css={style.price}>({getPrice(dialogImgMeta)})</span></Link>
+                    </div>
+                ) : (<p css={style.oSold}>Original is sold.</p>)}
+                {getPrintStatus(dialogImgMeta.prints, dialogImgMeta.printUrl)}
+              </div>
+            </div>
+          </div>
           <button css={style.dialogClose} onClick={closeDialog}>{close()}</button>
         </Dialog>
       </div>
