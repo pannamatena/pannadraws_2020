@@ -118,7 +118,7 @@ const FantasyArt = () => {
       prints: 'NOTYET',
       printUrl: '',
       discount: 25,
-      story: 'Sometimes I don\'t feel like using reference images. This painting was born on such an occiasion, I just started drawing straight to the blank paper, and the result is this little illustration.',
+      story: 'Sometimes I don\'t feel like using reference images. This painting was born on such an occasion, I just started drawing straight on the blank paper, and the result is this little illustration.',
     },
     the_climbing_rose_gate: {
       title: 'The Climbing Rose Gate',
@@ -206,7 +206,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/a-grinning-long_print',
       discount: 0,
-      story: 'I have a big pile of thin cartridge paper, and I really wanted to create something on them. Since the paper is thin all kinds of wet media was out of the question, so I decided to use coloured fine liners I have from my college years.',
+      story: 'I have a big pile of thin cartridge paper, and I really wanted to create something on it. Since the paper is thin all kinds of wet media was out of the question, so I decided to use coloured fine liners I have from my college years.',
     },
     the_kirin: {
       title: 'The Kirin',
@@ -239,7 +239,7 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/csodaszarvas-white-stag_print',
       discount: 0,
-      story: 'I had great scenery of a forest that I took on a hiking, and to add it a twist I incorporated a little Hungarian mythology to it. The white stag plays an important role in the myths of the origins of Hungarians.',
+      story: 'I had great scenery of a forest that I took on a hiking (apparently I shot through my sunglasses as I liked the colours better that way), and to add a twist to it I incorporated a little Hungarian mythology to it. The white stag plays an important role in the myths of the origins of Hungarians.',
     },
     ellen_trechend: {
       title: 'Ellén Trechend',

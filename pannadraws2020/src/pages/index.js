@@ -180,7 +180,7 @@ const App = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/hen-and-rooster2700884_print',
       discount: 0,
-      story: 'The source for this painting are two photos I took at the Lisbon Zoo. I wanted to create a vintage feeling with this one, something that really reminds me of country lifestyle.',
+      story: 'The source of this painting are two photos I took at the Lisbon Zoo. I wanted to create a vintage feeling with this one, something that really reminds me of country lifestyle.',
     },
     rooster_II: {
       title: 'Rooster II',
@@ -202,7 +202,7 @@ const App = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/wingspan2702266_print',
       discount: 0,
-      story: 'When I was visiting my friend in Manchester, UK, I came across a duck pond, on that very day when I thought I won\'t need my camera anyway... So reference photo was taken with my mobile. As you can guess there are details missing in the image, so I had to fill in those from imagination, like the feather details on the wings.',
+      story: 'When I was visiting my friend in Manchester, UK, I came across a duck pond, on that very day when I thought I won\'t need my camera anyway... So reference photo was taken with my phone. As you can guess there are details missing in the image, so I had to fill in those from imagination, like the feather details on the wings.',
     },
     red_pompoms: {
       title: 'Red Pompoms',
@@ -224,7 +224,7 @@ const App = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/staring-tiger_print',
       discount: 0,
-      story: 'The tiger at Lisbon Zoo happened to make a performance for us! He was walking back and forth to the observation window, and every time he came close to it he made a piruette while staring upwards. I managed to take a photo of his attraction, which became the inspiration for this painting.',
+      story: 'The tiger at Lisbon Zoo happened to make a performance for us! He was walking back and forth to the observation window, and every time he came close he made a piruette while staring upwards. I managed to take a photo of the attraction, which became the inspiration for this painting.',
     },
     champion: {
       title: 'Champion',
