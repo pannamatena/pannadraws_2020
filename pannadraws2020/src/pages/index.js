@@ -8,6 +8,13 @@ import MasonryLayout from "../components/MasonryLayout";
 const App = () => {
   const imgData = useStaticQuery(graphql`
     query {
+      old_nog: file(relativePath: { eq: "2020/old_nog_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       deer_in_phoenix_park: file(relativePath: { eq: "2020/deer_in_phoenix_park_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -138,6 +145,17 @@ const App = () => {
   `);
 
   const imgMeta = {
+    old_nog: {
+      title: 'Old Nog',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      price: 600,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printUrl: '',
+      discount: 0,
+      story: '"And so it was that Old Nog, the wisest heron of the Two Rivers, heard the noise of bubbles breaking on the water as he alighted by the pool side" (from Tarka the Otter by Henry Williamson). This is the opening piece for my art series "Feathers of Tales". I chose the heron as the kick-off for this major work because how could you be more majestic than this boss?! With his every slow and measured movement he demands the respect. You see him and you need to stare. Elegant and deadly.',
+    },
     deer_in_phoenix_park: {
       title: 'Deer in Phoenix Park',
       year: '2020',
@@ -241,7 +259,7 @@ const App = () => {
       title: 'Blondie',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 250,
+      price: 200,
       original: 'AVAILABLE',
       prints: 'SOLD',
       printUrl: '',

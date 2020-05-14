@@ -212,7 +212,7 @@ const FantasyArt = () => {
       title: 'The Kirin',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2019.',
-      price: 100,
+      price: 300,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/the-kirin2702415_print',
