@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
 import { breakPoints } from '../resources/breakpoints';
+import { logo } from '../resources/icons';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Banner from "../components/Banner";
@@ -113,7 +114,7 @@ const App = () => {
     dividerTitle: css`
       position: relative;
       
-      &:before {
+      /*&:before {
         content: '';
         display: block;
         width: 100%;
@@ -123,6 +124,13 @@ const App = () => {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+      }*/
+      
+      svg {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        float: left;
       }
       
       h3 {
@@ -133,17 +141,14 @@ const App = () => {
         z-index: 1;
         position: relative;
         display: inline-block;
-        padding: 2px 10px;
+        padding: 2px 5px;
         
         font-size: 1.3em;
-        margin-left: 10px;
         @media ${breakPoints.tabletPortrait} {
           font-size: 1.4em;
-          margin-left: 15px;
         }
         @media ${breakPoints.desktopSmall} {
           font-size: 1.5em;
-          margin-left: 20px;
         }
         @media ${breakPoints.desktopLarge} {
           font-size: 2em;
@@ -163,7 +168,7 @@ const App = () => {
         {/*<div css={style.newsContainer}>
           <div css={style.dividerTitle}><h3>News</h3></div>
         </div>*/}
-        <div css={style.dividerTitle}><h3>Latest Art</h3></div>
+        <div css={style.dividerTitle}>{logo()}<h3>Latest Art</h3></div>
         <MasonryLayout imgData={imgData} imgMeta={imgMeta} />
       </Layout>
   );

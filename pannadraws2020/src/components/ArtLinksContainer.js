@@ -41,16 +41,22 @@ const ArtLinksContainer = () => {
         justify-content: space-around;
       }
       @media ${breakPoints.tabletLandscape} {
-        max-width: 50%;
+        max-width: 315px;
+        justify-content: space-between;
+        transform: translateX(100px);
+      }
+      @media ${breakPoints.desktopSmall} {
+        max-width: 380px;
+        transform: translateX(130px);
       }
       @media ${breakPoints.desktopLarge} {
-        max-width: 55%;
+        max-width: 540px;
+        transform: translateX(200px);
       }
     `,
     artLink: css`
       display: block;
       max-width: 500px;
-      background: ${colours.c3};
       
       width: 50%;
       margin-bottom: 20px;
@@ -90,14 +96,14 @@ const ArtLinksContainer = () => {
         transition: color 0.3s ease-out;
         
         font-size: 1.5em;
+        @media ${breakPoints.tabletLandscape} {
+          font-size: 1.2em;
+        }
         @media ${breakPoints.desktopSmall} {
-          font-size: 2em;
+          font-size: 1.5em;
         }
         @media ${breakPoints.desktopLarge} {
-          font-size: 3em;
-        }
-        @media ${breakPoints.desktopXLarge} {
-          font-size: 3.9em;
+          font-size: 1.9em;
         }
       }
     `,
