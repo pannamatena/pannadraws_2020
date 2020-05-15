@@ -1,9 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 import React from 'react';
 import { css } from "@emotion/core"
 import { breakPoints } from '../resources/breakpoints';
@@ -16,21 +10,18 @@ const Banner = () => {
       width: 100%;
       position: relative;
       
-      height: 90px;
-      @media ${breakPoints.tabletPortrait} {
-        height: 130px;
-      }
+      height: 130px;
       @media ${breakPoints.tabletLandscape} {
-        height: 330px;
+        height: 240px;
       }
       @media ${breakPoints.desktopSmall} {
-        height: 440px;
+        height: 320px;
       }
       @media ${breakPoints.desktopLarge} {
-        height: 700px;
+        height: 520px;
       }
       @media ${breakPoints.desktopXLarge} {
-        height: 900px;
+        height: 720px;
       }
       
       h1 {
@@ -125,7 +116,7 @@ const Banner = () => {
         <div css={style.bannerText}>
           <h1><span>The girl who draws</span><span>dragons and unicorns</span></h1>
           <h3>(and chickens)</h3>
-        <h2>I'm Panna, a watercolor fantasy and animal artist.</h2>
+        <h2>I'm Panna, a watercolour fantasy and animal artist.</h2>
         </div>
       </div>
   );

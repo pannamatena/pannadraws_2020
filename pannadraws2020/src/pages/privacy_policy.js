@@ -77,7 +77,7 @@ const AboutPage = () => {
 
   return (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Privacy Policy of PannaDraws" />
     <div css={style.pageContainer}>
       <h1>Privacy Policy</h1>
 

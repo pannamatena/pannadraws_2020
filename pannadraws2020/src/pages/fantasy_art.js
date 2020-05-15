@@ -267,10 +267,7 @@ const FantasyArt = () => {
 
   return (
       <Layout>
-        <SEO title="Art of Panna Zsamba in 2019" />
-        <script>
-          fbq('track', 'Art_2019');
-        </script>
+        <SEO title="Fantasy fine art, dragon paintings, unicorn paintings" />
         <MasonryLayout imgData={imgData} imgMeta={imgMeta} />
       </Layout>
   );

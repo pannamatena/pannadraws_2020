@@ -15,7 +15,7 @@ const SketchbookPage = () => {
 
   return (
   <Layout>
-    <SEO title="Sketchbook" />
+    <SEO title="Sketches of animals, dragons and fantasy creatures by PannDraws" />
     <script>
       fbq('track', 'Art_sketch');
     </script>

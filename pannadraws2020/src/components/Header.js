@@ -253,7 +253,7 @@ const Header = () => {
           <nav role="navigation" css={style.menuLeft}>
             <div><span css={style.currentPage}>Art</span>
               <ul>
-                <li><Link to="/">Birds & Wildlife</Link></li>
+                <li><Link to="/animal_art/">Birds & Wildlife Art</Link></li>
                 <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
                 <li><Link to="/sketchbook/">Sketchbook</Link></li>
               </ul>

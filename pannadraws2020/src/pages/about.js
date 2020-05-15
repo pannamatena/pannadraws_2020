@@ -89,7 +89,7 @@ const AboutPage = () => {
 
   return (
   <Layout>
-    <SEO title="About" />
+    <SEO title="About PannaDraws" />
     <div css={style.pageContainer}>
       <script>
         fbq('track', 'About');

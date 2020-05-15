@@ -72,7 +72,7 @@ const SuccessPage = () => {
 
   return (
       <Layout>
-        <SEO title="Success" />
+        <SEO title="Your message to PannaDraws was sent successfully" />
         <div css={style.pageContainer}>
           <h1>Yiss, that message is sent!</h1>
           <p>I'll get back to you within a day usually.</p>

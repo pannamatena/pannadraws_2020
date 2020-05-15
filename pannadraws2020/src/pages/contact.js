@@ -291,7 +291,7 @@ const ContactPage = (props) => {
 
   return (
       <Layout>
-        <SEO title="Contact" />
+        <SEO title="Contact Panna" />
         <div css={style.pageContainer}>
           <h1>{props.location.state && props.location.state.originalImg ? 'Buy original art' : 'Get in touch!'}</h1>
           <p>Please send a message if you're interested in one of my pictures. Some further guidelines are below the form!</p>
