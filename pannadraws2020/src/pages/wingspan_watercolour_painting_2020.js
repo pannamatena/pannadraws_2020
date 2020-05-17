@@ -8,8 +8,8 @@ const wingspan_2020 = (props) => {
   return (
       <Layout>
         <SEO title="Wingspan watercolour bird painting" />
-        <ArtPageLayout prevPath={props.location.state.prevPath}>
-          <ArtPage imgData={props.location.state.imgData} imgMeta={props.location.state.imgMeta} />
+        <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
+          <ArtPage imgData={props.location.state ? props.location.state.imgData : []} imgMeta={props.location.state ? props.location.state.imgMeta : {}} />
         </ArtPageLayout>
       </Layout>
   );

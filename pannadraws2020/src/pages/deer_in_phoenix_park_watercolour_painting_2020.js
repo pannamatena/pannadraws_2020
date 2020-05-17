@@ -8,8 +8,8 @@ const deer_in_phoenix_park_2020 = (props) => {
   return (
       <Layout>
         <SEO title="Deer in Phoenix Park wildlife painting" />
-        <ArtPageLayout prevPath={props.location.state.prevPath}>
-          <ArtPage imgData={props.location.state.imgData} imgMeta={props.location.state.imgMeta} />
+        <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
+          <ArtPage imgData={props.location.state ? props.location.state.imgData : []} imgMeta={props.location.state ? props.location.state.imgMeta : {}} />
         </ArtPageLayout>
       </Layout>
   );

@@ -8,8 +8,8 @@ const champion_2019 = (props) => {
   return (
       <Layout>
         <SEO title="Champion watercolour horse portrait" />
-        <ArtPageLayout prevPath={props.location.state.prevPath}>
-          <ArtPage imgData={props.location.state.imgData} imgMeta={props.location.state.imgMeta} />
+        <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
+          <ArtPage imgData={props.location.state ? props.location.state.imgData : []} imgMeta={props.location.state ? props.location.state.imgMeta : {}} />
         </ArtPageLayout>
       </Layout>
   );

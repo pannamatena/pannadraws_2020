@@ -14,7 +14,6 @@ import { arrow } from '../resources/icons';
 import Image from './Image';
 
 const MasonryLayout = (props) => {
-  console.log(props);
   const style = {
     artGrid: css`
       display: grid;
