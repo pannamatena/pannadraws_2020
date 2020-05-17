@@ -4,25 +4,17 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import { css } from '@emotion/core';
-import { Dialog } from '@reach/dialog';
-import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
-import { close, arrow } from '../resources/icons';
+import { arrow } from '../resources/icons';
 import Image from './Image';
 
-const MasonryLayout = ({ imgData, imgMeta }) => {
-  const [windowInnerH, setWindowInnerH] = useState(0);
-  const [headerH, setHeaderH] = useState(0);
-  const [showDialog, setShowDialog] = useState(false);
-  const [dialogImgData, setDialogImgData] = useState({});
-  const [dialogImgMeta, setDialogImgMeta] = useState({});
-
+const MasonryLayout = (props) => {
+  console.log(props);
   const style = {
     artGrid: css`
       display: grid;
@@ -36,6 +28,7 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       background: ${colours.c5};
     `,
     artGridImg: css`
+      display: block;
       width: 100%;
       border: 2px solid transparent;
       transition: border-color 0.3s ease-out;
@@ -130,128 +123,9 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
       margin: 0 -10px;
       padding: 0 10px;
     `,
-    dialog: css`
-      padding: 0;
-      position: relative;
-      margin-bottom: 0;
-      
-      margin-top: 74px;
-      width: 90vw;
-      @media ${breakPoints.tabletPortrait} {
-        margin-top: 95px;
-        width: 80vw;
-      }
-      @media ${breakPoints.desktopSmall} {
-        margin-top: 106px;
-        width: 70vw;
-      }
-    `,
-    dialogClose: css`
-      svg {
-        fill: ${colours.c3};
-        position: absolute;
-        transition: fill 0.3s ease-out;
-        top: 10px;
-        
-        width: 15px;
-        height: 15px;
-        right: -25px;
-        @media ${breakPoints.tabletPortrait} {
-          width: 20px;
-          height: 20px;
-          right: -35px;
-        }
-        @media ${breakPoints.desktopSmall} {
-          width: 30px;
-          height: 30px;
-          right: -45px;
-        }
-      }
-      
-      &:hover {
-        svg {
-          fill: ${colours.c1};
-        }
-      }
-    `,
     discount: css`
       text-decoration: line-through;
       padding-right: 3px;
-    `,
-    dialogContent: css`
-      display: flex;
-      
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      @media ${breakPoints.tabletLandscape} {
-        flex-direction: row;
-      }
-    `,
-    dialogImg: css`
-      width: 100%;
-      flex: 1;
-      
-      @media ${breakPoints.tabletLandscape} {
-        width: auto;
-      }
-    `,
-    dialogMeta: css`
-      color: ${colours.c2};
-      min-width: 30%;
-      
-      padding: 10px 10px 0;
-      @media ${breakPoints.tabletPortrait} {
-        padding: 15px 15px 0;
-      }
-      @media ${breakPoints.tabletLandscape} {
-        max-width: 35%;
-      }
-      @media ${breakPoints.desktopSmall} {
-        padding: 20px 20px 0;
-      }
-      
-      h2 {
-        font-size: 1.2em;
-        font-family: ${fonts.f1};
-        text-transform: uppercase;
-      }
-      
-      p {
-        margin-bottom: 10px;
-        @media ${breakPoints.tabletPortrait} {
-          margin-bottom: 15px;
-        }
-        @media ${breakPoints.desktopSmall} {
-          margin-bottom: 20px;
-        }
-      }
-    `,
-    dialogMetaYear: css`
-      color: ${colours.c4};
-      display: block;
-      margin-bottom: 10px;
-      @media ${breakPoints.tabletPortrait} {
-        margin-bottom: 15px;
-      }
-      @media ${breakPoints.desktopSmall} {
-        margin-bottom: 20px;
-      }
-    `,
-    dialogActionBtns: css`
-      background: ${colours.c5};
-      padding: 5px 0;
-      @media ${breakPoints.tabletPortrait} {
-        padding: 10px 0;
-      }
-      @media ${breakPoints.desktopSmall} {
-        padding: 15px 5px;
-      }
-      
-      & > div,
-      p {
-        margin: 0 !important;
-      }
     `,
   };
 
@@ -275,35 +149,14 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
     }
   };
 
-  const calculateHeaderHeight = () => {
-    const height = document.getElementById('headerContainer').offsetHeight;
-    setHeaderH(height);
-  };
-
   useEffect(() => {
-    setWindowInnerH(window.innerHeight);
     resizeAllGridItems();
-    calculateHeaderHeight();
 
     window.addEventListener('resize', resizeAllGridItems);
-    window.addEventListener('resize', calculateHeaderHeight);
     return () => {
       window.removeEventListener('resize', resizeAllGridItems);
-      window.removeEventListener('resize', calculateHeaderHeight);
     }
   });
-
-  const openDialog = (imgData, imgMeta) => {
-    setDialogImgData(imgData);
-    setDialogImgMeta(imgMeta);
-    setShowDialog(true);
-  };
-
-  const closeDialog = () => {
-    setDialogImgData({});
-    setDialogImgMeta({});
-    setShowDialog(false);
-  };
 
   const getPrintStatus = (printVal, printUrl) => {
     switch (printVal) {
@@ -341,21 +194,26 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
   };
 
   const renderGridItems = () => {
-    return imgData && Object.keys(imgData).map((img, index) => (
+    const imgNames = Object.keys(props.imgData);
+    return props.imgData && imgNames.map((img, index) => (
         <div className="artGridItem" css={style.artGridItem} key={index}>
           <div className="artGridItem__content">
-            <div css={style.artGridImg} onClick={() => openDialog(imgData[img], imgMeta[img])}>
-              <Image img={imgData[img].childImageSharp.fluid}/>
-            </div>
+            <Link
+                css={style.artGridImg}
+                to={`/${imgNames[index]}_${props.imgMeta[img].type}_${props.imgMeta[img].year}`}
+                state={{ imgData: props.imgData[img], imgMeta: props.imgMeta[img], prevPath: props.path }}
+            >
+              <Image img={props.imgData[img].childImageSharp.fluid}/>
+            </Link>
             <div css={style.artGridMeta}>
-              <h5>{imgMeta[img].title}</h5>
-              <p css={style.artGridMetaDesc}>{imgMeta[img].description}</p>
-              {imgMeta[img].original === 'AVAILABLE' ? (
+              <h5>{props.imgMeta[img].title}</h5>
+              <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
+              {props.imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${imgMeta[img].title}" - ${imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(imgMeta[img])})</span></Link>
+                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${props.imgMeta[img].title}" - ${props.imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(props.imgMeta[img])})</span></Link>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
-              {getPrintStatus(imgMeta[img].prints, imgMeta[img].printUrl)}
+              {getPrintStatus(props.imgMeta[img].prints, props.imgMeta[img].printUrl)}
             </div>
           </div>
         </div>
@@ -365,32 +223,6 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
   return (
       <div id="artGridContainer" css={style.artGrid}>
         {renderGridItems()}
-        <Dialog css={style.dialog} aria-label="dialog" isOpen={showDialog} onDismiss={closeDialog}>
-          <div css={style.dialogContent}>
-            <div css={style.dialogImg}>
-              <Img
-                  fluid={dialogImgData.childImageSharp ? dialogImgData.childImageSharp.fluid : {}}
-                  style={{ maxHeight: `${windowInnerH - (headerH + 20)}px` }}
-                  imgStyle={{ objectFit: 'contain' }}
-              />
-            </div>
-            <div css={style.dialogMeta}>
-              <h2>{dialogImgMeta.title}</h2>
-              <span css={style.dialogMetaYear}>{dialogImgMeta.year}</span>
-              <p>{dialogImgMeta.description}</p>
-              {dialogImgMeta.story !== '' && (<p>{dialogImgMeta.story}</p>)}
-              <div css={style.dialogActionBtns}>
-                {dialogImgMeta.original === 'AVAILABLE' ? (
-                    <div css={style.originalBuy}>
-                      <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${dialogImgMeta.title}" - ${dialogImgMeta.year}` }}>Buy Original <span css={style.price}>({getPrice(dialogImgMeta)})</span></Link>
-                    </div>
-                ) : (<p css={style.oSold}>Original is sold.</p>)}
-                {getPrintStatus(dialogImgMeta.prints, dialogImgMeta.printUrl)}
-              </div>
-            </div>
-          </div>
-          <button css={style.dialogClose} onClick={closeDialog}>{close()}</button>
-        </Dialog>
       </div>
   );
 };
@@ -398,11 +230,13 @@ const MasonryLayout = ({ imgData, imgMeta }) => {
 MasonryLayout.propTypes = {
   imgData: PropTypes.object.isRequired,
   imgMeta: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 MasonryLayout.defaultProps = {
   imgData: {},
   imgMeta: {},
+  path: '',
 };
 
 export default MasonryLayout;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import { logo, logoText, instagram, facebook, deviantart } from '../resources/icons';
+import { logo, logoText, instagram, facebook, deviantart, menu } from '../resources/icons';
 import { colours } from '../resources/colors';
 import { breakPoints } from '../resources/breakpoints';
 import { fonts } from '../resources/fonts';
@@ -11,6 +11,7 @@ const Header = () => {
   //const [headerElWidth, setHeaderElWidth] = useState(0);
   const [isArtMenuActive, setIsArtMenuActive] = useState(false);
   const [topPos, setTopPos] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   /*const setWidth = () => {
     const headerEl = document.getElementById("headerContainer");
@@ -66,12 +67,99 @@ const Header = () => {
       display: flex;
       flex-direction: row;
     `,
-    menuLeft: css`
+    mobileMenu: css`
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+      @media ${breakPoints.desktopSmall} {
+        display: none;
+      }
+      
+      & > div > div {
+        background: ${colours.c2};
+      }
+      
+      &:hover,
+      &:active {
+        cursor: pointer;
+
+        & > div > div {
+          background: ${colours.c1};
+        }
+      }
+    `,
+    mobileMenuContainer: css`
+      flex: 1;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
+      
+      @media ${breakPoints.desktopSmall} {
+        display: none;
+      }
+    `,
+    mobileMenuContent: css`
+      position: absolute;
+      left: 0;
+      transition: all 0.5s ease;
+      transform: translateX(${isMobileMenuOpen ? '0' : '-100%'});
+      background: ${colours.c2};
+      
+      top: ${topPos > 0 ? '61px' : '76px'};
+      padding: 10px;
+      height: calc(100vh - ${topPos > 0 ? '61px' : '76px'});
+      @media ${breakPoints.tabletPortrait} {
+        top: ${topPos > 0 ? '62px' : '109px'};
+        padding: 15px;
+        height: calc(100vh - ${topPos > 0 ? '62px' : '109px'});
+      }
+      @media ${breakPoints.desktopSmall} {
+        display: none;
+      }
+      
+      a {
+        color: ${colours.c3};
+        text-transform: uppercase;
+        display: inline-block;
+        
+        :hover,
+        :active {
+          color: ${colours.c1};
+        }
+        
+        &.printShop {
+          color: ${colours.c1};
+        }
+        
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        @media ${breakPoints.tabletPortrait} {
+          font-size: 1.4em;
+          margin-bottom: 15px;
+        }
+        @media ${breakPoints.desktopSmall} {
+          font-size: 1.5em;
+        }
+        @media ${breakPoints.desktopLarge} {
+          font-size: 2em;
+        }
+      }
+    `,
+    menuLeft: css`
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
       flex: 1;
+      
+      display: none;
+      @media ${breakPoints.desktopSmall} {
+        display: flex;
+      }
       
       div {
         display: block;
@@ -214,6 +302,23 @@ const Header = () => {
         }
       }
     `,
+    logoContainer: css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      span {
+        color: ${colours.c4};
+        font-family: ${fonts.f1};
+        font-size: 1.2em;
+        
+        display: none;
+        @media ${breakPoints.tabletPortrait} {
+        display: ${topPos > 0 ? 'none' : 'block'};
+        }
+      }
+    `,
     logoImg: css`
       display: inline-block;
       
@@ -250,6 +355,17 @@ const Header = () => {
   return (
       <div id="headerContainer" css={style.headerContainer}>
         <div css={style.headerContainerInner}>
+          <div css={style.mobileMenuContainer}>
+            <div css={style.mobileMenu} onClick={() => {setIsMobileMenuOpen(!isMobileMenuOpen)}}>{menu()}</div>
+            <nav role="navigation" css={style.mobileMenuContent}>
+              <div><Link to="/animal_art/">Birds & Wildlife Art</Link></div>
+              <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
+              <div><Link to="/sketchbook/">Sketchbook</Link></div>
+              <div><Link to="/about/">About</Link></div>
+              <div><Link to="/contact/">Contact & FAQ</Link></div>
+              <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
+            </nav>
+          </div>
           <nav role="navigation" css={style.menuLeft}>
             <div><span css={style.currentPage}>Art</span>
               <ul>
@@ -262,11 +378,12 @@ const Header = () => {
             <div><Link to="/contact/">Contact & FAQ</Link></div>
             <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
           </nav>
-          <div>
+          <div css={style.logoContainer}>
             <Link to="/">
               <div css={style.logoImg}>{logo()}</div>
               <div css={style.logoText}>{logoText()}</div>
             </Link>
+            <span>fantasy and animal fine art</span>
           </div>
           <div css={style.menuRight}>
             <a href="https://www.facebook.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Facebook">{facebook()}</a>

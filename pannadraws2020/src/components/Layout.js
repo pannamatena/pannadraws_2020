@@ -47,14 +47,14 @@ const Layout = ({ children }) => {
       color: ${colours.c2};
       flex: 1;
       
-      padding-top: 74px;
+      padding-top: 76px;
       padding-bottom: 10px;
       @media ${breakPoints.tabletPortrait} {
-        padding-top: 95px;
+        padding-top: 109px;
         padding-bottom: 15px;
       }
       @media ${breakPoints.desktopSmall} {
-        padding-top: 106px;
+        padding-top: 130px;
         padding-bottom: 20px;
       }
       
@@ -217,4 +217,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout
+export default Layout;

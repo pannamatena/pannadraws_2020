@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import MasonryLayout from "../components/MasonryLayout";
 
-const FantasyArt = () => {
+const FantasyArt = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
       old_nog: file(relativePath: { eq: "2020/old_nog_2020_web.png" }) {
@@ -83,69 +83,13 @@ const FantasyArt = () => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      wet_raven: file(relativePath: { eq: "2019/wet_raven_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      turkey_portrait: file(relativePath: { eq: "2019/turkey_portrait_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      puffin: file(relativePath: { eq: "2019/puffin_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      horse_portrait: file(relativePath: { eq: "2019/horse_portrait_2018_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      dog_portrait: file(relativePath: { eq: "2019/dog_portrait_2018_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      bunnies: file(relativePath: { eq: "2019/bunnies_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      rooster_portrait: file(relativePath: { eq: "2019/rooster_portrait_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      wandering_rooster: file(relativePath: { eq: "2019/wandering_rooster_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
     old_nog: {
-      title: 'Old Nog',
+      title: 'Old Nog (Feathers of Tales I)',
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
       price: 600,
@@ -153,7 +97,8 @@ const FantasyArt = () => {
       prints: 'NOTYET',
       printUrl: '',
       discount: 0,
-      story: '"And so it was that Old Nog, the wisest heron of the Two Rivers, heard the noise of bubbles breaking on the water as he alighted by the pool side" (from Tarka the Otter by Henry Williamson). This is the opening piece for my art series "Feathers of Tales". I chose the heron as the kick-off for this major work because how could you be more majestic than this boss?! With his every slow and measured movement he demands the respect. You see him and you need to stare. Elegant and deadly.',
+      type: 'watercolour_painting',
+      story: '"And so it was that Old Nog, the wisest heron of the Two Rivers, heard the noise of bubbles breaking on the water as he alighted by the pool side" <i>(from Tarka the Otter by Henry Williamson)</i>.<br /><br />This is the opening artwork for my art series "Feathers of Tales". I chose the heron as the kick-off for this major work because how could you be more majestic than this boss?! With his every slow and measured movement he demands the respect. You see him and you helplessly stop and stare. Elegant and deadly, and a real icon of the Irish waterscapes.',
     },
     deer_in_phoenix_park: {
       title: 'Deer in Phoenix Park',
@@ -164,29 +109,32 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/deer-in-phoenix-park_print',
       discount: 0,
-      story: 'I created this quick study of a stag to practice the deer head for "The Summoning". I ended up liking the linework so much I decided to finish it as a standalone piece.',
+      type: 'watercolour_painting',
+      story: 'I created this quick study of a stag to practice the deer head for "The Summoning". I ended up liking the linework so much I decided to finish it as a standalone painting.<br /><br />Here in Dublin one of the city attractions is Phoenix Park, an enormous green patch in the city with forests and fields. These deer roam freely, and some of them are pretty friendly towards people (especially if you have some munchies!). They are quite small though, about the size of a pony. Still when you look at them that same grace shines from their posture that you can see with their bigger cousins.',
     },
     peacock_girls: {
       title: 'Peacock Girls',
       year: '2020',
-      description: 'Ink and colored pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      description: 'Ink and coloured pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
       price: 600,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/peacock-girls_print',
       discount: 0,
-      story: 'Two peahens I captured on camera at Dublin Zoo. The composition is made from two separate photos. The title is wrong on purpose: in my head I tend to simplify terms and I always thought if these birds as "girl peacocks". ',
+      type: 'coloured_pencil_drawing',
+      story: 'Two peahens I captured on camera at Dublin Zoo. The composition is made from two separate photos.<br /><br />The title is wrong on purpose: as a speaker of English as a second language, in my head I tend to simplify English terms and expressions. I always thought of these birds as "girl peacocks" in Hungarian, so I just went with a literal translation when naming this artwork.',
     },
     two_geese: {
       title: 'Two Geese',
       year: '2020',
-      description: 'Colored pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      description: 'Coloured pencil on cartridge paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
       price: 600,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/two-geese2700843_print',
       discount: 0,
-      story: 'This was my first coloured pencil attempt, hence my strong linework is missing here, as I was only exploring this medium.',
+      type: 'coloured_pencil_drawing',
+      story: 'This was my first attempt at coloured pencils, hence my strong linework is missing here, as I was only exploring this medium.<br /><br />While I was working on this drawing I realised I love geese. But why, I wondered. I don\'t know if any readers are familiar with the cartoon <i>Nils Holgersson</i>. When I was a kid I was hooked on the concept of someone going on an adventure on the back of a goose! How cool is that? I believe my thing for geese comes from this childhood experience.',
     },
     hen_and_rooster: {
       title: 'Hen and Rooster',
@@ -197,7 +145,8 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/hen-and-rooster2700884_print',
       discount: 0,
-      story: 'The source of this painting are two photos I took at the Lisbon Zoo. I wanted to create a vintage feeling with this one, something that really reminds me of country lifestyle.',
+      type: 'watercolour_painting',
+      story: 'The source of this painting are two photos I took at the Lisbon Zoo. I wanted to create a vintage feeling with this one, something that really reminds me of country lifestyle.<br /><br />I deliberately put the hen in front, even though roosters tend to be more colourful and decorative. Maybe there was some feminist idea lurking at the back of my head... I only realised later this painting reminds me of <i>American Gothic</i> by Grant Wood. But there the woman is in the background, which I don\'t like! Let\'s give some spotlight to the ladies.',
     },
     rooster_II: {
       title: 'Rooster II',
@@ -208,7 +157,8 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/rooster-ii2702198_print',
       discount: 0,
-      story: 'Another quick practice with coloured pencils.',
+      type: 'coloured_pencil_drawing',
+      story: 'Another quick practice with coloured pencils. I took the reference photo at a local farm. Whenever I visit such a place I\'m always reminded how much I enjoy these simple animals. You can get me tigers, horses and all kind of majestic beasts, my all time favourites are farm birds!',
     },
     wingspan: {
       title: 'Wingspan',
@@ -219,7 +169,8 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/wingspan2702266_print',
       discount: 0,
-      story: 'When I was visiting my friend in Manchester, UK, I came across a duck pond, on that very day when I thought I won\'t need my camera anyway... So reference photo was taken with my phone. As you can guess there are details missing in the image, so I had to fill in those from imagination, like the feather details on the wings.',
+      type: 'watercolour_painting',
+      story: 'When I was visiting my friend in Manchester, UK, I came across a duck pond, on that very day when I thought I wouldn\'t need my camera anyway... It was full of curious Canada geese, and you could guess I could\'t resist capturing them on camera. So reference photo was taken with my phone. As a result there were details missing in the image, which I had to fill in from imagination, like the feather details on the wings.',
     },
     red_pompoms: {
       title: 'Red Pompoms',
@@ -230,7 +181,8 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
-      story: '',
+      type: 'watercolour_painting',
+      story: 'I was listening to Stephen King\'s <i>The Shining</i> while I was working on this horse portrait. The majority of that story takes place during a harsh winter time, which really made the mark on this piece. The red pompoms break a bit the coolness of the greys and whites, which otherwise would give me the chill.<br /><br />Reference photo I used can be found <a href="https://unsplash.com/photos/Kwb5MOowb9c" title="Red Pompoms watercolour painting reference photo" target="_blank" rel="noopener noreferrer" >here</a>.',
     },
     staring_tiger: {
       title: 'Staring Tiger',
@@ -241,7 +193,8 @@ const FantasyArt = () => {
       prints: 'AVAILABLE',
       printUrl: 'https://society6.com/product/staring-tiger_print',
       discount: 0,
-      story: 'The tiger at Lisbon Zoo happened to make a performance for us! He was walking back and forth to the observation window, and every time he came close he made a piruette while staring upwards. I managed to take a photo of the attraction, which became the inspiration for this painting.',
+      type: 'watercolour_painting',
+      story: 'The tiger at Lisbon Zoo happened to make a performance for us. He was walking back and forth to the observation window, and every time he came close he made a piruette while staring upwards. I managed to take a photo of the attraction, which became the inspiration for this painting.',
     },
     champion: {
       title: 'Champion',
@@ -252,113 +205,27 @@ const FantasyArt = () => {
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
-      story: '',
+      type: 'watercolour_painting',
+      story: 'Something caught my eye when I looked ad the photo that served as a reference for this painting. I loved the colour combinations, the dark brown hide of the horse, and the regal blue cap on his head, with the light green background. I found it beautiful how the whole came together, so I decided to commemorate it in a painting.<br /><br />Reference photo I used can be found <a href="https://unsplash.com/photos/RqC5LCjjfyk" title="Champion watercolour painting reference photo" target="_blank" rel="noopener noreferrer" >here</a>.',
     },
     blondie: {
       title: 'Blondie',
       year: '2019',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 250,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    wet_raven: {
-      title: 'Wet Raven',
-      year: '2019',
-      description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 300,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    turkey_portrait: {
-      title: 'Turkey Portrait',
-      year: '2019',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 120,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      printUrl: 'https://society6.com/product/turkey-portrait2702379_print',
-      discount: 0,
-      story: '',
-    },
-    puffin: {
-      title: 'Puffin',
-      year: '2019',
-      description: 'Charcoal on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
       price: 200,
-      original: 'SOLD',
+      original: 'AVAILABLE',
       prints: 'SOLD',
       printUrl: '',
       discount: 0,
-      story: '',
-    },
-    horse_portrait: {
-      title: 'Horse Portrait',
-      year: '2019',
-      description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 100,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    dog_portrait: {
-      title: 'Dog Portrait',
-      year: '2019',
-      description: 'Watercolour pencils on cartridge paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 100,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    bunnies: {
-      title: 'Bunnies',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 260 mm x 360 mm (10 x 14 in), 2019.',
-      price: 250,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    rooster_portrait: {
-      title: 'Rooster Portrait',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 500,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
-    },
-    wandering_rooster: {
-      title: 'Wandering Rooster',
-      year: '2019',
-      description: 'Watercolour on cold-pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2019.',
-      price: 500,
-      original: 'SOLD',
-      prints: 'SOLD',
-      printUrl: '',
-      discount: 0,
-      story: '',
+      type: 'watercolour_painting',
+      story: 'This horse has a really frizzy mane, which I found interesting enough to try to capture it in watercolours.<br /><br />Reference photo I used can be found <a href="https://unsplash.com/photos/xcvMhWJe-qQ" title="Blondie watercolour painting reference photo" target="_blank" rel="noopener noreferrer" >here</a>.',
     },
   };
 
   return (
       <Layout>
         <SEO title="Animal fine art, bird watercolour paintings by Panna Zsamba" />
-        <MasonryLayout imgData={imgData} imgMeta={imgMeta} />
+        <MasonryLayout imgData={imgData} imgMeta={imgMeta} path={props.path} />
       </Layout>
   );
 };

@@ -370,3 +370,11 @@ export const arrow = () => (
 </g>
 </svg>
 );
+
+export const menu = () => (
+    <div style={{height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
+      <div style={{ height: '3px', width: '100%'}} />
+      <div style={{ height: '3px', width: '100%'}} />
+      <div style={{ height: '3px', width: '100%'}} />
+    </div>
+);

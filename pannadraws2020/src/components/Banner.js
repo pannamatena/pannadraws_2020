@@ -12,16 +12,16 @@ const Banner = () => {
       
       height: 130px;
       @media ${breakPoints.tabletLandscape} {
-        height: 240px;
+        height: 330px;
       }
       @media ${breakPoints.desktopSmall} {
-        height: 320px;
+        height: 440px;
       }
       @media ${breakPoints.desktopLarge} {
-        height: 520px;
+        height: 700px;
       }
       @media ${breakPoints.desktopXLarge} {
-        height: 720px;
+        height: 900px;
       }
       
       h1 {
