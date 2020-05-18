@@ -6,4 +6,6 @@ export const colours = {
   c5: '#ecebeb',
   c1_h: '#B10606',
   c2_h: '#0F0E0D',
+  c_success: '#407E1F',
+  c_error: '#d40707',
 };

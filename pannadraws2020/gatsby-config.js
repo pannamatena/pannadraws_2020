@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-theme-gallery`,
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://pannadraws.us8.list-manage.com/subscribe/post?u=e82605840049426b1b02fcdbf&amp;id=d22bb8f248',
+      },
+    },
+    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {

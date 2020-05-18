@@ -11,6 +11,9 @@ const Banner = () => {
       position: relative;
       
       height: 130px;
+      @media ${breakPoints.tabletPortrait} {
+        height: 200px;
+      }
       @media ${breakPoints.tabletLandscape} {
         height: 330px;
       }

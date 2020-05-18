@@ -10,6 +10,7 @@ import SEO from '../components/Seo';
 import Banner from "../components/Banner";
 import MasonryLayout from "../components/MasonryLayout";
 import ArtLinksContainer from "../components/ArtLinksContainer";
+import NewsLetter from '../components/Newsletter';
 
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
@@ -148,6 +149,20 @@ const App = (props) => {
         }
       }
     `,
+    section: css`
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: center;
+      
+      margin-bottom: 10px;
+      @media ${breakPoints.tabletPortrait} {
+        margin-bottom: 15px;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin-bottom: 20px;
+      }
+    `,
     newsContainer: css`
     
     `,
@@ -157,7 +172,12 @@ const App = (props) => {
       <Layout>
         <SEO title="Fantasy and animal fine art by Panna Zsamba" />
         <Banner />
-        <ArtLinksContainer />
+        <div css={style.section}>
+          <NewsLetter/>
+        </div>
+        <div css={style.section}>
+          <ArtLinksContainer />
+        </div>
         {/*<div css={style.newsContainer}>
           <div css={style.dividerTitle}><h3>News</h3></div>
         </div>*/}

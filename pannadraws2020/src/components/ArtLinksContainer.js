@@ -28,47 +28,44 @@ const ArtLinksContainer = () => {
 
   const style = {
     artLinksContainer: css`
-      
-    `,
-    artLinksContainerInner: css`
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
       
+      width: 100%;
+      max-width: 800px;
+      padding: 10px;
       @media ${breakPoints.tabletPortrait} {
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      @media ${breakPoints.tabletLandscape} {
-        max-width: 315px;
-        justify-content: space-between;
-        transform: translateX(100px);
+        padding: 15px;
       }
       @media ${breakPoints.desktopSmall} {
-        max-width: 380px;
-        transform: translateX(130px);
-      }
-      @media ${breakPoints.desktopLarge} {
-        max-width: 540px;
-        transform: translateX(200px);
+        padding: 20px;
       }
     `,
     artLink: css`
       display: block;
       max-width: 500px;
+      width: 100%;
       
-      width: 50%;
-      margin-bottom: 20px;
-      @media ${breakPoints.tabletPortrait} {
-        width: 35%;
-        margin-bottom: 30px;
+      &:first-child {
+        margin-right: 5px;
+        @media ${breakPoints.tabletPortrait} {
+          margin-right: 15px;
+        }
+        @media ${breakPoints.desktopSmall} {
+          margin-right: 20px;
+        }
       }
-      @media ${breakPoints.tabletLandscape} {
-        width: 45%;
-      }
-      @media ${breakPoints.desktopSmall} {
-        margin-bottom: 50px;
+      
+      &:last-child {
+        margin-left: 5px;
+        @media ${breakPoints.tabletPortrait} {
+          margin-left: 15px;
+        }
+        @media ${breakPoints.desktopSmall} {
+          margin-left: 20px;
+        }
       }
       
       .gatsby-image-wrapper {
@@ -111,16 +108,14 @@ const ArtLinksContainer = () => {
 
   return (
       <div css={style.artLinksContainer}>
-        <div css={style.artLinksContainerInner}>
-          <Link css={style.artLink} to="/animal_art/">
-            <Image img={imgData.art_link_birds.childImageSharp.fluid}/>
-            <span>Birds & Wildlife Art</span>
-          </Link>
-          <Link css={style.artLink} to="/fantasy_art/">
-            <Image img={imgData.art_link_fantasy.childImageSharp.fluid}/>
-            <span>Fantasy Art</span>
-          </Link>
-        </div>
+        <Link css={style.artLink} to="/animal_art/">
+          <Image img={imgData.art_link_birds.childImageSharp.fluid}/>
+          <span>Birds & Wildlife Art</span>
+        </Link>
+        <Link css={style.artLink} to="/fantasy_art/">
+          <Image img={imgData.art_link_fantasy.childImageSharp.fluid}/>
+          <span>Fantasy Art</span>
+        </Link>
       </div>
   );
 };

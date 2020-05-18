@@ -163,7 +163,7 @@ const AboutPage = () => {
         <p>I’m Panna Zsamba, a self-taught watercolour artist based in Dublin, Ireland.</p>
 
         <p>I have always been an artistic person and entertained myself by doodling ever since I was
-          a child, however, my focus hadn't been on art from the beginning. I was born in Hungary, where I first I studied
+          a child, however, my focus hasn't been on art from the beginning. I was born in Hungary, where I first I studied
           English literature and culture at college, though I took freelance web
           development jobs during those years. Graduating from there I became a
           software engineer. In a different way this career fulfilled my creative passion,

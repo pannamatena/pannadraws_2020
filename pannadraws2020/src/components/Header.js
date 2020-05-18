@@ -129,11 +129,16 @@ const Header = () => {
         
         :hover,
         :active {
+          cursor: pointer;
           color: ${colours.c1};
         }
         
         &.printShop {
           color: ${colours.c1};
+        }
+        
+        &[aria-current="page"] {
+          border-bottom: 1px solid ${colours.c1};
         }
         
         font-size: 1.3em;
