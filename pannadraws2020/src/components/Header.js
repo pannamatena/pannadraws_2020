@@ -367,7 +367,8 @@ const Header = () => {
               <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
               <div><Link to="/sketchbook/">Sketchbook</Link></div>
               <div><Link to="/about/">About</Link></div>
-              <div><Link to="/contact/">Contact & FAQ</Link></div>
+              <div><Link to="/contact/">Contact</Link></div>
+              <div><Link to="/faq/">FAQ</Link></div>
               <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
             </nav>
           </div>
@@ -380,8 +381,9 @@ const Header = () => {
               </ul>
             </div>
             <div><Link to="/about/">About</Link></div>
-            <div><Link to="/contact/">Contact & FAQ</Link></div>
-            <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
+            <div><Link to="/contact/">Contact</Link></div>
+            <div><Link to="/faq/">FAQ</Link></div>
+            <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy">Shop</a></div>
           </nav>
           <div css={style.logoContainer}>
             <Link to="/">
@@ -393,7 +395,7 @@ const Header = () => {
           <div css={style.menuRight}>
             <a href="https://www.facebook.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Facebook">{facebook()}</a>
             <a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="PannaDraws on Instagram">{instagram()}</a>
-            <a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">{deviantart()}</a>
+            {/*<a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">{deviantart()}</a>*/}
             {/*<a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">{twitter()}</a>*/}
           </div>
 

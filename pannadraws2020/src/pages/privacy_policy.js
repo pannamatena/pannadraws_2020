@@ -6,7 +6,7 @@ import { colours } from '../resources/colors';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 
-const AboutPage = () => {
+const PrivacyPolicy = () => {
   const style = {
     pageContainer: css`
       max-width: 800px;
@@ -266,4 +266,4 @@ const AboutPage = () => {
   </Layout>
 )};
 
-export default AboutPage
+export default PrivacyPolicy

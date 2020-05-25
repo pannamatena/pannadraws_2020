@@ -112,10 +112,34 @@ const ArtPage = (props) => {
       font-size: 1.2em;
       text-transform: uppercase;
       
+      span {
+        svg {
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          fill: ${colours.c1};
+          transition: fill 0.3s ease-out;
+          margin-left: 3px;
+        }
+      }
+      
       &:hover {
         cursor: pointer;
         color: ${colours.c1_h}
+        
+        svg {
+          fill: ${colours.c1_h};
+        }
       }
+    `,
+    freeShip: css`
+      display: inline-block;
+      padding: 3px;
+      margin-top: 3px;
+      background: ${colours.c_success};
+      color: ${colours.c3};
+      font-size: .8em;
+      float: right;
     `,
     buyPBtn: css`
       display: block;
@@ -311,7 +335,17 @@ const ArtPage = (props) => {
           <div css={style.actionBtns}>
             {props.imgMeta.original === 'AVAILABLE' ? (
                 <div css={style.originalBuy}>
-                  <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${props.imgMeta.title}" - ${props.imgMeta.year}` }}>Buy Original <span css={style.price}>({getPrice(props.imgMeta)})</span></Link>
+                  <span css={style.freeShip}>+ FREE shipping</span>
+                  <a
+                      css={style.buyOBtn}
+                      href={props.imgMeta.buyUrl}
+                      title={`${props.imgMeta.title} original artwork for sale`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >Buy original on Etsy <span css={style.price}>
+                      ({getPrice(props.imgMeta)})
+                    {arrow()}
+                    </span></a>
                 </div>
             ) : (<p css={style.oSold}>Original is sold.</p>)}
             {getPrintStatus(props.imgMeta.prints, props.imgMeta.printUrl)}

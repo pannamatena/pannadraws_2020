@@ -70,10 +70,34 @@ const MasonryLayout = (props) => {
       font-size: 1.2em;
       text-transform: uppercase;
       
+      span {
+        svg {
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          fill: ${colours.c1};
+          transition: fill 0.3s ease-out;
+          margin-left: 3px;
+        }
+      }
+      
       &:hover {
         cursor: pointer;
         color: ${colours.c1_h}
+        
+        svg {
+          fill: ${colours.c1_h};
+        }
       }
+    `,
+    freeShip: css`
+      display: inline-block;
+      padding: 3px;
+      margin-top: 3px;
+      background: ${colours.c_success};
+      color: ${colours.c3};
+      font-size: .8em;
+      float: right;
     `,
     buyPBtn: css`
       display: block;
@@ -209,7 +233,17 @@ const MasonryLayout = (props) => {
               <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
               {props.imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <Link css={style.buyOBtn} to="/contact" state={{ originalImg: `"${props.imgMeta[img].title}" - ${props.imgMeta[img].year}` }}>Buy Original <span css={style.price}>({getPrice(props.imgMeta[img])})</span></Link>
+                    <span css={style.freeShip}>+ FREE shipping</span>
+                    <a
+                        css={style.buyOBtn}
+                        href={props.imgMeta[img].buyUrl}
+                        title={`${props.imgMeta[img].title} original artwork for sale`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Buy original on Etsy <span css={style.price}>
+                      ({getPrice(props.imgMeta[img])})
+                      {arrow()}
+                    </span></a>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {getPrintStatus(props.imgMeta[img].prints, props.imgMeta[img].printUrl)}

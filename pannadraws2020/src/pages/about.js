@@ -170,6 +170,9 @@ const AboutPage = () => {
          but I couldn't hold in the real itch to create fine art, which burst out in my
          early 30s. I decided then to take my artistic self seriously, and to the next level.</p>
 
+        <p>First I started with landscapes, but I was missing something. I wanted to have activity
+          in my scenes. Figurative art just broke its way out of me eventually.</p>
+
         <div css={style.image} className="first">
           <Image
               img={data.me_at_work.childImageSharp.fluid}
@@ -191,6 +194,11 @@ const AboutPage = () => {
               caption="My workspace, where the magic happens"
           />
         </div>
+
+        <p>I take my reference photos myself where possible. I want to fully own the experience
+          each painting holds. All the adventures of getting to the spot, waiting for the right
+          moment, the shutter sound, and eventually the artistic process are all in there in
+          each piece.</p>
 
         <p>My choice of subject is usually inspired by folklore and myths, while I also
           love to capture the beauty of animals and wildlife around me, especially birds. I'm

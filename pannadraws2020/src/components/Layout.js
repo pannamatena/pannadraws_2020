@@ -202,8 +202,10 @@ const Layout = ({ children }) => {
         <div css={style.socialMenu}>
           <span><a href="https://www.facebook.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Facebook">Facebook</a></span>
           <span><a href="https://www.instagram.com/pannamatena/" target="_blank" rel="noopener noreferrer" title="PannaDraws on Instagram">Instagram</a></span>
-          <span><a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">DeviantArt</a></span>
+          {/*<span><a href="https://www.deviantart.com/matena" target="_blank" rel="noopener noreferrer" title="Panna's Deviantart Gallery">DeviantArt</a></span>*/}
+          <span><Link to="/return_policy">Return policy</Link></span>
           <span><Link to="/privacy_policy">Privacy policy</Link></span>
+          <span><Link to="/faq">FAQ</Link></span>
           {/*<span><a href="https://twitter.com/pannamatena" target="_blank" rel="noopener noreferrer" title="Panna's Twitter">Twitter</a></span>*/}
         </div>
         <p>Were you looking for my coding site? <a href="http://pannacodes.com" target="_blank" rel="noopener noreferrer">pannacodes.com</a></p>
