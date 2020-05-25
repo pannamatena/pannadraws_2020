@@ -1,18 +1,33 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import ArtPageLayout from '../components/ArtPageLayout';
 import ArtPage from '../components/ArtPage';
+import animalArtMeta from '../resources/animalArtMeta';
 
-const staring_tiger_2019 = (props) => {
+const StaringTiger = (props) => {
+  const imgData = useStaticQuery(graphql`
+    query {
+        queryData: file(relativePath: { eq: "2019/staring_tiger_2019_web.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        },
+      }
+   `);
+  const imgMeta = animalArtMeta.staring_tiger;
+
   return (
       <Layout>
         <SEO title="Staring Tiger watercolour illustration" />
         <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
-          <ArtPage imgData={props.location.state ? props.location.state.imgData : []} imgMeta={props.location.state ? props.location.state.imgMeta : {}} />
+          <ArtPage imgData={imgData.queryData} imgMeta={imgMeta} />
         </ArtPageLayout>
       </Layout>
   );
 };
 
-export default staring_tiger_2019;
+export default StaringTiger;

@@ -224,7 +224,7 @@ const MasonryLayout = (props) => {
             <Link
                 css={style.artGridImg}
                 to={`/${imgNames[index]}_${props.imgMeta[img].type}_${props.imgMeta[img].year}`}
-                state={{ imgData: props.imgData[img], imgMeta: props.imgMeta[img], prevPath: props.path }}
+                state={{ prevPath: props.path }}
             >
               <Image img={props.imgData[img].childImageSharp.fluid}/>
             </Link>
