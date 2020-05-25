@@ -123,7 +123,8 @@ const FAQPage = () => {
 
           <h3>How do I know the painting is the original?</h3>
           <p>I sign each piece. There is usually a smaller signature in the front,
-            and a detailed one including the title at the back.</p>
+            and a detailed one including the title at the back. You will also receive a Certificate of Authenticity,
+          a document containing details of the artwork and a signature from me.</p>
 
           <h3>What can I do with my purchased art?</h3>
           <p>You can use it for personal purposes, eg hang it on your wall! But you cannot reproduce
