@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_kings_friend: file(relativePath: { eq: "2020/the_kings_friend_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       old_nog: file(relativePath: { eq: "2020/old_nog_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -42,18 +49,24 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      deer_in_phoenix_park: file(relativePath: { eq: "2020/deer_in_phoenix_park_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    the_kings_friend: {
+      title: 'The King\'s Friend (Feathers of Tales II)',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+      price: 600,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/803980602/the-kings-friend-feathers-of-tales-ii',
+      printUrl: '',
+      discount: 0,
+      type: 'watercolour_painting',
+      story: '"You see, the goose used to swim across the lake, and go diving for trout, and catch fish on a Friday for the king, and flew every other day round about the lake, diverting the poor king." from the story <i>King O\'Toole and His Goose</i>.<br /><br />How much time I spent hunting down these timid birds! I was a bit troubled what breed of goose I should choose for the second artwork in my Feathers of Tales project (an art series featuring birds of Irish folklore). I\'d naturally go with one that is resident in Ireland, a true Irish breed. But guess what, most geese are here only for the winter, and they migrate to other places to breed during the summer. So do they count as Irish? And there came the lockdown in the spring, so I had to stick to my closest goose neighbours: the light bellied Brent geese.<br /><br />By the time I finished this painting the last of the Brents left for the summer. But this one will remain here to make me long for the freedom they now have. Geese represent a special kind of freedom and adventure for me thanks to my childhood memories of Nils Holgersson. I wonder if we get back to normal by that time this goose comes back for the winter. Until then here\'s the painting!',
+    },
     old_nog: {
       title: 'Old Nog (Feathers of Tales I)',
       year: '2020',
@@ -105,19 +118,6 @@ const App = (props) => {
       discount: 0,
       type: 'watercolour_painting',
       story: 'Considering the preparations, this painting took me the longest ever to finish. When I had the idea of the subject, I knew I had to go to Phoenix Park to take reference photos of the deer there. But even when I started planning the painting I had no idea about the composition... it all came to life on the paper eventually, no matter how many sketches I made to plan it.<br /><br />I wanted to create a dream-like scene, where some of the details might get lost. So I added a greenish grey wash to create a foggy background. Some quirky elements were also sneaked into the picture, like the eyeball staff of the deer spirit. I really enjoyed drawing such weird things, so I might explore this path a bit more in the future.<br /><br />This is the first painting in a long while where I really ignored outside opinions. To most people the subject is not common and too weird. But this time I let my creativity roam free and just drew and paint whatever occurred to me, not being concerned with feedback. Therefore I would recommend it only to those people who are open to curiosity, who like to meet things they don\'t understand. If you want your guests ask "oh, what is this artwork about?". And you\'re absolutely free to answer whatever you think it is about!',
-    },
-    deer_in_phoenix_park: {
-      title: 'Deer in Phoenix Park',
-      year: '2020',
-      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
-      price: 225,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: '',
-      printUrl: 'https://society6.com/product/deer-in-phoenix-park_print',
-      discount: 0,
-      type: 'watercolour_painting',
-      story: 'I created this quick study of a stag to practice the deer head for "The Summoning". I ended up liking the linework so much I decided to finish it as a standalone painting.<br /><br />Here in Dublin one of the city attractions is Phoenix Park, an enormous green patch in the city with forests and fields. These deer roam freely, and some of them are pretty friendly towards people (especially if you have some munchies!). They are quite small though, about the size of a pony. Still when you look at them that same grace shines from their posture that you can see with their bigger cousins.',
     },
   };
 

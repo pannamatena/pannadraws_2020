@@ -1,4 +1,17 @@
 const animalArtMeta = {
+  the_kings_friend: {
+    title: 'The King\'s Friend (Feathers of Tales II)',
+    year: '2020',
+    description: 'Ink and watercolour on watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
+    price: 600,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/803980602/the-kings-friend-feathers-of-tales-ii',
+    printUrl: '',
+    discount: 0,
+    type: 'watercolour_painting',
+    story: '"You see, the goose used to swim across the lake, and go diving for trout, and catch fish on a Friday for the king, and flew every other day round about the lake, diverting the poor king." from the story <i>King O\'Toole and His Goose</i>.<br /><br />How much time I spent hunting down these timid birds! I was a bit troubled what breed of goose I should choose for the second artwork in my Feathers of Tales project (an art series featuring birds of Irish folklore). I\'d naturally go with one that is resident in Ireland, a true Irish breed. But guess what, most geese are here only for the winter, and they migrate to other places to breed during the summer. So do they count as Irish? And there came the lockdown in the spring, so I had to stick to my closest goose neighbours: the light bellied Brent geese.<br /><br />By the time I finished this painting the last of the Brents left for the summer. But this one will remain here to make me long for the freedom they now have. Geese represent a special kind of freedom and adventure for me thanks to my childhood memories of Nils Holgersson. I wonder if we get back to normal by that time this goose comes back for the winter. Until then here\'s the painting!',
+  },
   old_nog: {
     title: 'Old Nog (Feathers of Tales I)',
     year: '2020',
