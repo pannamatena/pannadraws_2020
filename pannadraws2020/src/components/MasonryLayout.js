@@ -57,7 +57,7 @@ const MasonryLayout = (props) => {
     printBuy: css`
       background: ${colours.c5};
       margin: 0 -10px;
-      padding: 5px 10px 0;
+      padding: 10px 10px 0;
     `,
     price: css`
       
@@ -93,11 +93,9 @@ const MasonryLayout = (props) => {
     freeShip: css`
       display: inline-block;
       padding: 3px;
-      margin-top: 3px;
       background: ${colours.c_success};
       color: ${colours.c3};
       font-size: .8em;
-      float: right;
     `,
     buyPBtn: css`
       display: block;
@@ -144,7 +142,7 @@ const MasonryLayout = (props) => {
       
       background: ${colours.c5};
       margin: 0 -10px;
-      padding: 0 10px;
+      padding: 10px 10px 0;
     `,
     discount: css`
       text-decoration: line-through;
@@ -186,7 +184,7 @@ const MasonryLayout = (props) => {
       case 'AVAILABLE': {
         return (
             <div css={style.printBuy}>
-              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints <span>{arrow()}</span></a>
+              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints (from € 26.95 + shipping)<span>{arrow()}</span></a>
             </div>
         )
       }
@@ -233,7 +231,6 @@ const MasonryLayout = (props) => {
               <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
               {props.imgMeta[img].original === 'AVAILABLE' ? (
                   <div css={style.originalBuy}>
-                    <span css={style.freeShip}>+ FREE shipping</span>
                     <a
                         css={style.buyOBtn}
                         href={props.imgMeta[img].buyUrl}
@@ -244,6 +241,7 @@ const MasonryLayout = (props) => {
                       ({getPrice(props.imgMeta[img])})
                       {arrow()}
                     </span></a>
+                    <span css={style.freeShip}>+ FREE shipping</span>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
               {getPrintStatus(props.imgMeta[img].prints, props.imgMeta[img].printUrl)}
