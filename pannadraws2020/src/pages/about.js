@@ -30,6 +30,13 @@ const AboutPage = () => {
             ...GatsbyImageSharpFluid
           }
         }
+      },
+      me_hunting: file(relativePath: { eq: "me_hunting.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `);
@@ -130,7 +137,8 @@ const AboutPage = () => {
       max-width: 400px;
       margin: 40px auto;
       
-      &.first {
+      &.first,
+      &.third {
         @media ${breakPoints.tabletPortrait} {
           transform: rotate(2deg);
         }
@@ -199,6 +207,14 @@ const AboutPage = () => {
           each painting holds. All the adventures of getting to the spot, waiting for the right
           moment, the shutter sound, and eventually the artistic process are all in there in
           each piece.</p>
+
+        <div css={style.image} className="third">
+          <Image
+              img={data.me_hunting.childImageSharp.fluid}
+              alt="Panna on the hunt at the Bull Island bird sanctuary"
+              caption="Me on the hunt at the Bull Island bird sanctuary"
+          />
+        </div>
 
         <p>My choice of subject is usually inspired by folklore and myths, while I also
           love to capture the beauty of animals and wildlife around me, especially birds. I'm
