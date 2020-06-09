@@ -1,4 +1,17 @@
 const fantasyArtMeta = {
+  entering_the_red_forest: {
+    title: 'Entering the Red Forest',
+    year: '2020',
+    description: 'Ink and watercolour on watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+    price: 300,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/807843812/entering-the-red-forest-original',
+    printUrl: '',
+    discount: 0,
+    type: 'watercolour_painting',
+    story: 'Not all ancient forests have to be dark and damp... Here\'s the colourful Red Forest, but when you enter you\'ll face the same mystique as in the dark ones. And from the mist a long white body emerges, with a mane and antlers of crimson, holding a golden orb that casts a blurry yellow glow over its keeper. Here\'s the guardian spirit of the woods, and you may wonder, should you run?<br /><br />I never really felt as comfortable in forests as in big open plains. The trees are just towering over you, and it\'s silent and noisy at the same time. It\'s motionless and full of little movements. It\'s peaceful and threatening. This is the kind of duality I wanted to show in this painting. It\'s up to the viewer to decide if they want to run, or stay. Because the forest is both welcoming and hostile.<br /><br />Reference photo I used for the forest is <a href="https://unsplash.com/photos/CoD2Q92UaEg" title="Red Forest reference photo" target="_blank" rel="noopener noreferrer" >here</a>.',
+  },
   the_old_blind_worm_of_the_swamp: {
     title: 'The Old Blind Worm of the Swamp',
     year: '2020',

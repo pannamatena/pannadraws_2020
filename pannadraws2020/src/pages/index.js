@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      entering_the_red_forest: file(relativePath: { eq: "2020/entering_the_red_forest_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       the_kings_friend: file(relativePath: { eq: "2020/the_kings_friend_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -42,18 +49,24 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      the_summoning: file(relativePath: { eq: "2020/the_summoning_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    entering_the_red_forest: {
+      title: 'Entering the Red Forest',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+      price: 300,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/807843812/entering-the-red-forest-original',
+      printUrl: '',
+      discount: 0,
+      type: 'watercolour_painting',
+      story: 'Not all ancient forests have to be dark and damp... Here\'s the colourful Red Forest, but when you enter you\'ll face the same mystique as in the dark ones. And from the mist a long white body emerges, with a mane and antlers of crimson, holding a golden orb that casts a blurry yellow glow over its keeper. Here\'s the guardian spirit of the woods, and you may wonder, should you run?<br /><br />I never really felt as comfortable in forests as in big open plains. The trees are just towering over you, and it\'s silent and noisy at the same time. It\'s motionless and full of little movements. It\'s peaceful and threatening. This is the kind of duality I wanted to show in this painting. It\'s up to the viewer to decide if they want to run, or stay. Because the forest is both welcoming and hostile.<br /><br />Reference photo I used for the forest is <a href="https://unsplash.com/photos/CoD2Q92UaEg" title="Red Forest reference photo" target="_blank" rel="noopener noreferrer" >here</a>.',
+    },
     the_kings_friend: {
       title: 'The King\'s Friend (Feathers of Tales II)',
       year: '2020',
@@ -105,19 +118,6 @@ const App = (props) => {
       discount: 0,
       type: 'watercolour_painting',
       story: 'When I work on a larger painting that takes more time to finish I have to take a break from it time to time, and come back with fresh eyes. Usually in these intervals I like to doodle things that don\'t require reference or research, just a blank paper and me. This is how this unicorn started, but it grew so close to my heart by the end that I made her into a finished painting.<br /><br />Maybe that need for a break gave this painting its romantic atmosphere. My favourite flower is the rose, and I wanted to create something really pleasant for me to look at. Like a true dream world. There is a little girl still in me, who likes rainbows and unicorns, and sometimes all she needs is a good old-fashioned fairy tale. She definitely got that when I was painting this artwork.',
-    },
-    the_summoning: {
-      title: 'The Summoning',
-      year: '2020',
-      description: 'Ink and watercolour on cold pressed watercolour paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
-      price: 650,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/799936804/the-summoning-original-watercolour',
-      printUrl: 'https://www.etsy.com/ie/listing/804184536/the-summoning-matte-paper-poster-fantasy',
-      discount: 0,
-      type: 'watercolour_painting',
-      story: 'Considering the preparations, this painting took me the longest ever to finish. When I had the idea of the subject, I knew I had to go to Phoenix Park to take reference photos of the deer there. But even when I started planning the painting I had no idea about the composition... it all came to life on the paper eventually, no matter how many sketches I made to plan it.<br /><br />I wanted to create a dream-like scene, where some of the details might get lost. So I added a greenish grey wash to create a foggy background. Some quirky elements were also sneaked into the picture, like the eyeball staff of the deer spirit. I really enjoyed drawing such weird things, so I might explore this path a bit more in the future.<br /><br />This is the first painting in a long while where I really ignored outside opinions. To most people the subject is not common and too weird. But this time I let my creativity roam free and just drew and paint whatever occurred to me, not being concerned with feedback. Therefore I would recommend it only to those people who are open to curiosity, who like to meet things they don\'t understand. If you want your guests ask "oh, what is this artwork about?". And you\'re absolutely free to answer whatever you think it is about!',
     },
   };
 
