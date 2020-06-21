@@ -15,6 +15,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      mother_bear: file(relativePath: { eq: "2020/mother_bear_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      angelic_hunt: file(relativePath: { eq: "2020/angelic_hunt_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       entering_the_red_forest: file(relativePath: { eq: "2020/entering_the_red_forest_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -54,6 +68,32 @@ const App = (props) => {
   `);
 
   const imgMeta = {
+    mother_bear: {
+      title: 'Mother Bear',
+      year: '2020',
+      description: 'Watercolour and pen on watercolour paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+      price: 300,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/813397798/mother-bear-original-watercolour',
+      printUrl: '',
+      discount: 0,
+      type: 'watercolour_painting',
+      story: 'All the crows are leading the way to one spot in the forest. They are the messengers, eyes and ears of Mother Bear, dwelling deep in the woods. Mother Bear doesn\'t leave the forest, but she knows everything that is going on around the world... so she doesn\'t get surprised when you reach the clearing filled with mossy rocks to see her. You just had to follow the crows and here you are. But Mother Bear just smiles, she already knows you.<br /><br />The idea of Mother Bear came to me when I was browsing through my older reference photos. I had a shot of a bear looking so friendly, taken at the Lisbon zoo when I was on a holiday there. As I usually focus more on birds or dragons I just didn\'t have any good ideas for the picture, but one night I just sketched the bear as practice, when this whole scene just occurred to me, as if I\'d known this since forever. I just had to discover her! And so it felt like Mother Bear already knew about me, and our encounter was a surprise only to me.',
+    },
+    angelic_hunt: {
+      title: 'Angelic Hunt',
+      year: '2020',
+      description: 'Coloured pencils and pen on paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+      price: 600,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/825365941/angelic-hunt-original-coloured-pencil',
+      printUrl: '',
+      discount: 0,
+      type: 'coloured_pencil_drawing',
+      story: 'Little egrets are fascinating. An angelic appearance with the snow white plumage that gently moves in the wind like some kind of jewellery on the bird. Little egrets are never in a hurry, they move with the elegance of a lady. But when you blink, in that second they catch and kill. They are brilliant predators in the skin of an angel.<br /><br />I met the egret serving as my reference for this drawing during one of my walks. She was busy with her catch so I could capture her in a pose that shows the wild in this beautiful bird. The morning breeze on the seashore was lifting the lighter feathers on her body as she turned towards me, holding her fresh kill. That fish reminded me the egret might look like an angel, but she\'s a deadly one.<br /><br />This drawing was created to enter the art competition "Drawn to Nature" hosted by the <a href="https://ukcps.org.uk" title="UK Coloured Pencil Society" target="_blank" rel="noopener noreferrer" >UK Coloured Pencil Society</a>. The objective of the contest was to capture the wildness of nature, which I found in this hunting egret.',
+    },
     entering_the_red_forest: {
       title: 'Entering the Red Forest',
       year: '2020',

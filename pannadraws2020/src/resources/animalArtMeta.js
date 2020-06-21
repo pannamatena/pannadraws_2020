@@ -1,4 +1,17 @@
 const animalArtMeta = {
+  angelic_hunt: {
+    title: 'Angelic Hunt',
+    year: '2020',
+    description: 'Coloured pencils and pen on paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+    price: 600,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/825365941/angelic-hunt-original-coloured-pencil',
+    printUrl: '',
+    discount: 0,
+    type: 'coloured_pencil_drawing',
+    story: 'Little egrets are fascinating. An angelic appearance with the snow white plumage that gently moves in the wind like some kind of jewellery on the bird. Little egrets are never in a hurry, they move with the elegance of a lady. But when you blink, in that second they catch and kill. They are brilliant predators in the skin of an angel.<br /><br />I met the egret serving as my reference for this drawing during one of my walks. She was busy with her catch so I could capture her in a pose that shows the wild in this beautiful bird. The morning breeze on the seashore was lifting the lighter feathers on her body as she turned towards me, holding her fresh kill. That fish reminded me the egret might look like an angel, but she\'s a deadly one.<br /><br />This drawing was created to enter the art competition "Drawn to Nature" hosted by the <a href="https://ukcps.org.uk" title="UK Coloured Pencil Society" target="_blank" rel="noopener noreferrer" >UK Coloured Pencil Society</a>. The objective of the contest was to capture the wildness of nature, which I found in this hunting egret.',
+  },
   the_kings_friend: {
     title: 'The King\'s Friend (Feathers of Tales II)',
     year: '2020',
