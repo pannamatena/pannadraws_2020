@@ -1,4 +1,17 @@
 const fantasyArtMeta = {
+  bonds: {
+    title: 'Bonds',
+    year: '2020',
+    description: 'Ink and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
+    price: 300,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/815319864/bonds-original-ink-and-coloured-pencil',
+    printUrl: '',
+    discount: 0,
+    type: 'mixed_media_painting',
+    story: 'How does fatigue bond the mind and prevent it from flying free? I was exhausted both mentally and physically when this drawing was born, as I had a long cycling exercise before. I didn\'t have a concept in mind, I only had the blank sheet and just drew. When pushed to the limits, this is what remains to my mind: my favourite flower, birds and dragons, tangled together.<br /><br />The artwork was created using traditional inking with sepia acrylic ink and a coloured pencil. This was the first time I tried this transparent ink on a separate piece and I like how it ended up giving this aged look to the image.',
+  },
   mother_bear: {
     title: 'Mother Bear',
     year: '2020',
