@@ -2,7 +2,7 @@ const animalArtMeta = {
   angelic_hunt: {
     title: 'Angelic Hunt',
     year: '2020',
-    description: 'Coloured pencils and pen on paper. 420 x 297 mm ( 11.69 x 16.53 in), 2020.',
+    description: 'Coloured pencils and pen on paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
     price: 600,
     original: 'AVAILABLE',
     prints: 'NOTYET',
