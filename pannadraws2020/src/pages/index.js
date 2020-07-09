@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      one_for_sorrow: file(relativePath: { eq: "2020/one_for_sorrow_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       bonds: file(relativePath: { eq: "2020/bonds_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -63,18 +70,24 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      the_climbing_rose_gate: file(relativePath: { eq: "2020/the_climbing_rose_gate_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    one_for_sorrow: {
+      title: 'One for Sorrow (Feathers of Tales III)',
+      year: '2020',
+      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm (20 x 16 in), 2020.',
+      price: 450,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/834290581/one-for-sorrow-feathers-of-tales-iii',
+      printUrl: '',
+      discount: 0,
+      type: 'watercolour_painting',
+      story: '"One for sorrow,<br />Two for joy,<br />Three for a girl,<br />Four for a boy,<br />Five for silver,<br />Six for gold,<br />Seven for a secret,<br />Never to be told.<br />Eight for a wish,<br />Nine for a kiss,<br />Ten for a bird,<br />You must not miss<br />Eleven is worse<br />Twelve for a dastardly curse."<br /><br />The mischievous magpie. You can hear his unmistakable chatter everywhere, and you may wonder how many you\'ll come across this time? As this nursery rhyme goes, you might get lucky, but what if there\'s only one? Quickly, ask him how his wife is! Then you might have a chance to avoid misfortune.<br /><br />I chose the magpie for this painting because there\'s scarcely any bird with more superstition around it than this black and white fellow. Although magpies have a pretty negative reputation overall, they are quite intelligent and good looking. You can try get rid of them, but they still figure out a way to get what they want, and then their distinctive chatter sounds like laughter. A common bird in every garden, still a real icon. You might be superstitious or not, but you surely know the magpie.<br /><br />This painting is the 3rd in Feathers of Tales, my series on birds of Irish folklore. Previous artworks in the series are "Old Nog" and "The King\'s Friend", both available in my shop.',
+    },
     bonds: {
       title: 'Bonds',
       year: '2020',
@@ -165,19 +178,6 @@ const App = (props) => {
       discount: 0,
       type: 'watercolour_painting',
       story: 'Sometimes I don\'t feel like using reference images. This painting was born on such an occasion, I just started drawing straight on the blank paper, and the result was this little illustration.<br /><br />I imagined a scene as if I was illustrating a fairy tale, where this ancient beast suddenly emerges from the dark water, looking like she has been sleeping down there for hundreds of years. Despite she scared the rider, she meant no harm, on the contrary, she was excited to have a visitor at last!',
-    },
-    the_climbing_rose_gate: {
-      title: 'The Climbing Rose Gate',
-      year: '2020',
-      description: 'Ink and watercolour on cold pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2020.',
-      price: 220,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/813763953/the-climbing-rose-gate-original',
-      printUrl: 'https://www.etsy.com/ie/listing/805097264/the-climbing-rose-gate-unicorn-art-print',
-      discount: 0,
-      type: 'watercolour_painting',
-      story: 'When I work on a larger painting that takes more time to finish I have to take a break from it time to time, and come back with fresh eyes. Usually in these intervals I like to doodle things that don\'t require reference or research, just a blank paper and me. This is how this unicorn started, but it grew so close to my heart by the end that I made her into a finished painting.<br /><br />Maybe that need for a break gave this painting its romantic atmosphere. My favourite flower is the rose, and I wanted to create something really pleasant for me to look at. Like a true dream world. There is a little girl still in me, who likes rainbows and unicorns, and sometimes all she needs is a good old-fashioned fairy tale. She definitely got that when I was painting this artwork.',
     },
   };
 
