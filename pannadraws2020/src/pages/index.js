@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_fishermans_son: file(relativePath: { eq: "2020/the_fishermans_son_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       one_for_sorrow: file(relativePath: { eq: "2020/one_for_sorrow_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -63,18 +70,24 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      the_old_blind_worm_of_the_swamp: file(relativePath: { eq: "2020/the_old_blind_worm_of_the_swamp_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    the_fishermans_son: {
+      title: 'The Fisherman\'s Son (Feathers of Tales IV)',
+      year: '2020',
+      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm (20 x 16 in), 2020.',
+      price: 200,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/827929980/the-fishermans-son-feathers-of-tales-iv',
+      printUrl: '',
+      discount: 0,
+      type: 'watercolour_painting',
+      story: '"Well" said the Gruagach "you won\'t see your son to-day. At noon-to-morrow I\'ll put a whistle in my mouth and call together all the birds in my place, and they\'ll come. Among others will be twelve doves. I\'ll put my hand in my pocket, this way, and take out wheat and throw it before them on the ground. The doves will eat the wheat, and you must pick your son out of the twelve. If you find him, you\'ll have him; if you don\'t, you\'ll never have him again." (From "Myths and Folk Tales of Ireland" by Jeremiah Curtin)<br /><br />It wasn\'t easy to pick one tale where the white dove plays a major role, but I chose "The Fisherman\'s Son and The Gruagach of Tricks" because it had these typical folk tale elements in it that everyone knows: a fisherman, a boy, a "man of high degree" as a villain, and magic, and the dove.<br /><br />In the painting I wanted to create that gloomy atmosphere that folk tales have, when you know in the end everyone will live happily ever after, but the story is scary, and the fate of the heroes is to suffer and go through trials. I might not tell you a big spoiler when I say the fisherman will save his boy, but the route to that moment is full of darkness and hardships.<br /><br />This is #4 in my Feathers of Tales series, based on birds of Irish folklore. Fun fact: the model I used is a common grey pigeon you see in every city, but I "bleached" her while painting.',
+    },
     one_for_sorrow: {
       title: 'One for Sorrow (Feathers of Tales III)',
       year: '2020',
@@ -165,19 +178,6 @@ const App = (props) => {
       discount: 0,
       type: 'watercolour_painting',
       story: '"And so it was that Old Nog, the wisest heron of the Two Rivers, heard the noise of bubbles breaking on the water as he alighted by the pool side" <i>(from Tarka the Otter by Henry Williamson)</i>.<br /><br />During the lockdown I was restricted to the 2km area of my home, so every Saturday early morning I went for a walk to the nearby seashore at Clontarf to photograph the Brent geese that were still lingering around. I was just about to leave with my legs sore from all the squatting with the camera, when something stirred the Brents, who scattered immediately. And then a big shadow descended: the grey heron arrived. I quickly ducked behind the bushes and grabbed my camera again, just in time to take the photo that served as a reference for this painting.<br /><br />This is the opening artwork for my art series "Feathers of Tales". I chose the heron as the kick-off for this major work because how could you be more majestic than this boss?! With his every slow and measured movement he demands the respect. You see him and you helplessly stop and stare. Elegant and deadly, and a real icon of the Irish waterscapes.',
-    },
-    the_old_blind_worm_of_the_swamp: {
-      title: 'The Old Blind Worm of the Swamp',
-      year: '2020',
-      description: 'Ink and watercolour on cold pressed watercolour paper. 210 x 297 mm ( 8.27 x 11.69 in), 2020.',
-      price: 225,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/799874088/the-old-blind-worm-of-the-swamp-original',
-      printUrl: 'https://www.etsy.com/ie/listing/819379749/the-old-blind-worm-of-the-swamp-dragon',
-      discount: 0,
-      type: 'watercolour_painting',
-      story: 'Sometimes I don\'t feel like using reference images. This painting was born on such an occasion, I just started drawing straight on the blank paper, and the result was this little illustration.<br /><br />I imagined a scene as if I was illustrating a fairy tale, where this ancient beast suddenly emerges from the dark water, looking like she has been sleeping down there for hundreds of years. Despite she scared the rider, she meant no harm, on the contrary, she was excited to have a visitor at last!',
     },
   };
 
