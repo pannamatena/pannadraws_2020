@@ -1,4 +1,17 @@
 const animalArtMeta = {
+  sparrowhawk: {
+    title: 'Sparrowhawk',
+    year: '2020',
+    description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+    price: 180,
+    original: 'SOLD',
+    prints: 'NOTYET',
+    buyUrl: '',
+    printUrl: '',
+    discount: 0,
+    type: 'watercolour_painting',
+    story: 'They say the eyes are the windows to the soul. Look at the eyes of this creature, he couldn\'t even deny his predatory nature! The sparrowhawk, a small bird of prey, but fast, agile and deadly. This one here is a male, which is smaller than the female and has the orange markings. Their skills sparkle most in woodlands, where they cross between the smallest gaps with great speed, and they can chase down prey on foot (?!). Now I\'d love to see THAT!<br /><br />I\'m always so fond of the variety of birds visiting my garden to feed. And it actually never occurred to me that by attracting so many breeds there\'s a consequencial visitor as well... I wasn\'t even aware there are hawks nearby.<br /><br />So I was doing my morning workout and between sets I stared out the kitchen window. Suddenly all the birds took off, and something spiralled down like an arrow. My wandering brain didn\'t even register what was happening, I remember thinking "oh, what kind of bird is this, how interesting" before the shock settled in. "*@$&! He got a sparrow!! Omg! It\'s a hawk!" He sat for 3 seconds in the grass with his prey, then took off. I stood there in complete shock for another minute, thinking I wouldn\'t have stood a chance. By the time I realised what was happening, that sparrow was dead. That\'s how I met my sparrowhawk.',
+  },
   the_fishermans_son: {
     title: 'The Fisherman\'s Son (Feathers of Tales IV)',
     year: '2020',
