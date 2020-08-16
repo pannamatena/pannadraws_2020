@@ -148,6 +148,10 @@ const MasonryLayout = (props) => {
       text-decoration: line-through;
       padding-right: 3px;
     `,
+    discountPrint: css`
+      text-decoration: line-through;
+      padding-right: 3px;
+    `,
   };
 
   const resizeGridItem = (item, index) => {
@@ -179,12 +183,28 @@ const MasonryLayout = (props) => {
     }
   });
 
-  const getPrintStatus = (printVal, printUrl) => {
-    switch (printVal) {
+  const getPrintPrice = (imgMeta) => {
+    const price = 26.95;
+    if (imgMeta.discountPrint) {
+      return (
+          <span>
+            <span css={style.discountPrint}>€ {price}</span>
+            € {((price / 100) * (100 - imgMeta.discountPrint)).toFixed(2)}
+          </span>
+      );
+    }
+    return `€ ${price}`;
+  };
+
+  const getPrintStatus = (imgMeta) => {
+    switch (imgMeta.prints) {
       case 'AVAILABLE': {
         return (
             <div css={style.printBuy}>
-              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints (from € 26.95 + shipping)<span>{arrow()}</span></a>
+              <a css={style.buyPBtn} href={imgMeta.printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">
+                {/*Buy prints (from {getPrintPrice(imgMeta)} + shipping)<span>{arrow()}</span>*/}
+                Buy prints (from € 26.95 + shipping)<span>{arrow()}</span>
+              </a>
             </div>
         )
       }
@@ -244,7 +264,7 @@ const MasonryLayout = (props) => {
                     <span css={style.freeShip}>+ FREE shipping</span>
                   </div>
               ) : (<p css={style.oSold}>Original is sold.</p>)}
-              {getPrintStatus(props.imgMeta[img].prints, props.imgMeta[img].printUrl)}
+              {getPrintStatus(props.imgMeta[img])}
             </div>
           </div>
         </div>

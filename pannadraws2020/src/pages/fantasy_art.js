@@ -8,6 +8,13 @@ import fantasyArtMeta from "../resources/fantasyArtMeta";
 const FantasyArt = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      almost_invincible: file(relativePath: { eq: "2020/almost_invincible_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       bonds: file(relativePath: { eq: "2020/bonds_2020_web.png" }) {
         childImageSharp {
           fluid {
