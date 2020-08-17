@@ -185,11 +185,13 @@ const MasonryLayout = (props) => {
 
   const getPrintPrice = (imgMeta) => {
     const price = 26.95;
+    let discountedPrice = ((price / 100) * (100 - imgMeta.discountPrint)).toFixed(3);
+    discountedPrice = discountedPrice.substring(0, discountedPrice.length - 1);
     if (imgMeta.discountPrint) {
       return (
           <span>
             <span css={style.discountPrint}>€ {price}</span>
-            € {((price / 100) * (100 - imgMeta.discountPrint)).toFixed(2)}
+            € {discountedPrice}
           </span>
       );
     }
@@ -202,8 +204,8 @@ const MasonryLayout = (props) => {
         return (
             <div css={style.printBuy}>
               <a css={style.buyPBtn} href={imgMeta.printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">
-                {/*Buy prints (from {getPrintPrice(imgMeta)} + shipping)<span>{arrow()}</span>*/}
-                Buy prints (from € 26.95 + shipping)<span>{arrow()}</span>
+                Buy prints (from {getPrintPrice(imgMeta)} + shipping)<span>{arrow()}</span>
+                {/*Buy prints (from € 26.95 + shipping)<span>{arrow()}</span>*/}
               </a>
             </div>
         )
