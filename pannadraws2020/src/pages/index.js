@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_ousel_of_cilgwri: file(relativePath: { eq: "2020/the_ousel_of_cilgwri_2020_web.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       almost_invincible: file(relativePath: { eq: "2020/almost_invincible_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -64,17 +71,24 @@ const App = (props) => {
           }
         }
       },
-      angelic_hunt: file(relativePath: { eq: "2020/angelic_hunt_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
     }
   `);
 
   const imgMeta = {
+    the_ousel_of_cilgwri: {
+      title: 'The Ousel of Cilgwri',
+      year: '2020',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 115,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/845872130/the-ousel-of-cilgwri-feathers-of-tales',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '"And the Ousel answered, \'When I first came here, there was a smith\'s anvil in this place, and I was then a young bird; and from that time no work has been done upon it, save the pecking of my beak every evening, and now there is not so much as the size of a nut remaining thereof; yet the vengeance of Heaven be upon me, if during all that time I have ever heard of the man for whom you inquire. Nevertheless I will do that which is right, and that which it is fitting that I should do for an embassy from Arthur. There is a race of animals who were formed before me, and I will be your guide to them.\'" (from the myth <i>Culhwch and Olwen</i>)<br /><br />The blackbird is believed to be one of the oldest animals in the world, along with the stag and the trout, and he\'s the advisor of many great mythical heroes. I see the blackbird as one of the kindest birds I know, there\'s a pair nesting in my garden every year. Their second batch of fledglings left the nest early August, but that doesn\'t mean they don\'t need their parents attention after. That\'s why I could get the reference photos of them as both parents were frequent visitors around the feeders at that time.<br /><br />I used two photos in this painting: the posture was provided by the mum, while the texture of the plumage is coming from a picture of the proud dad. This is the 6th piece in my Feathers of Tales series depicting birds in Irish myth and folklore.',
+    },
     almost_invincible: {
       title: 'Almost Invincible',
       year: '2020',
@@ -172,20 +186,6 @@ const App = (props) => {
       discountPrint: 10,
       type: 'watercolour_painting',
       story: 'All the crows are leading the way to one spot in the forest. They are the messengers, eyes and ears of Mother Bear, dwelling deep in the woods. Mother Bear doesn\'t leave the forest, but she knows everything that is going on around the world... so she doesn\'t get surprised when you reach the clearing filled with mossy rocks to see her. You just had to follow the crows and here you are. But Mother Bear just smiles, she already knows you.<br /><br />The idea of Mother Bear came to me when I was browsing through my older reference photos. I had a shot of a bear looking so friendly, taken at the Lisbon zoo when I was on a holiday there. As I usually focus more on birds or dragons I just didn\'t have any good ideas for the picture, but one night I just sketched the bear as practice, when this whole scene just occurred to me, as if I\'d known this since forever. I just had to discover her! And so it felt like Mother Bear already knew about me, and our encounter was a surprise only to me.',
-    },
-    angelic_hunt: {
-      title: 'Angelic Hunt',
-      year: '2020',
-      description: 'Coloured pencils and pen on paper. 420 x 594 mm (16.53 x 23.39 in), 2020.',
-      price: 600,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      buyUrl: 'https://www.etsy.com/ie/listing/825365941/angelic-hunt-original-coloured-pencil',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 10,
-      type: 'coloured_pencil_drawing',
-      story: 'Little egrets are fascinating. An angelic appearance with the snow white plumage that gently moves in the wind like some kind of jewellery on the bird. Little egrets are never in a hurry, they move with the elegance of a lady. But when you blink, in that second they catch and kill. They are brilliant predators in the skin of an angel.<br /><br />I met the egret serving as my reference for this drawing during one of my walks. She was busy with her catch so I could capture her in a pose that shows the wild in this beautiful bird. The morning breeze on the seashore was lifting the lighter feathers on her body as she turned towards me, holding her fresh kill. That fish reminded me the egret might look like an angel, but she\'s a deadly one.<br /><br />This drawing was created to enter the art competition "Drawn to Nature" hosted by the <a href="https://ukcps.org.uk" title="UK Coloured Pencil Society" target="_blank" rel="noopener noreferrer" >UK Coloured Pencil Society</a>. The objective of the contest was to capture the wildness of nature, which I found in this hunting egret.',
     },
   };
 
