@@ -31,23 +31,17 @@ const Banner = () => {
         font-family: ${fonts.f1};
         text-transform: uppercase;
         
-        font-size: 1.5em;
+        font-size: 2em;
+        text-align: center;
         @media ${breakPoints.desktopSmall} {
-          font-size: 2em;
+          font-size: 2.5em;
+          text-align: left;
         }
         @media ${breakPoints.desktopLarge} {
-          font-size: 3em;
-        }
-        @media ${breakPoints.desktopXLarge} {
           font-size: 4em;
         }
-        
-        span {
-          display: block;
-          
-          &:last-child {
-            padding-left: 50px;
-          }
+        @media ${breakPoints.desktopXLarge} {
+          font-size: 5em;
         }
       }
       
@@ -56,35 +50,42 @@ const Banner = () => {
         
         margin-top: 0px;
         font-size: 1.2em;
+        text-align: center;
         @media ${breakPoints.tabletLandscape} {
           font-size: 1em;
-          margin-top: 10px;
+          margin-left: 20px;
+          text-align: left;
         }
         @media ${breakPoints.desktopSmall} {
           font-size: 1.2em;
         }
         @media ${breakPoints.desktopLarge} {
           font-size: 1.5em;
-          margin-top: 20px;
         }
         @media ${breakPoints.desktopXLarge} {
-          font-size: 2em;
+          font-size: 1.9em;
         }
       }
       
-      h3 {
-        font-family: ${fonts.f1};
-        text-transform: uppercase;
+      h3 {        
+        color: ${colours.c4};
         
+        margin-top: 0px;
         font-size: 1em;
+        text-align: center;
+        @media ${breakPoints.tabletLandscape} {
+          font-size: 0.8em;
+          text-align: left;
+          margin-left: 40px;
+        }
         @media ${breakPoints.desktopSmall} {
-          font-size: 1.2em;
+          font-size: 1em;
         }
         @media ${breakPoints.desktopLarge} {
-          font-size: 2.2em;
+          font-size: 1.3em;
         }
         @media ${breakPoints.desktopXLarge} {
-          font-size: 3.2em;
+          font-size: 1.7em;
         }
       }
     `,
@@ -101,11 +102,11 @@ const Banner = () => {
         transform: translate(-50%, -50%);
       }
       @media ${breakPoints.tabletLandscape} {
-        left: 100px;
+        left: 170px;
         transform: translate(0, -50%);
       }
       @media ${breakPoints.desktopSmall} {
-        left: 130px;
+        left: 200px;
       }
       @media ${breakPoints.desktopLarge} {
         left: 200px;
@@ -117,9 +118,9 @@ const Banner = () => {
   return (
       <div id="bannerContainer" css={style.bannerContainer}>
         <div css={style.bannerText}>
-          <h1><span>The girl who draws</span><span>dragons and unicorns</span></h1>
-          <h3>(and chickens)</h3>
-        <h2>I'm Panna, a watercolour fantasy and animal artist.</h2>
+          <h1>Transcendent watercolour</h1>
+        <h2>other-worldly birds and creatures as fine art</h2>
+          <h3>by Panna Zsamba</h3>
         </div>
       </div>
   );

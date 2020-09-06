@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   const [windowLoc, setWindowLoc] = useState('');
   const backgroundImg = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "pannadraws_bg.png" }) {
+      desktop: file(relativePath: { eq: "pannadraws_bg_heron.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 3644) {
             ...GatsbyImageSharpFluid_withWebp

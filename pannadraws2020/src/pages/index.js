@@ -198,6 +198,10 @@ const App = (props) => {
         height: 30px;
         margin-left: 10px;
         float: left;
+        
+        @media ${breakPoints.desktopLarge} {
+          margin-top: 8px;
+        }
       }
       
       h3 {
@@ -248,9 +252,9 @@ const App = (props) => {
         <div css={style.section}>
           <NewsLetter/>
         </div>
-        <div css={style.section}>
+        {/*<div css={style.section}>
           <ArtLinksContainer />
-        </div>
+        </div>*/}
         {/*<div css={style.newsContainer}>
           <div css={style.dividerTitle}><h3>News</h3></div>
         </div>*/}

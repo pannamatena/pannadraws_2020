@@ -369,7 +369,7 @@ const Header = () => {
               <div><Link to="/about/">About</Link></div>
               <div><Link to="/contact/">Contact</Link></div>
               <div><Link to="/faq/">FAQ</Link></div>
-              <div><a className="printShop" href="https://society6.com/pannadraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Print Shop</a></div>
+              <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy">Shop</a></div>
             </nav>
           </div>
           <nav role="navigation" css={style.menuLeft}>
