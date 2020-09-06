@@ -24,7 +24,7 @@ const AboutPage = () => {
           }
         }
       },
-      my_workspace: file(relativePath: { eq: "my_workspace.jpg" }) {
+      my_workspace: file(relativePath: { eq: "me_studio_3.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -166,19 +166,18 @@ const AboutPage = () => {
         <Image img={data.me.childImageSharp.fluid} alt="Panna Zsamba watercolour artist"/>
       </div>
       <div css={style.textContainer}>
-        <h1>I paint and draw fantasy creatures, birds and wildlife.</h1>
+        <h1>I paint birds. And sometimes mystical creatures. Are the two separate at all?</h1>
 
         <p>I’m Panna Zsamba, a self-taught watercolour artist based in Dublin, Ireland.</p>
 
-        <p>I have always been an artistic person and entertained myself by doodling ever since I was
-          a child, however, my focus hasn't been on art from the beginning. I was born in Hungary, where I first I studied
-          English literature and culture at college, though I took freelance web
+        <p>I was born in Hungary, where I first I studied
+          English literature and culture at college, while I took freelance web
           development jobs during those years. Graduating from there I became a
           software engineer. In a different way this career fulfilled my creative passion,
          but I couldn't hold in the real itch to create fine art, which burst out in my
-         early 30s. I decided then to take my artistic self seriously, and to the next level.</p>
+         early 30s. I decided then to focus more on fine art.</p>
 
-        <p>First I started with landscapes, but I was missing something. I wanted to have activity
+        <p>I started with landscapes, but I was missing something. I wanted to have activity
           in my scenes. Figurative art just broke its way out of me eventually.</p>
 
         <div css={style.image} className="first">
@@ -198,8 +197,8 @@ const AboutPage = () => {
         <div css={style.image} className="second">
           <Image
               img={data.my_workspace.childImageSharp.fluid}
-              alt="Panna's workspace, where the magic happens"
-              caption="My workspace, where the magic happens"
+              alt="Me sketching 'The Robin'"
+              caption="Me sketching 'The Robin'"
           />
         </div>
 
@@ -224,16 +223,30 @@ const AboutPage = () => {
 
         <h2>My Statement</h2>
 
-        <p>I work as a fantasy and animal artist because I have always been fascinated by
-        the beasts of stories of my childhood and myths in my readings in later life.</p>
-        <p>Part of my inspiration comes from novels and stories, but wildlife constantly affects me
-        in almost all everyday situations, like a walk to the grocery store, or just
-        looking at my bird feeder through the kitchen window.</p>
-        <p>I choose watercolour and ink as materials to capture my subjects because these light mediums
-          provide a fairy-tale-like atmosphere to my work. This lightness is balanced by the sharp
-          outlines of figures, inspired by superhero comic and manga books of my childhood.</p>
-        <p>A bird is a symbol of freedom. The supernatural lets you escape reality.
-          When painting, my subjects work as a stress relief for me, so I can get lost in the magical world I create.</p>
+        <p>I paint because I can't sit on my butt.</p>
+
+        <p>This sounds odd from an artist and someone who also works in software, however,
+          not being able to sit in one place for a long time kickstarted my artistic career
+          by providing the inspiration for my subject matter. I love nature, and whenever
+          I can I'm outside. I've loved observing animal behaviour from an early age.
+          I focus mostly on birds as they represent adventure for me with their capability
+          of flight.</p>
+
+        <p>My art is also a search. I feel a connection between all living things, and
+          I want to point that out, to say THIS is it, though I haven't been able to.
+          When I paint I'm searching for the definition of this connection. This search
+          is what brings in the supernatural into my work, as I think old myths and
+          legends, folk tales present elements that are trying to do the same, that
+          is to make sense of our place in this world by explaining the unexplainable.</p>
+
+        <p>I choose watercolour and ink as materials to capture my subjects because
+          these light mediums provide a fairy-tale-like atmosphere to my work. This
+          lightness is balanced by the sharp outlines of figures, inspired by superhero
+          comic and manga books of my childhood. I love strong contrasts and defined
+          figures so most of my subjects are represented in a dramatic manner.</p>
+
+        <p>We humans are the stories we have. The stories already written come alive in my
+          paintings, and there are many more adventures out there to lead me on this search.</p>
 
       </div>
     </div>
