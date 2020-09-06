@@ -1,6 +1,6 @@
 const animalArtMeta = {
   furcula: {
-    title: 'Furcula the First',
+    title: 'Furcula the First (Feathers of Tales VII)',
     year: '2020',
     description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (20 x 16 in), 2020.',
     price: 200,
@@ -14,7 +14,7 @@ const animalArtMeta = {
     story: '"If you get the wishbone on a chicken, catch one end of it and tell somebody else to catch the other end and whoever gets the right side after pulling you may wish for whatever you like." (<a href="http://irisharchaeology.ie/2016/11/animal-sacrifice-and-blood-letting-saint-martins-feast-in-ireland/" target="_blank" rel="noopener noreferrer">Irish superstition</a>)<br/><br/>Chickens might be the most important birds in our lives, yet when it comes to "bird art" I doubt a chicken is what everyone thinks about. Probably most nations in the world have some sort of connection with this animal and hens and roosters are represented in many beliefs and tales. Irish folklore is not an exception, there are many superstitions around chickens, many including the sacrifice of the bird. I just picked one of the less bloody ones as the opening quote, but here\'s another one:<br/><br/>"Some kind of fowl is killed such as chicken or goose and then the blood is sprinkled in the four corners of the kitchen. In some houses there is a cross formed with the blood, or three drops. It is believed if this is done no member of the family will meet with a violent death during the year."<br/><br/>I wanted to show this bird being more than just a wishbone or a sacrifice. If you have different eyes for it, a rooster is a beautiful ornate bird, the king of the yard. He should be portrayed as a king!<br/><br/>This painting is the 7th in my Feathers of Tales series, which features birds of Irish myths and folklore.',
   },
   the_ousel_of_cilgwri: {
-    title: 'The Ousel of Cilgwri',
+    title: 'The Ousel of Cilgwri (Feathers of Tales VI)',
     year: '2020',
     description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
     price: 115,
@@ -28,7 +28,7 @@ const animalArtMeta = {
     story: '"And the Ousel answered, \'When I first came here, there was a smith\'s anvil in this place, and I was then a young bird; and from that time no work has been done upon it, save the pecking of my beak every evening, and now there is not so much as the size of a nut remaining thereof; yet the vengeance of Heaven be upon me, if during all that time I have ever heard of the man for whom you inquire. Nevertheless I will do that which is right, and that which it is fitting that I should do for an embassy from Arthur. There is a race of animals who were formed before me, and I will be your guide to them.\'" (from the myth <i>Culhwch and Olwen</i>)<br /><br />The blackbird is believed to be one of the oldest animals in the world, along with the stag and the trout, and he\'s the advisor of many great mythical heroes. I see the blackbird as one of the kindest birds I know, there\'s a pair nesting in my garden every year. Their second batch of fledglings left the nest early August, but that doesn\'t mean they don\'t need their parents attention after. That\'s why I could get the reference photos of them as both parents were frequent visitors around the feeders at that time.<br /><br />I used two photos in this painting: the posture was provided by the mum, while the texture of the plumage is coming from a picture of the proud dad. This is the 6th piece in my Feathers of Tales series depicting birds in Irish myth and folklore.',
   },
   the_robin: {
-    title: 'The Robin',
+    title: 'The Robin (Feathers of Tales V)',
     year: '2020',
     description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
     price: 120,
