@@ -62,6 +62,11 @@ const MasonryLayout = (props) => {
     price: css`
       
     `,
+    priceSubline: css`
+      display: block;
+      font-size: 0.9em;
+      padding-bottom: 5px;
+    `,
     buyOBtn: css`
       display: block;
       color: ${colours.c1};
@@ -236,6 +241,41 @@ const MasonryLayout = (props) => {
     return `€ ${price}`;
   };
 
+  const getActionControls = (img) => {
+    if (props.imgMeta[img].type === 'adult_colouring') {
+      return (
+          <div css={style.originalBuy}>
+            <a
+                css={style.buyOBtn}
+                href={props.imgMeta[img].buyUrl}
+                title={`${props.imgMeta[img].title} colouring for adults`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >Buy on Etsy <span css={style.price}>{arrow()}</span></a>
+            <span css={style.priceSubline}>(from {getPrice(props.imgMeta[img])} + shipping)</span>
+          </div>
+      );
+    }
+    return (<>
+      {props.imgMeta[img].original === 'AVAILABLE' ? (
+          <div css={style.originalBuy}>
+            <a
+                css={style.buyOBtn}
+                href={props.imgMeta[img].buyUrl}
+                title={`${props.imgMeta[img].title} original artwork for sale`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >Buy original on Etsy <span css={style.price}>
+                      ({getPrice(props.imgMeta[img])})
+              {arrow()}
+                    </span></a>
+            <span css={style.freeShip}>+ FREE shipping</span>
+          </div>
+      ) : (<p css={style.oSold}>Original is sold.</p>)}
+      {getPrintStatus(props.imgMeta[img])}
+    </>);
+  };
+
   const renderGridItems = () => {
     const imgNames = Object.keys(props.imgData);
     return props.imgData && imgNames.map((img, index) => (
@@ -251,22 +291,7 @@ const MasonryLayout = (props) => {
             <div css={style.artGridMeta}>
               <h5>{props.imgMeta[img].title}</h5>
               <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
-              {props.imgMeta[img].original === 'AVAILABLE' ? (
-                  <div css={style.originalBuy}>
-                    <a
-                        css={style.buyOBtn}
-                        href={props.imgMeta[img].buyUrl}
-                        title={`${props.imgMeta[img].title} original artwork for sale`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Buy original on Etsy <span css={style.price}>
-                      ({getPrice(props.imgMeta[img])})
-                      {arrow()}
-                    </span></a>
-                    <span css={style.freeShip}>+ FREE shipping</span>
-                  </div>
-              ) : (<p css={style.oSold}>Original is sold.</p>)}
-              {getPrintStatus(props.imgMeta[img])}
+              {getActionControls(img)}
             </div>
           </div>
         </div>

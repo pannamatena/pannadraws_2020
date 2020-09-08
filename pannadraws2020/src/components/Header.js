@@ -365,6 +365,7 @@ const Header = () => {
             <nav role="navigation" css={style.mobileMenuContent}>
               <div><Link to="/animal_art/">All Birds & Wildlife Art</Link></div>
               <div><Link to="/feathers_of_tales/">Feathers of Tales</Link></div>
+              <div><Link to="/adult_colouring/">Adult Colouring</Link></div>
               <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
               <div><Link to="/sketchbook/">Sketchbook</Link></div>
               <div><Link to="/about/">About</Link></div>
@@ -378,6 +379,7 @@ const Header = () => {
               <ul>
                 <li><Link to="/animal_art/">All Birds & Wildlife Art</Link></li>
                 <li><Link to="/feathers_of_tales/">Feathers of Tales</Link></li>
+                <li><Link to="/adult_colouring/">Adult Colouring</Link></li>
                 <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
                 <li><Link to="/sketchbook/">Sketchbook</Link></li>
               </ul>
