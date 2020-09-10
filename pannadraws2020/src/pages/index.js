@@ -15,6 +15,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      may: file(relativePath: { eq: "2020/may_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       furcula: file(relativePath: { eq: "2020/furcula_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -64,17 +71,24 @@ const App = (props) => {
           }
         }
       },
-      bonds: file(relativePath: { eq: "2020/bonds_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
     }
   `);
 
   const imgMeta = {
+    may: {
+      title: 'May',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (20 x 16 in), 2020.',
+      price: 75,
+      original: 'AVAILABLE',
+      prints: 'SOLD',
+      buyUrl: 'https://www.etsy.com/ie/listing/868678085/may-original-watercolour-painting-robin',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This robin painting is free to download for my newsletter subscribers! It\'s an A4 size high quality PDF that you can print for yourself. You can sign up on the <a title="PannaDraws home" href="/">home page</a>!<br /><br />I spotted this little fellow back in May 2020, in the middle of the worst of the lockdown in our local park, when I couldn\'t really go any further for bird photography. He was totally ignorant of course, singing his heart out as it was the breeding season. Now that it\'s September I thought it\'s a nice memory to think back of the blooming trees. For that matter it\'s nice to think of spring at any time of the year, so I chose this image as a reference for the new printable gift for newsletter subscribers.',
+    },
     furcula: {
       title: 'Furcula the First',
       year: '2020',
@@ -172,20 +186,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: '"One for sorrow,<br />Two for joy,<br />Three for a girl,<br />Four for a boy,<br />Five for silver,<br />Six for gold,<br />Seven for a secret,<br />Never to be told.<br />Eight for a wish,<br />Nine for a kiss,<br />Ten for a bird,<br />You must not miss<br />Eleven is worse<br />Twelve for a dastardly curse."<br /><br />The mischievous magpie. You can hear his unmistakable chatter everywhere, and you may wonder how many you\'ll come across this time? As this nursery rhyme goes, you might get lucky, but what if there\'s only one? Quickly, ask him how his wife is! Then you might have a chance to avoid misfortune.<br /><br />I chose the magpie for this painting because there\'s scarcely any bird with more superstition around it than this black and white fellow. Although magpies have a pretty negative reputation overall, they are quite intelligent and good looking. You can try get rid of them, but they still figure out a way to get what they want, and then their distinctive chatter sounds like laughter. A common bird in every garden, still a real icon. You might be superstitious or not, but you surely know the magpie.<br /><br />This painting is the 3rd in Feathers of Tales, my series on birds of Irish folklore. Previous artworks in the series are "Old Nog" and "The King\'s Friend", both available in my shop.',
-    },
-    bonds: {
-      title: 'Bonds',
-      year: '2020',
-      description: 'Ink and coloured pencil on mixed media paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
-      price: 115,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/815319864/bonds-original-ink-and-coloured-pencil',
-      printUrl: 'https://www.etsy.com/ie/listing/831518669/bonds-fantasy-poster-print-fantasy-art',
-      discount: 0,
-      discountPrint: 0,
-      type: 'mixed_media_painting',
-      story: 'How does fatigue bond the mind and prevent it from flying free? I was exhausted both mentally and physically when this drawing was born, as I had a long cycling exercise before. I didn\'t have a concept in mind, I only had the blank sheet and just drew. When pushed to the limits, this is what remains to my mind: my favourite flower, birds and dragons, tangled together.<br /><br />The artwork was created using traditional inking with sepia acrylic ink and a coloured pencil. This was the first time I tried this transparent ink on a separate piece and I like how it ended up giving this aged look to the image.',
     },
   };
 

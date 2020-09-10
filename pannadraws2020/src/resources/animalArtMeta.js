@@ -1,4 +1,18 @@
 const animalArtMeta = {
+  may: {
+    title: 'May',
+    year: '2020',
+    description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (20 x 16 in), 2020.',
+    price: 75,
+    original: 'AVAILABLE',
+    prints: 'SOLD',
+    buyUrl: 'https://www.etsy.com/ie/listing/868678085/may-original-watercolour-painting-robin',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'This robin painting is free to download for my newsletter subscribers! It\'s an A4 size high quality PDF that you can print for yourself. You can sign up on the <a title="PannaDraws home" href="/">home page</a>!<br /><br />I spotted this little fellow back in May 2020, in the middle of the worst of the lockdown in our local park, when I couldn\'t really go any further for bird photography. He was totally ignorant of course, singing his heart out as it was the breeding season. Now that it\'s September I thought it\'s a nice memory to think back of the blooming trees. For that matter it\'s nice to think of spring at any time of the year, so I chose this image as a reference for the new printable gift for newsletter subscribers.',
+  },
   furcula: {
     title: 'Furcula the First (Feathers of Tales VII)',
     year: '2020',
