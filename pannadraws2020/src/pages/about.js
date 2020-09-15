@@ -168,58 +168,78 @@ const AboutPage = () => {
       <div css={style.textContainer}>
         <h1>I paint birds. And sometimes mystical creatures. Are the two separate at all?</h1>
 
-        <p>I’m Panna Zsamba, a self-taught watercolour artist based in Dublin, Ireland.</p>
+        <p>Panna is a Dublin based, self-taught watercolour artist born in 1987 in Budapest, Hungary.</p>
 
-        <p>I was born in Hungary, where I first I studied
-          English literature and culture at college, while I took freelance web
-          development jobs during those years. Graduating from there I became a
-          software engineer. In a different way this career fulfilled my creative passion,
-         but I couldn't hold in the real itch to create fine art, which burst out in my
-         early 30s. I decided then to focus more on fine art.</p>
+        <p>She spent her
+          childhood summers in the country, at Lake Balaton, where she got the chance
+          to connect to nature through activities like fishing and playing near water.
+          She didn't get far from the wilderness back in the city either, where she
+          lived close to the river Danube, next to the nature reserve in the Northern
+          part of the city. These years spent getting scratches and bumps while being
+          outside show their influence in her art as she learnt how to observe nature.</p>
 
-        <p>I started with landscapes, but I was missing something. I wanted to have activity
-          in my scenes. Figurative art just broke its way out of me eventually.</p>
+        <p>In 2009 she graduated from college where with a major in English Literature
+          and Culture, writing her thesis on "Dragons in Celtic Mythology and Literature",
+          which marked her interest in the supernatural and Celtic culture. However,
+          from there she started a career in software development, which she learnt on
+          her own during college years.
+        </p>
 
         <div css={style.image} className="first">
           <Image
               img={data.me_at_work.childImageSharp.fluid}
               alt="Panna at work while her boss is supervising the job done"
-              caption="Me at work while my boss is supervising the job done"
+              caption="Panna at work while her boss is supervising the job done"
           />
         </div>
 
-        <p>I mostly use watercolour as my primary medium, though I tend to experiment
-          with coloured pencils a lot lately. As a kid I loved comic books, which shows
-          in my style. My work is defined by harsh ink outlines and vivid colours I use
-          in most paintings, the former inspired by traditional comic book and manga
-          inking.</p>
+        <p>After trying herself in many artistic hobbies from wooden ship models,
+          cross-stitching and sewing, in 2019 she heard the call for her true passion,
+          painting. While working in software she was drawn towards digital art, but
+          because spending most of her time in front of a screen she found
+          more artistic excitement and challenge in traditional media.</p>
 
         <div css={style.image} className="second">
           <Image
               img={data.my_workspace.childImageSharp.fluid}
-              alt="Me sketching 'The Robin'"
-              caption="Me sketching 'The Robin'"
+              alt="Panna sketching 'The Robin'"
+              caption="Panna sketching 'The Robin'"
           />
         </div>
 
-        <p>I take my reference photos myself where possible. I want to fully own the experience
-          each painting holds. All the adventures of getting to the spot, waiting for the right
-          moment, the shutter sound, and eventually the artistic process are all in there in
-          each piece.</p>
+        <p>Panna is focusing on birds in her figurative paintings, which subjects combine
+          her love for adventure and nature and the passion for painting animals,
+          spiced with a hint of the supernatural. She loves going out and taking her own
+          reference photos as she considers this part of the creative process, while it
+          also makes her familiar with her subjects. Getting to know these birds helps
+          her in her quest of finding our place, as humans, in this world, finding a
+          connection with nature. With the advancement of civilisation she feels there's
+          an ever growing gap between us and the natural world, and to build a bridge over
+          that she reaches for supernatural beliefs, folklore and legends from times when
+          people depended much more on the environment.</p>
 
         <div css={style.image} className="third">
           <Image
               img={data.me_hunting.childImageSharp.fluid}
               alt="Panna on the hunt at the Bull Island bird sanctuary"
-              caption="Me on the hunt at the Bull Island bird sanctuary"
+              caption="Panna on the hunt at the Bull Island bird sanctuary"
           />
         </div>
 
-        <p>My choice of subject is usually inspired by folklore and myths, while I also
-          love to capture the beauty of animals and wildlife around me, especially birds. I'm
-         lucky to have the origins in a country that is so deeply connected to myths, and
-         also to live in another place now, where the same can be told. I learnt to open an eye
-         to see the fairy magic in the small everyday things. Believe me, it's there!</p>
+        <p>Panna's paintings invite you to see beyond what is obvious, forget about what
+          you believe to be real, and lose yourself in the stories these pictures depict.
+          While the figures are always in the center of attention, highlighted with
+          comic-book-style-influenced ink outlines, the background often hints at the
+          human  existence, showing the faint silhouettes of buildings, or sometimes
+          ruins, pointing out the age of the stories used. Watercolour adds a lightness
+          to her compositions, balancing the harsh outlines, while the eeriness of
+          nature, some darkness, a threat always lingers in there as well.</p>
+
+        <p>The heroes of these artworks are everyday birds, but their character is brought
+          out to almost make them talk to you, to tell you their stories. While they
+          are pleasing to the eye and their overall aesthetics wants to be enjoyable, a
+          darkness is there, warning you life is not just beauty, and fairy tales can
+          become horror stories in a blink. Nature is ruthless after all.</p>
 
         <h2>My Statement</h2>
 
