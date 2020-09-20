@@ -252,7 +252,7 @@ const MasonryLayout = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
             >Buy on Etsy <span css={style.price}>{arrow()}</span></a>
-            <span css={style.priceSubline}>(from {getPrice(props.imgMeta[img])} + shipping)</span>
+            <span css={style.priceSubline}>(from {getPrice(props.imgMeta[img])}{props.imgMeta[img].subType !== 'digital' ? ' + shipping' : null})</span>
           </div>
       );
     }

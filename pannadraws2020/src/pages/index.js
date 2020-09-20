@@ -9,7 +9,6 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Banner from "../components/Banner";
 import MasonryLayout from "../components/MasonryLayout";
-import ArtLinksContainer from "../components/ArtLinksContainer";
 import NewsLetter from '../components/Newsletter';
 
 const App = (props) => {
@@ -226,7 +225,7 @@ const App = (props) => {
         }
       }
     `,
-    section: css`
+    sectionCenter: css`
       display: flex;
       flex-direction: row;
       align-items: flex-end;
@@ -240,8 +239,74 @@ const App = (props) => {
         margin-bottom: 20px;
       }
     `,
+    sectionLeft: css`
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      
+      margin: 20px 0 0;
+      @media ${breakPoints.tabletPortrait} {
+        margin: 30px 0 0;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin: 40px 0 0;
+      }
+      @media ${breakPoints.desktopXLarge} {
+        margin: 100px 0 0;
+      }
+    `,
     newsContainer: css`
     
+    `,
+    quote: css`
+      margin: 0 auto;
+      width: 60%;
+      position: relative;
+      font-size: 1.5em;
+      
+      &:before { 
+        content: '"';
+        display: block;
+        position: absolute;
+        top: -9px;
+        left: 0;
+        font-family: ${fonts.f1};
+        font-size: 3em;
+        color: ${colours.c1};
+      }
+      
+      margin-bottom: 20px;
+      @media ${breakPoints.tabletPortrait} {
+        margin-bottom: 30px;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin-bottom: 40px;
+      }
+    `,
+    quoteText: css`
+      padding-left: 20px;
+      
+      font-size: 0.9em;
+      @media ${breakPoints.tabletPortrait} {
+        font-size: 1em;
+      }
+      @media ${breakPoints.desktopSmall} {
+        font-size: 1.1em;
+      }
+    `,
+    quoteFrom: css`
+      font-size: 1em;
+      color: ${colours.c4};
+      text-align: right;
+      
+      font-size: 0.8em;
+      @media ${breakPoints.tabletPortrait} {
+        font-size: 0.9em;
+      }
+      @media ${breakPoints.desktopSmall} {
+        font-size: 1em;
+      }
     `,
   };
 
@@ -249,7 +314,7 @@ const App = (props) => {
       <Layout>
         <SEO title="Fantasy and animal fine art by Panna Zsamba" />
         <Banner />
-        <div css={style.section}>
+        <div css={style.sectionCenter}>
           <NewsLetter/>
         </div>
         {/*<div css={style.section}>
@@ -260,6 +325,20 @@ const App = (props) => {
         </div>*/}
         <div css={style.dividerTitle}>{logo()}<h3>Latest Art</h3></div>
         <MasonryLayout imgData={imgData} imgMeta={imgMeta} path={props.path} />
+        <div css={style.sectionLeft}>
+          <div css={style.quote}>
+            <p css={style.quoteText}>From first discovering Pannas beautiful work on Facebook, I’ve become an avid follower!!
+              She has such talent and skill and her work is very much 'all her own'... very unique
+              style! I’m happy to say I’m recently the proud owner of her original piece 'Robin'
+              from her 'feathersoftales'... and I look forward to seeing more!!</p>
+            <p css={style.quoteFrom}>Patricia Morrison, Ireland</p>
+          </div>
+          <div css={style.quote}>
+            <p css={style.quoteText}>Just got home from work and seen my package. I love it, thank you so much!
+              Love the little message too!</p>
+            <p css={style.quoteFrom}>Stephen Kelly, Ireland</p>
+          </div>
+        </div>
       </Layout>
   );
 };

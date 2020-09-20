@@ -1,4 +1,19 @@
 const adultColouringMeta = {
+  farewell: {
+    title: 'Farewell',
+    year: '2020',
+    description: 'An autumn-themed printable colouring page.',
+    price: 1,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/859944744/farewell-adult-coloring-printable-page',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'adult_colouring',
+    subType: 'digital',
+    story: 'When leaves are turning yellow and red the swallows are about to leave us once again. These lightning-fast little fellows are true markers of summers days, which we also have to say farewell to when they leave.<br /><br />This design was inspired by these times, when seasons are changing as well as our bird neighbours: winter visitors are arriving, and our summer friends are taking their leaves. The design was made to become a tshirt pattern, but I made it available as an adult colouring page as well.',
+  },
   dragon_dance: {
     title: 'Dragon Dance',
     year: '2020',
@@ -11,6 +26,7 @@ const adultColouringMeta = {
     discount: 0,
     discountPrint: 0,
     type: 'adult_colouring',
+    subType: 'digital',
     story: 'A Draconic Colouring Adventure!<br /><br />Mighty fire-breathers, mystical Eastern spirits and swift water serpents come together for a dance in this set of colouring pages. Are they fighting? Or is there more to it? Give their dragon dance a mood by colouring the enchanted scenes!<br /><br />You can print the pages on either A3 or A4 sized paper (they are optimised for A3, but it will work with smaller scales and US sizes as well). I would suggest using a thicker, non-glossy paper for the best experience.<br /><br />Original artwork was created using acrylic inks on mixed media paper.',
   },
   my_river_dance: {
