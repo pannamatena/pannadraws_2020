@@ -18,7 +18,7 @@ const animalArtMeta = {
     year: '2020',
     description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (20 x 16 in), 2020.',
     price: 200,
-    original: 'AVAILABLE',
+    original: 'SOLD',
     prints: 'NOTYET',
     buyUrl: 'https://www.etsy.com/ie/listing/864105935/furcula-the-first-feathers-of-tales-vii',
     printUrl: '',

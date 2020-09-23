@@ -284,12 +284,12 @@ const ArtPage = (props) => {
     setShowDialog(false);
   };
 
-  const getPrintStatus = (printVal, printUrl) => {
-    switch (printVal) {
+  const getPrintStatus = (imgMeta) => {
+    switch (imgMeta.prints) {
       case 'AVAILABLE': {
         return (
             <div css={style.printBuy}>
-              <a css={style.buyPBtn} href={printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints (from € 26.95 + shipping)<span>{arrow()}</span></a>
+              <a css={style.buyPBtn} href={imgMeta.printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints (from € 26.95 + shipping)<span>{arrow()}</span></a>
             </div>
         )
       }
