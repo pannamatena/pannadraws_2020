@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      queen_of_the_wasteland: file(relativePath: { eq: "2020/queen_of_the_wasteland_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      st_colmans_duck: file(relativePath: { eq: "2020/st_colmans_duck_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       may: file(relativePath: { eq: "2020/may_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -56,28 +70,42 @@ const App = (props) => {
           }
         }
       },
-      the_fishermans_son: file(relativePath: { eq: "2020/the_fishermans_son_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      one_for_sorrow: file(relativePath: { eq: "2020/one_for_sorrow_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
     }
   `);
 
   const imgMeta = {
+    queen_of_the_wasteland: {
+      title: 'Queen of the Wasteland (Feathers of Tales IX)',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 508 x 405 mm (20 x 16 in), 2020.',
+      price: 180,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: 'https://www.etsy.com/ie/listing/877615323/queen-of-the-wasteland-feathers-of-tales',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '“Wherever there was war, either among gods or men, she, the great queen, was present, either in her own shape or on her favorite disguise, that of a hoodie or carrion crow. An old poem shows her inciting a warrior: Over his head is shrieking, A lean hag, quickly hopping, Over the points of the weapons and shields, She is the grey-haired Morrigii!” (from <a href="https://livinglibraryblog.com/the-raven-and-crow-of-the-celts-part-i-myth-and-legend/" target="_blank" rel="noopener noreferrer">Celtic Myth and Legend</a> by Charles Squires)<br /><br />The Morrigan is maybe the most well-known character of Irish myths. She sometimes appears as a goddess, but sometimes as a trio of goddesses named Macha, Babd and Namain. These badass women took the form a crow or raven and went to battle, leaving a wasteland behind.<br /><br />I\'m not a seaside kid, the largest body of water I was accustomed to as a child was a big lake. Sweet water has a very different environment than the sea, the smells, animals, and the routine is different (lack of tides!). So to me that vast empty flat field left behind after the tide with the smell of fish and seaweed looks like a wasteland: treasure hunter birds are foraging upon it, and there\'s the smell of rot and salt, but it\'s still full of life, shells and driftwood.<br /><br />That\'s where I\'ve seen this hooded crow digging the weeds in search of something to eat, at low tide near Bull Island. That wasteland is like a battlefield after the battle, you don\'t know what treasures you might find among the waste! And this is how this bird became the muse for part 9 of Feathers of Tales, my art series about birds in Irish myth and folklore.',
+    },
+    st_colmans_duck: {
+      title: 'St Colman\'s Duck (Feathers of Tales VIII)',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 180,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '"But as they were so tame, persons fetching water from the pond on a dark night—so the legend goes on to say—sometimes by an unlucky chance brought one of them away in the vessel without knowing it, and threw the contents, bird and all, into a pot over a fire to be boiled. Whenever this happened no matter how the people heaped on wood, or how long the fire was kept up, the water still remained as cold as when it was taken from the pond; and in the end the little duck was found not in the least harmed, swimming about unconcernedly on the top." (the legend of St Colman\'s ducks)<br /><br />If you\'re exploring Irish stories you can\'t avoid a reference to the church. That\'s the case with the duck, the 8th part of my Feathers of Tales series, where I just couldn\'t ignore the story of St Colman\'s ducks.<br /><br />There are many legends around these ducks, all telling about how invincible they were. Some sources even add that they were actually wild ducks, not the domestic ones, so it just fits that I chose this handsome mallard for this picture.<br /><br />Being a common bird (just visit any pond in any park in Dublin) I haven\'t thought too much about ducks before, but painting the wonderful shiny details on this one I realised, as always, how beautiful these birds are. And because they are used to human presence they make a convenient photo subject as well! The reference photo was taken during lockdown and this boy posed quite happily for me. I also love the earth colours this painting required, it turned out to be a nice heartwarming artwork.<br /><br />Part 8 of the series Feathers of Tales.',
+    },
     may: {
       title: 'May',
       year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (20 x 16 in), 2020.',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
       price: 75,
       original: 'AVAILABLE',
       prints: 'SOLD',
@@ -91,7 +119,7 @@ const App = (props) => {
     furcula: {
       title: 'Furcula the First',
       year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (20 x 16 in), 2020.',
+      description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
       price: 200,
       original: 'SOLD',
       prints: 'NOTYET',
@@ -157,34 +185,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'They say the eyes are the windows to the soul. Look at the eyes of this creature, he couldn\'t even deny his predatory nature! The sparrowhawk, a small bird of prey, but fast, agile and deadly. This one here is a male, which is smaller than the female and has the orange markings. Their skills sparkle most in woodlands, where they cross between the smallest gaps with great speed, and they can chase down prey on foot (?!). Now I\'d love to see THAT!<br /><br />I\'m always so fond of the variety of birds visiting my garden to feed. And it actually never occurred to me that by attracting so many breeds there\'s a consequencial visitor as well... I wasn\'t even aware there are hawks nearby.<br /><br />So I was doing my morning workout and between sets I stared out the kitchen window. Suddenly all the birds took off, and something spiralled down like an arrow. My wandering brain didn\'t even register what was happening, I remember thinking "oh, what kind of bird is this, how interesting" before the shock settled in. "*@$&! He got a sparrow!! Omg! It\'s a hawk!" He sat for 3 seconds in the grass with his prey, then took off. I stood there in complete shock for another minute, thinking I wouldn\'t have stood a chance. By the time I realised what was happening, that sparrow was dead. That\'s how I met my sparrowhawk.',
-    },
-    the_fishermans_son: {
-      title: 'The Fisherman\'s Son (Feathers of Tales IV)',
-      year: '2020',
-      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm (20 x 16 in), 2020.',
-      price: 200,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/827929980/the-fishermans-son-feathers-of-tales-iv',
-      printUrl: 'https://www.etsy.com/ie/listing/841722676/the-fishermans-son-feathers-of-tales-iv',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"Well" said the Gruagach "you won\'t see your son to-day. At noon-to-morrow I\'ll put a whistle in my mouth and call together all the birds in my place, and they\'ll come. Among others will be twelve doves. I\'ll put my hand in my pocket, this way, and take out wheat and throw it before them on the ground. The doves will eat the wheat, and you must pick your son out of the twelve. If you find him, you\'ll have him; if you don\'t, you\'ll never have him again." (From "Myths and Folk Tales of Ireland" by Jeremiah Curtin)<br /><br />It wasn\'t easy to pick one tale where the white dove plays a major role, but I chose "The Fisherman\'s Son and The Gruagach of Tricks" because it had these typical folk tale elements in it that everyone knows: a fisherman, a boy, a "man of high degree" as a villain, and magic, and the dove.<br /><br />In the painting I wanted to create that gloomy atmosphere that folk tales have, when you know in the end everyone will live happily ever after, but the story is scary, and the fate of the heroes is to suffer and go through trials. I might not tell you a big spoiler when I say the fisherman will save his boy, but the route to that moment is full of darkness and hardships.<br /><br />This is #4 in my Feathers of Tales series, based on birds of Irish folklore. Fun fact: the model I used is a common grey pigeon you see in every city, but I "bleached" her while painting.',
-    },
-    one_for_sorrow: {
-      title: 'One for Sorrow (Feathers of Tales III)',
-      year: '2020',
-      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm (20 x 16 in), 2020.',
-      price: 450,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/834290581/one-for-sorrow-feathers-of-tales-iii',
-      printUrl: 'https://www.etsy.com/ie/listing/841718518/one-for-sorrow-feathers-of-tales-iii',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"One for sorrow,<br />Two for joy,<br />Three for a girl,<br />Four for a boy,<br />Five for silver,<br />Six for gold,<br />Seven for a secret,<br />Never to be told.<br />Eight for a wish,<br />Nine for a kiss,<br />Ten for a bird,<br />You must not miss<br />Eleven is worse<br />Twelve for a dastardly curse."<br /><br />The mischievous magpie. You can hear his unmistakable chatter everywhere, and you may wonder how many you\'ll come across this time? As this nursery rhyme goes, you might get lucky, but what if there\'s only one? Quickly, ask him how his wife is! Then you might have a chance to avoid misfortune.<br /><br />I chose the magpie for this painting because there\'s scarcely any bird with more superstition around it than this black and white fellow. Although magpies have a pretty negative reputation overall, they are quite intelligent and good looking. You can try get rid of them, but they still figure out a way to get what they want, and then their distinctive chatter sounds like laughter. A common bird in every garden, still a real icon. You might be superstitious or not, but you surely know the magpie.<br /><br />This painting is the 3rd in Feathers of Tales, my series on birds of Irish folklore. Previous artworks in the series are "Old Nog" and "The King\'s Friend", both available in my shop.',
     },
   };
 
