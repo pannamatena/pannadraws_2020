@@ -78,7 +78,7 @@ const App = (props) => {
       title: 'Queen of the Wasteland (Feathers of Tales IX)',
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 508 x 405 mm (20 x 16 in), 2020.',
-      price: 180,
+      price: 200,
       original: 'AVAILABLE',
       prints: 'NOTYET',
       buyUrl: 'https://www.etsy.com/ie/listing/877615323/queen-of-the-wasteland-feathers-of-tales',
