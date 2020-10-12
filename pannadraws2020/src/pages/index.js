@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      rascals: file(relativePath: { eq: "2020/rascals_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      farewell: file(relativePath: { eq: "2020/farewell_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       queen_of_the_wasteland: file(relativePath: { eq: "2020/queen_of_the_wasteland_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -42,38 +56,66 @@ const App = (props) => {
           }
         }
       },
-      the_ousel_of_cilgwri: file(relativePath: { eq: "2020/the_ousel_of_cilgwri_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      almost_invincible: file(relativePath: { eq: "2020/almost_invincible_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      the_robin: file(relativePath: { eq: "2020/the_robin_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      sparrowhawk: file(relativePath: { eq: "2020/sparrowhawk_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
     }
   `);
 
   const imgMeta = {
+    /*christmas_tit_1: {
+      title: 'Christmas Tit I',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
+      price: 45,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '',
+    },
+    christmas_robin_1: {
+      title: 'Christmas Robin I',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
+      price: 45,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '',
+    },*/
+    rascals: {
+      title: 'Rascals',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 135,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/870126360/rascals-bird-art-poster-print-garden',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Originally created as at-shirt design, this painting of two mischievous starlings became one of my favourites. If anything, starlings are real characters in the garden. They appear in a group out of nowhere, raid all the bird feeders, then most of them leave. Some might remain, and then you can listen to their chit-chat in the bushes... A pleasant sound I couldn\'t believe was coming from these rascals! In this painting I also wanted to show their beauty, the amazing greenish shine in their plumage with the golden dots along their body.<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
+    },
+    farewell: {
+      title: 'Farewell',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 115,
+      original: 'AVAILABLE',
+      prints: 'AVAILABLE',
+      buyUrl: 'https://www.etsy.com/ie/listing/871870682/farewell-original-watercolour-painting',
+      printUrl: 'https://www.etsy.com/ie/listing/870127742/farewell-bird-art-poster-print-swallow',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'When it\'s summer, you hardly think about the time when nature starts to change colours, and some of the usual habitants of your environment leave for the winter. When I painted this swallow, originally intended it as a t-shirt design, the little birds already left, leaving behind the autumn colours of leaves. I know they\'ll return once it\'s spring time again. Until then, farewell!<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
+    },
     queen_of_the_wasteland: {
       title: 'Queen of the Wasteland (Feathers of Tales IX)',
       year: '2020',
@@ -93,9 +135,9 @@ const App = (props) => {
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
       price: 180,
-      original: 'SOLD',
+      original: 'AVAILABLE',
       prints: 'NOTYET',
-      buyUrl: '',
+      buyUrl: 'https://www.etsy.com/ie/listing/871888495/st-colmans-duck-feathers-of-tales-viii',
       printUrl: '',
       discount: 0,
       discountPrint: 0,
@@ -121,7 +163,7 @@ const App = (props) => {
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
       price: 200,
-      original: 'SOLD',
+      original: 'AVAILABLE',
       prints: 'NOTYET',
       buyUrl: 'https://www.etsy.com/ie/listing/864105935/furcula-the-first-feathers-of-tales-vii',
       printUrl: '',
@@ -129,62 +171,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: '"If you get the wishbone on a chicken, catch one end of it and tell somebody else to catch the other end and whoever gets the right side after pulling you may wish for whatever you like." (<a href="http://irisharchaeology.ie/2016/11/animal-sacrifice-and-blood-letting-saint-martins-feast-in-ireland/" target="_blank" rel="noopener noreferrer">Irish superstition</a>)<br/><br/>Chickens might be the most important birds in our lives, yet when it comes to "bird art" I doubt a chicken is what everyone thinks about. Probably most nations in the world have some sort of connection with this animal and hens and roosters are represented in many beliefs and tales. Irish folklore is not an exception, there are many superstitions around chickens, many including the sacrifice of the bird. I just picked one of the less bloody ones as the opening quote, but here\'s another one:<br/><br/>"Some kind of fowl is killed such as chicken or goose and then the blood is sprinkled in the four corners of the kitchen. In some houses there is a cross formed with the blood, or three drops. It is believed if this is done no member of the family will meet with a violent death during the year."<br/><br/>I wanted to show this bird being more than just a wishbone or a sacrifice. If you have different eyes for it, a rooster is a beautiful ornate bird, the king of the yard. He should be portrayed as a king!<br/><br/>This painting is the 7th in my Feathers of Tales series, which features birds of Irish myths and folklore.',
-    },
-    the_ousel_of_cilgwri: {
-      title: 'The Ousel of Cilgwri',
-      year: '2020',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 115,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      buyUrl: 'https://www.etsy.com/ie/listing/845872130/the-ousel-of-cilgwri-feathers-of-tales',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"And the Ousel answered, \'When I first came here, there was a smith\'s anvil in this place, and I was then a young bird; and from that time no work has been done upon it, save the pecking of my beak every evening, and now there is not so much as the size of a nut remaining thereof; yet the vengeance of Heaven be upon me, if during all that time I have ever heard of the man for whom you inquire. Nevertheless I will do that which is right, and that which it is fitting that I should do for an embassy from Arthur. There is a race of animals who were formed before me, and I will be your guide to them.\'" (from the myth <i>Culhwch and Olwen</i>)<br /><br />The blackbird is believed to be one of the oldest animals in the world, along with the stag and the trout, and he\'s the advisor of many great mythical heroes. I see the blackbird as one of the kindest birds I know, there\'s a pair nesting in my garden every year. Their second batch of fledglings left the nest early August, but that doesn\'t mean they don\'t need their parents attention after. That\'s why I could get the reference photos of them as both parents were frequent visitors around the feeders at that time.<br /><br />I used two photos in this painting: the posture was provided by the mum, while the texture of the plumage is coming from a picture of the proud dad. This is the 6th piece in my Feathers of Tales series depicting birds in Irish myth and folklore.',
-    },
-    almost_invincible: {
-      title: 'Almost Invincible',
-      year: '2020',
-      description: 'Ink, graphite and watercolour pencil on mixed media paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 90,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      buyUrl: 'https://www.etsy.com/ie/listing/855625433/almost-invincible-original-mixed-media',
-      printUrl: 'https://www.etsy.com/ie/listing/855629301/almost-invincible-fantasy-poster-print',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'We need a dragon. That western-type, fierce, all the years and battles visible on his scales. No, don\'t illustrate "The Hobbit" (you\'re not a fan of the story anyway, the dragon DIES :\'( ), let\'s just place this guy in a composition, like a coat of arms. All right, not an illustration, but at least can I take that monstrous spear as an inspiration? Looks ok in a coat of arms, doesn\'t it? Let\'s make it two spears then. Fire and smoke. Let\'s add some of the latter, that always makes a nice background. This is still too relaxed. When you\'re this fierce and a badass, you can\'t just hang around in the air, can you? You can hang around in a swarm of arrows! Not that you care, you\'re invincible. Almost.<br /><br />That sums up my line of thoughts while creating my contribution to this year\'s #smaugust on Instagram. Despite my doubts I finished it eventually. And my thoughts in the end? Well it\'s better than I thought it would be, and I figured I actually like this monochromatic approach (also much quicker to work with only one colour on your palette).',
-    },
-    the_robin: {
-      title: 'The Robin',
-      year: '2020',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 120,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/839003450/the-robin-feathers-of-tales-v-matte',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"Well how the boy tried to stay awake! He hadn\'t really slept while lying on the frozen ground and he was still exhausted from the walk. His eyes got lower. His head got lower.  The fire got lower. So low in fact that a starving wolf began to inch near the sleeping pair. However, there was one who was awake. There was one who saw everything from the middle of an old bush; a little bird who was as gray as the brambly wood." (<a href="http://irishhedgerows.weebly.com/folklore.html" target="_blank" rel="noopener noreferrer">Irish folk tale</a>)<br /><br />Although he\'s a common sight, it\'s always a pleasure to meet the little robin. When we moved into our new house he was the first to approach while we were digging up the whole garden. While other birds scatter in a blink of an eye, he stays asking for some snacks. And when he sings, all the other birds seem silent as if they were listening to the melancholic tunes. The robin is truly a kind little companion in my backyard. That\'s why I had to include him in Feathers of Tales.<br /><br />And in case you were wondering how the story ends, how this friendly bird got his distinctive red chest, here you go:<br /><br />"The bird hopped down and began fanning the flickering embers until the flames began to lick out hungrily; nor did the little bird stop, despite the pain on his breast, until the flames were dancing with strength. The heat from the flames changed the colour of his breast feathers and from that day onwards the Robin has proudly worn a red breast." (same folk tale)<br /><br />This is #5 in my Feathers of Tales series, based on birds of Irish folklore. Other pieces are also available in the shop, including the heron, goose, magpie and dove!',
-    },
-    sparrowhawk: {
-      title: 'Sparrowhawk',
-      year: '2020',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 180,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/841725878/sparrowhawk-bird-art-poster-print-birds',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'They say the eyes are the windows to the soul. Look at the eyes of this creature, he couldn\'t even deny his predatory nature! The sparrowhawk, a small bird of prey, but fast, agile and deadly. This one here is a male, which is smaller than the female and has the orange markings. Their skills sparkle most in woodlands, where they cross between the smallest gaps with great speed, and they can chase down prey on foot (?!). Now I\'d love to see THAT!<br /><br />I\'m always so fond of the variety of birds visiting my garden to feed. And it actually never occurred to me that by attracting so many breeds there\'s a consequencial visitor as well... I wasn\'t even aware there are hawks nearby.<br /><br />So I was doing my morning workout and between sets I stared out the kitchen window. Suddenly all the birds took off, and something spiralled down like an arrow. My wandering brain didn\'t even register what was happening, I remember thinking "oh, what kind of bird is this, how interesting" before the shock settled in. "*@$&! He got a sparrow!! Omg! It\'s a hawk!" He sat for 3 seconds in the grass with his prey, then took off. I stood there in complete shock for another minute, thinking I wouldn\'t have stood a chance. By the time I realised what was happening, that sparrow was dead. That\'s how I met my sparrowhawk.',
     },
   };
 

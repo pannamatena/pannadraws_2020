@@ -4,12 +4,12 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import ArtPageLayout from '../components/ArtPageLayout';
 import ArtPage from '../components/ArtPage';
-import adultColouringMeta from '../resources/adultColouringMeta';
+import animalArtMeta from '../resources/animalArtMeta';
 
-const FarewellColouring = (props) => {
+const ChristmasRobin1 = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
-        queryData: file(relativePath: { eq: "2020/farewell_ink_2020_web.jpg" }) {
+        queryData: file(relativePath: { eq: "2020/card_robin_02_2020_web.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -18,11 +18,11 @@ const FarewellColouring = (props) => {
         },
       }
    `);
-  const imgMeta = adultColouringMeta.farewell;
+  const imgMeta = animalArtMeta.christmas_robin_1;
 
   return (
       <Layout>
-        <SEO title="Farewell - An autumn-themed printable colouring page" />
+        <SEO title="Christmas Robin I greeting card design watercolour painting" />
         <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
           <ArtPage imgData={imgData.queryData} imgMeta={imgMeta} />
         </ArtPageLayout>
@@ -30,4 +30,4 @@ const FarewellColouring = (props) => {
   );
 };
 
-export default FarewellColouring;
+export default ChristmasRobin1;
