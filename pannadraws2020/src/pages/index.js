@@ -60,7 +60,7 @@ const App = (props) => {
   `);
 
   const imgMeta = {
-    /*christmas_tit_1: {
+    christmas_tit_1: {
       title: 'Christmas Tit I',
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
@@ -87,7 +87,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: '',
-    },*/
+    },
     rascals: {
       title: 'Rascals',
       year: '2020',
