@@ -1,9 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { css } from "@emotion/core"
-import Img from 'gatsby-image';
-import { Dialog } from '@reach/dialog';
-import { Link } from 'gatsby';
-import { close, arrow } from '../resources/icons';
+import { arrow } from '../resources/icons';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';

@@ -11,7 +11,6 @@ import { css } from '@emotion/core';
 import ArtActionControls from './ArtActionControls';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
-import { arrow } from '../resources/icons';
 import Image from './Image';
 
 const MasonryLayout = (props) => {
