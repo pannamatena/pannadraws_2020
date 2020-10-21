@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { css } from "@emotion/core"
 import Img from 'gatsby-image';
 import { Dialog } from '@reach/dialog';
+import ArtActionControls from './ArtActionControls';
 import { Link } from 'gatsby';
 import { close, arrow } from '../resources/icons';
 import { breakPoints } from '../resources/breakpoints';
@@ -48,9 +49,7 @@ const ArtPage = (props) => {
         width: auto;
       }
     `,
-    artPageMainImg: css`
-      
-    `,
+    artPageMainImg: css``,
     artPageDetails: css`
       color: ${colours.c2};
       min-width: 30%;
@@ -92,123 +91,6 @@ const ArtPage = (props) => {
       @media ${breakPoints.desktopSmall} {
         margin-bottom: 20px;
       }
-    `,
-    originalBuy: css`
-      background: ${colours.c5};
-      margin: 0 -10px;
-      padding: 5px 10px 0;
-    `,
-    printBuy: css`
-      background: ${colours.c5};
-      margin: 0 -10px;
-      padding: 10px 10px 0;
-    `,
-    price: css``,
-    priceSubline: css`
-      display: block;
-      font-size: 0.9em;
-      padding-bottom: 5px;
-    `,
-    buyOBtn: css`
-      display: block;
-      color: ${colours.c1};
-      transition: color 0.2s ease;
-      font-family: ${fonts.f1};
-      font-size: 1.2em;
-      text-transform: uppercase;
-      
-      span {
-        svg {
-          width: 10px;
-          height: 10px;
-          transform: rotate(-45deg);
-          fill: ${colours.c1};
-          transition: fill 0.3s ease-out;
-          margin-left: 3px;
-        }
-      }
-      
-      &:hover {
-        cursor: pointer;
-        color: ${colours.c1_h}
-        
-        svg {
-          fill: ${colours.c1_h};
-        }
-      }
-    `,
-    freeShip: css`
-      display: inline-block;
-      padding: 3px;
-      background: ${colours.c_success};
-      color: ${colours.c3};
-      font-size: .8em;
-    `,
-    buyPBtn: css`
-      display: block;
-      color: ${colours.c2};
-      transition: color 0.2s ease;
-      font-family: ${fonts.f1};
-      font-size: 1em;
-      text-transform: uppercase;
-      
-      span {
-        svg {
-          width: 10px;
-          height: 10px;
-          transform: rotate(-45deg);
-          fill: ${colours.c2};
-          transition: fill 0.3s ease-out;
-        }
-      }
-      
-      &:hover {
-        cursor: pointer;
-        color: ${colours.c1};
-        
-        svg {
-          fill: ${colours.c1};
-        }
-      }
-    `,
-    oSold: css`
-      color: ${colours.c4};
-      font-family: ${fonts.f1};
-      font-size: 1em;
-      text-transform: uppercase;
-      
-      background: ${colours.c5};
-      margin: 0 -10px;
-      padding: 0 10px;
-    `,
-    pSold: css`
-      color: ${colours.c4};
-      font-family: ${fonts.f1};
-      font-size: 1em;
-      text-transform: uppercase;
-      
-      background: ${colours.c5};
-      margin: 0 -10px;
-      padding: 10px 10px 0;
-    `,
-    actionBtns: css`
-      background: ${colours.c5};
-      padding: 5px 0;
-      @media ${breakPoints.tabletPortrait} {
-        padding: 10px 0;
-      }
-      @media ${breakPoints.desktopSmall} {
-        padding: 15px 5px;
-      }
-      
-      & > div,
-      p {
-        margin: 0 !important;
-      }
-    `,
-    discount: css`
-      text-decoration: line-through;
-      padding-right: 3px;
     `,
     artStory: css`
       a {
@@ -284,76 +166,6 @@ const ArtPage = (props) => {
     setShowDialog(false);
   };
 
-  const getPrintStatus = (imgMeta) => {
-    switch (imgMeta.prints) {
-      case 'AVAILABLE': {
-        return (
-            <div css={style.printBuy}>
-              <a css={style.buyPBtn} href={imgMeta.printUrl} target="_blank" rel="noopener noreferrer" title="PannaDraws on Society6">Buy prints (from € 26.95 + shipping)<span>{arrow()}</span></a>
-            </div>
-        )
-      }
-      case 'NOTYET': {
-        return (
-            <p css={style.pSold}>Prints are not released yet.</p>
-        )
-      }
-      default: {
-        return (
-            <p css={style.pSold}>Prints are no longer available.</p>
-        )
-      }
-    }
-  };
-
-  const getPrice = (imgMeta) => {
-    const price = imgMeta.price;
-    if (imgMeta.discount) {
-      return (
-          <span>
-            <span css={style.discount}>€ {price}</span>
-            € {(price / 100) * (100 - imgMeta.discount)}
-          </span>
-      );
-    }
-    return `€ ${price}`;
-  };
-
-  const getActionControls = (imgMeta) => {
-    if (imgMeta.type === 'adult_colouring') {
-      return (
-          <div css={style.originalBuy}>
-            <a
-                css={style.buyOBtn}
-                href={imgMeta.buyUrl}
-                title={`${imgMeta.title} colouring for adults`}
-                target="_blank"
-                rel="noopener noreferrer"
-            >Buy on Etsy <span css={style.price}>{arrow()}</span></a>
-            <span css={style.priceSubline}>(from {getPrice(imgMeta)} + shipping)</span>
-          </div>
-      );
-    }
-    return (<>
-      {imgMeta.original === 'AVAILABLE' ? (
-          <div css={style.originalBuy}>
-            <a
-                css={style.buyOBtn}
-                href={imgMeta.buyUrl}
-                title={`${imgMeta.title} original artwork for sale`}
-                target="_blank"
-                rel="noopener noreferrer"
-            >Buy original on Etsy <span css={style.price}>
-                      ({getPrice(imgMeta)})
-              {arrow()}
-                    </span></a>
-            <span css={style.freeShip}>+ FREE shipping</span>
-          </div>
-      ) : (<p css={style.oSold}>Original is sold.</p>)}
-      {getPrintStatus(imgMeta)}
-    </>);
-  };
-
   function createMarkup(story) {
     return {__html: story};
   }
@@ -370,9 +182,7 @@ const ArtPage = (props) => {
           <span css={style.artPageYear}>{props.imgMeta.year}</span>
           <p>{props.imgMeta.description}</p>
           {props.imgMeta.story !== '' && (<p css={style.artStory} dangerouslySetInnerHTML={createMarkup(props.imgMeta.story)} />)}
-          <div css={style.actionBtns}>
-            {getActionControls(props.imgMeta)}
-          </div>
+          <ArtActionControls imgMeta={props.imgMeta} />
         </div>
 
         <Dialog css={style.dialog} aria-label="dialog" isOpen={showDialog} onDismiss={closeDialog}>
