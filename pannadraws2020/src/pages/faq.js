@@ -202,6 +202,10 @@ const FAQPage = () => {
           <p>In case of t-shirts and art prints the posting origin depends on your location. I use a print-on-demand service called Printful. They have
            offices worldwide and post from the closest location to you.</p>
 
+          <h3>How much does shipping cost?</h3>
+          <p>For most of the originals I offer free shipping. For smaller originals I usually offer free shipping to Ireland, UK and USA. In other cases postage is
+            calculated on checkout, based on your destination.</p>
+
           <h2>Returns</h2>
 
           <h3>Do you accept returns?</h3>

@@ -125,6 +125,54 @@ const ArtActionControls = (props) => {
       color: ${colours.c3};
       font-size: .8em;
     `,
+    merchSection: css`
+      border-top: 1px solid ${colours.c4};
+    
+      margin-top: 10px;
+      padding-top: 5px;
+      @media ${breakPoints.tabletPortrait} {
+        margin-top: 15px;
+        padding-top: 10px;
+      }
+      @media ${breakPoints.desktopSmall} {
+        margin-top: 20px;
+        padding-top: 15px;
+      }
+    `,
+    merchItem: css`
+      margin-bottom: 5px;
+    
+      a {
+        display: block;
+        color: ${colours.c2};
+        transition: color 0.2s ease;
+        font-family: ${fonts.f1};
+        font-size: 1em;
+        text-transform: uppercase;
+        
+        svg {
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          fill: ${colours.c2};
+          transition: fill 0.3s ease-out;
+        }
+        
+        &:hover {
+          cursor: pointer;
+          color: ${colours.c1};
+          
+          svg {
+            fill: ${colours.c1};
+          }
+        }
+      }
+      
+      span {
+        display: block;
+        font-size: 0.8em;
+      }
+    `,
   };
 
   const getPrice = () => {
@@ -183,7 +231,8 @@ const ArtActionControls = (props) => {
                       ({getPrice()})
             {arrow()}
                     </span></a>
-          <span css={style.freeShip}>+ FREE shipping</span>
+          {props.imgMeta.ship && props.imgMeta.ship === 'FREE' && (<span css={style.freeShip}>+ FREE shipping</span>)}
+          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK_USA' && (<span css={style.freeShip}>+ FREE shipping to Ireland, UK, USA</span>)}
         </div>
     ) : (
         <p css={style.oSold}>Original is sold.</p>
@@ -212,10 +261,24 @@ const ArtActionControls = (props) => {
     }
   };
 
+  const getMerchSection = () => {
+    return (props.imgMeta.merch && props.imgMeta.merch.length > 0) ? (
+        <div css={style.merchSection}>
+          {props.imgMeta.merch.map(merch => (
+              <div css={style.merchItem}>
+                <a href={merch.url} target="_blank" rel="noopener noreferrer" title={`${merch.name} by PannaDraws on Etsy`}>{merch.name} {arrow()}</a>
+                <span>(from € {merch.price} + shipping)</span>
+              </div>
+          ))}
+        </div>
+    ) : null;
+  };
+
   return (
       <div css={style.artActionControls}>
         {getOriginalSection()}
         {getPrintSection()}
+        {getMerchSection()}
       </div>
   );
 };

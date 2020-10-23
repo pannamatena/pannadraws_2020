@@ -68,6 +68,7 @@ const App = (props) => {
       original: 'AVAILABLE',
       prints: 'NOTYET',
       buyUrl: '',
+      ship: 'FREE',
       printUrl: '',
       discount: 0,
       discountPrint: 0,
@@ -82,6 +83,7 @@ const App = (props) => {
       original: 'AVAILABLE',
       prints: 'NOTYET',
       buyUrl: '',
+      ship: 'FREE',
       printUrl: '',
       discount: 0,
       discountPrint: 0,
@@ -96,6 +98,23 @@ const App = (props) => {
       printPrice: 21.95,
       original: 'SOLD',
       prints: 'AVAILABLE',
+      merch: [
+        {
+          name: 'Artist\'s Sketchbook',
+          url: 'https://www.etsy.com/ie/listing/888840913/rascals-artists-sketchbook-spiral',
+          price: 23
+        },
+        {
+          name: 'Women\'s t-shirt',
+          url: 'https://www.etsy.com/ie/listing/889316355/rascals-womens-short-sleeve-t-shirt-with',
+          price: 32
+        },
+        {
+          name: 'Men\'s t-shirt',
+          url: 'https://www.etsy.com/ie/listing/875381994/rascals-mens-short-sleeve-t-shirt-with',
+          price: 31.50
+        },
+      ],
       buyUrl: '',
       printUrl: 'https://www.etsy.com/ie/listing/870126360/rascals-bird-art-poster-print-garden',
       discount: 0,
@@ -111,8 +130,21 @@ const App = (props) => {
       printPrice: 21.95,
       original: 'AVAILABLE',
       prints: 'AVAILABLE',
+      ship: 'FREE_IRL_UK_USA',
       buyUrl: 'https://www.etsy.com/ie/listing/871870682/farewell-original-watercolour-painting',
       printUrl: 'https://www.etsy.com/ie/listing/870127742/farewell-bird-art-poster-print-swallow',
+      merch: [
+        {
+          name: 'Women\'s t-shirt',
+          url: 'https://www.etsy.com/ie/listing/864817848/farewell-womens-short-sleeve-t-shirt',
+          price: 28
+        },
+        {
+          name: 'Men\'s t-shirt',
+          url: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
+          price: 28.50
+        },
+      ],
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
@@ -125,6 +157,7 @@ const App = (props) => {
       price: 200,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      ship: 'FREE',
       buyUrl: 'https://www.etsy.com/ie/listing/877615323/queen-of-the-wasteland-feathers-of-tales',
       printUrl: '',
       discount: 0,
@@ -139,6 +172,7 @@ const App = (props) => {
       price: 180,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      ship: 'FREE',
       buyUrl: 'https://www.etsy.com/ie/listing/871888495/st-colmans-duck-feathers-of-tales-viii',
       printUrl: '',
       discount: 0,
@@ -154,6 +188,7 @@ const App = (props) => {
       original: 'AVAILABLE',
       prints: 'SOLD',
       buyUrl: 'https://www.etsy.com/ie/listing/868678085/may-original-watercolour-painting-robin',
+      ship: 'FREE_IRL_UK_USA',
       printUrl: '',
       discount: 0,
       discountPrint: 0,
@@ -167,6 +202,7 @@ const App = (props) => {
       price: 200,
       original: 'AVAILABLE',
       prints: 'NOTYET',
+      ship: 'FREE',
       buyUrl: 'https://www.etsy.com/ie/listing/864105935/furcula-the-first-feathers-of-tales-vii',
       printUrl: '',
       discount: 0,
