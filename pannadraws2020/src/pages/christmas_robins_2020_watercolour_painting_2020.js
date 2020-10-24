@@ -6,10 +6,10 @@ import ArtPageLayout from '../components/ArtPageLayout';
 import ArtPage from '../components/ArtPage';
 import animalArtMeta from '../resources/animalArtMeta';
 
-const ChristmasTit1 = (props) => {
+const ChristmasRobins2020 = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
-        queryData: file(relativePath: { eq: "2020/card_coal_tit_01_2020_web.jpg" }) {
+        queryData: file(relativePath: { eq: "2020/christmas_robins_2020.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -18,11 +18,11 @@ const ChristmasTit1 = (props) => {
         },
       }
    `);
-  const imgMeta = animalArtMeta.christmas_tit_1;
+  const imgMeta = animalArtMeta.christmas_robins_2020;
 
   return (
       <Layout>
-        <SEO title="Christmas Tit I greeting card design watercolour painting" />
+        <SEO title="Christmas Robins 2020 greeting card design watercolour painting" />
         <ArtPageLayout prevPath={props.location.state ? props.location.state.prevPath : '/'}>
           <ArtPage imgData={imgData.queryData} imgMeta={imgMeta} />
         </ArtPageLayout>
@@ -30,4 +30,4 @@ const ChristmasTit1 = (props) => {
   );
 };
 
-export default ChristmasTit1;
+export default ChristmasRobins2020;

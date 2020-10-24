@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      christmas_tits_2020: file(relativePath: { eq: "2020/christmas_tits_2020.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      christmas_robins_2020: file(relativePath: { eq: "2020/christmas_robins_2020.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       rascals: file(relativePath: { eq: "2020/rascals_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -60,35 +74,49 @@ const App = (props) => {
   `);
 
   const imgMeta = {
-    christmas_tit_1: {
-      title: 'Christmas Tit I',
+    christmas_tits_2020: {
+      title: 'Christmas Tits 2020',
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
-      price: 45,
+      price: 110,
       original: 'AVAILABLE',
       prints: 'NOTYET',
-      buyUrl: '',
-      ship: 'FREE',
+      buyUrl: 'https://www.etsy.com/ie/listing/878489796/holiday-tits-set-of-3-original',
+      merch: [
+        {
+          name: 'Christmas Cards (set of 3 or 6)',
+          url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
+          price: 8
+        },
+      ],
+      ship: 'FREE_IRL_UK_USA',
       printUrl: '',
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
-      story: '',
+      story: 'These little tits were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Robin cards). The 3 paintings picture two coal tits and a blue tit showcasing fantastic acrobatic skills!',
     },
-    christmas_robin_1: {
-      title: 'Christmas Robin I',
+    christmas_robins_2020: {
+      title: 'Christmas Robins 2020',
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
-      price: 45,
+      price: 110,
       original: 'AVAILABLE',
       prints: 'NOTYET',
-      buyUrl: '',
-      ship: 'FREE',
+      buyUrl: 'https://www.etsy.com/ie/listing/892422311/holiday-robins-set-of-3-original',
+      ship: 'FREE_IRL_UK_USA',
       printUrl: '',
+      merch: [
+        {
+          name: 'Christmas Cards (set of 3 or 6)',
+          url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
+          price: 8
+        },
+      ],
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
-      story: '',
+      story: 'These handsome robins were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Tit cards). The 3 paintings picture the birds in different poses, all familiar to those who love these photogenic little birds.',
     },
     rascals: {
       title: 'Rascals',
