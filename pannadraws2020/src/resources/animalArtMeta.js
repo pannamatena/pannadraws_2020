@@ -19,7 +19,7 @@ const animalArtMeta = {
     discount: 0,
     discountPrint: 0,
     type: 'watercolour_painting',
-    story: 'These little tits were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Robin cards). The 3 paintings picture two coal tits and a blue tit showcasing fantastic acrobatic skills!',
+    story: 'These little tits were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Robin cards). The 3 paintings picture two coal tits and a blue tit showcasing fantastic acrobatic skills!<br /><br />In the picture here you can see the set of holiday greeting cards, but if you head over to my shop (use the link below to the original) you can see the paintings in detail. The cards come with gold envelopes. The paintings are unframed, but mounted in 16 x 20" photo mounts and they fit in standard size frames.',
   },
   christmas_robins_2020: {
     title: 'Christmas Robins 2020',
@@ -41,7 +41,7 @@ const animalArtMeta = {
     discount: 0,
     discountPrint: 0,
     type: 'watercolour_painting',
-    story: 'These handsome robins were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Tit cards). The 3 paintings picture the birds in different poses, all familiar to those who love these photogenic little birds.',
+    story: 'These handsome robins were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Tit cards). The 3 paintings picture the birds in different poses, all familiar to those who love these photogenic little birds.<br /><br />In the picture here you can see the set of holiday greeting cards, but if you head over to my shop (use the link below to the original) you can see the paintings in detail. The cards come with gold envelopes. The paintings are unframed, but mounted in 16 x 20" photo mounts and they fit in standard size frames.',
   },
   rascals: {
     title: 'Rascals',
