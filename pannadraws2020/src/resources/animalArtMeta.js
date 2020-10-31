@@ -97,6 +97,11 @@ const animalArtMeta = {
         url: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
         price: 28.50
       },
+      {
+        name: 'Notebook',
+        url: 'https://www.etsy.com/ie/listing/895826951/farewell-hardcover-journal-bird-art',
+        price: 14.95
+      },
     ],
     discount: 0,
     discountPrint: 0,
@@ -203,6 +208,13 @@ const animalArtMeta = {
     printUrl: 'https://www.etsy.com/ie/listing/841725878/sparrowhawk-bird-art-poster-print-birds',
     discount: 0,
     discountPrint: 0,
+    merch: [
+      {
+        name: 'Fridge Magnet',
+        url: 'https://www.etsy.com/ie/listing/882191122/sparrowhawk-fridge-magnet-watercolour',
+        price: 5.15
+      },
+    ],
     type: 'watercolour_painting',
     story: 'They say the eyes are the windows to the soul. Look at the eyes of this creature, he couldn\'t even deny his predatory nature! The sparrowhawk, a small bird of prey, but fast, agile and deadly. This one here is a male, which is smaller than the female and has the orange markings. Their skills sparkle most in woodlands, where they cross between the smallest gaps with great speed, and they can chase down prey on foot (?!). Now I\'d love to see THAT!<br /><br />I\'m always so fond of the variety of birds visiting my garden to feed. And it actually never occurred to me that by attracting so many breeds there\'s a consequencial visitor as well... I wasn\'t even aware there are hawks nearby.<br /><br />So I was doing my morning workout and between sets I stared out the kitchen window. Suddenly all the birds took off, and something spiralled down like an arrow. My wandering brain didn\'t even register what was happening, I remember thinking "oh, what kind of bird is this, how interesting" before the shock settled in. "*@$&! He got a sparrow!! Omg! It\'s a hawk!" He sat for 3 seconds in the grass with his prey, then took off. I stood there in complete shock for another minute, thinking I wouldn\'t have stood a chance. By the time I realised what was happening, that sparrow was dead. That\'s how I met my sparrowhawk.',
   },

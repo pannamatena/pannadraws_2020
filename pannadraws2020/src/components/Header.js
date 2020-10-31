@@ -368,6 +368,7 @@ const Header = () => {
               <div><Link to="/adult_colouring/">Adult Colouring</Link></div>
               <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
               <div><Link to="/sketchbook/">Sketchbook</Link></div>
+              <div><Link to="/merchandise/">Merch</Link></div>
               <div><Link to="/about/">About</Link></div>
               <div><Link to="/contact/">Contact</Link></div>
               <div><Link to="/faq/">FAQ</Link></div>
@@ -384,6 +385,7 @@ const Header = () => {
                 <li><Link to="/sketchbook/">Sketchbook</Link></li>
               </ul>
             </div>
+            <div><Link to="/merchandise/">Merch</Link></div>
             <div><Link to="/about/">About</Link></div>
             <div><Link to="/contact/">Contact</Link></div>
             <div><Link to="/faq/">FAQ</Link></div>

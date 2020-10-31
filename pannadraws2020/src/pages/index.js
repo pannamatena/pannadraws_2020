@@ -172,6 +172,11 @@ const App = (props) => {
           url: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
           price: 28.50
         },
+        {
+          name: 'Notebook',
+          url: 'https://www.etsy.com/ie/listing/895826951/farewell-hardcover-journal-bird-art',
+          price: 14.95
+        },
       ],
       discount: 0,
       discountPrint: 0,

@@ -204,6 +204,21 @@ const ArtActionControls = (props) => {
   };
 
   const getOriginalSection = () => {
+    if (props.imgMeta.type === 'merchandise') {
+      return (
+          <div css={style.originalBuy}>
+            <a
+                css={style.buyOBtn}
+                href={props.imgMeta.buyUrl}
+                title={props.imgMeta.title}
+                target="_blank"
+                rel="noopener noreferrer"
+            >Buy on Etsy <span css={style.price}>{arrow()}</span></a>
+            <span css={style.priceSubline}>(from {getPrice()} + shipping)</span>
+          </div>
+      );
+    }
+
     if (props.imgMeta.type === 'adult_colouring') {
       return (
           <div css={style.originalBuy}>
@@ -240,6 +255,10 @@ const ArtActionControls = (props) => {
   };
 
   const getPrintSection = () => {
+    if (props.imgMeta.type === 'merchandise') {
+      return null;
+    }
+
     switch (props.imgMeta.prints) {
       case 'AVAILABLE': {
         return (

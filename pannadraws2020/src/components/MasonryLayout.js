@@ -82,24 +82,43 @@ const MasonryLayout = (props) => {
 
   const renderGridItems = () => {
     const imgNames = Object.keys(props.imgData);
-    return props.imgData && imgNames.map((img, index) => (
-        <div className="artGridItem" css={style.artGridItem} key={index}>
-          <div className="artGridItem__content">
-            <Link
-                css={style.artGridImg}
-                to={`/${imgNames[index]}_${props.imgMeta[img].type}_${props.imgMeta[img].year}`}
-                state={{ prevPath: props.path }}
-            >
-              <Image img={props.imgData[img].childImageSharp.fluid}/>
-            </Link>
-            <div css={style.artGridMeta}>
-              <h5>{props.imgMeta[img].title}</h5>
-              <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
-              <ArtActionControls imgMeta={props.imgMeta[img]} />
+
+    return props.imgData && imgNames.map((img, index) => {
+
+      if (props.imgMeta[img].type === 'merchandise') {
+        return (
+            <div className="artGridItem" css={style.artGridItem} key={index}>
+              <div className="artGridItem__content">
+                <Image img={props.imgData[img].childImageSharp.fluid}/>
+                <div css={style.artGridMeta}>
+                  <h5>{props.imgMeta[img].title}</h5>
+                  <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
+                  <ArtActionControls imgMeta={props.imgMeta[img]} />
+                </div>
+              </div>
+            </div>
+        );
+      }
+
+      return (
+          <div className="artGridItem" css={style.artGridItem} key={index}>
+            <div className="artGridItem__content">
+              <Link
+                  css={style.artGridImg}
+                  to={`/${imgNames[index]}_${props.imgMeta[img].type}_${props.imgMeta[img].year}`}
+                  state={{ prevPath: props.path }}
+              >
+                <Image img={props.imgData[img].childImageSharp.fluid}/>
+              </Link>
+              <div css={style.artGridMeta}>
+                <h5>{props.imgMeta[img].title}</h5>
+                <p css={style.artGridMetaDesc}>{props.imgMeta[img].description}</p>
+                <ArtActionControls imgMeta={props.imgMeta[img]} />
+              </div>
             </div>
           </div>
-        </div>
-    ));
+      )
+    });
   };
 
   return (
