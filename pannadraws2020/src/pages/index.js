@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      lirs_daughter: file(relativePath: { eq: "2020/lirs_daughter_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      treasures: file(relativePath: { eq: "2020/treasures_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       christmas_tits_2020: file(relativePath: { eq: "2020/christmas_tits_2020.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,42 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      may: file(relativePath: { eq: "2020/may_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      furcula: file(relativePath: { eq: "2020/furcula_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
+      }
     }
   `);
 
   const imgMeta = {
+    lirs_daughter: {
+      title: 'Lir\'s Daughter (Feathers of Tales X)',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
+      price: 180,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      ship: 'FREE_IRL_UK_USA',
+      buyUrl: 'https://www.etsy.com/ie/listing/902422157/lirs-daughter-feathers-of-tales-x',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '"...so she drove the children of Lir into the lake to bathe, and they did as Oifa told them. As soon as they were upon the lake she struck them with a Druid\'s wand of spells and wizardry and put them into the forms of four beautiful, perfectly white swans..." (The Fate of The Children of Lir)<br /><br />So the series ends with this story, one of the most famous ones from Celtic mythology. Oifa, their stepmother, in her jealousy turned Lir\'s children into swans for 900 years just to see the decline of the Tuatha De Danann and their family. When Oifa\'s crime was discovered she was turned into an air-demon, a creature she loathed the most. But that didn\'t break the magic on the children who remained swans with the gift of speech and songs.<br /><br />This painting is the 10th and final piece in Feathers of Tales, my series on birds of Irish folklore.',
+    },
+    treasures: {
+      title: 'Treasures',
+      year: '2020',
+      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
+      price: 120,
+      printPrice: 21.95,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      ship: 'FREE_IRL_UK_USA',
+      buyUrl: 'https://www.etsy.com/ie/listing/896513203/treasures-original-watercolour-painting',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'While drawing this I was so so tempted to move it towards a contemporary issue and add plastic waste among the seashells and logs. That would have been the reality, this in my painting is the fairy tale guys...<br /><br />I took the reference photo on Bull Island and on some days its shore is a disgrace. Plastic everywhere, bottles, scraps, all the little colourful bits that doesn\'t fit in the greyish green on the shore. Sad.<br /><br />So this piece is kept as an imaginary scene, a dream, without the rubbish, just the natural elements. A bit of comfort and escape from reality.',
+    },
     christmas_tits_2020: {
       title: 'Christmas Tits 2020',
       year: '2020',
@@ -212,36 +243,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: '"But as they were so tame, persons fetching water from the pond on a dark night—so the legend goes on to say—sometimes by an unlucky chance brought one of them away in the vessel without knowing it, and threw the contents, bird and all, into a pot over a fire to be boiled. Whenever this happened no matter how the people heaped on wood, or how long the fire was kept up, the water still remained as cold as when it was taken from the pond; and in the end the little duck was found not in the least harmed, swimming about unconcernedly on the top." (the legend of St Colman\'s ducks)<br /><br />If you\'re exploring Irish stories you can\'t avoid a reference to the church. That\'s the case with the duck, the 8th part of my Feathers of Tales series, where I just couldn\'t ignore the story of St Colman\'s ducks.<br /><br />There are many legends around these ducks, all telling about how invincible they were. Some sources even add that they were actually wild ducks, not the domestic ones, so it just fits that I chose this handsome mallard for this picture.<br /><br />Being a common bird (just visit any pond in any park in Dublin) I haven\'t thought too much about ducks before, but painting the wonderful shiny details on this one I realised, as always, how beautiful these birds are. And because they are used to human presence they make a convenient photo subject as well! The reference photo was taken during lockdown and this boy posed quite happily for me. I also love the earth colours this painting required, it turned out to be a nice heartwarming artwork.<br /><br />Part 8 of the series Feathers of Tales.',
-    },
-    may: {
-      title: 'May',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
-      price: 75,
-      original: 'AVAILABLE',
-      prints: 'SOLD',
-      buyUrl: 'https://www.etsy.com/ie/listing/868678085/may-original-watercolour-painting-robin',
-      ship: 'FREE_IRL_UK_USA',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This robin painting is free to download for my newsletter subscribers! It\'s an A4 size high quality PDF that you can print for yourself. You can sign up on the <a title="PannaDraws home" href="/">home page</a>!<br /><br />I spotted this little fellow back in May 2020, in the middle of the worst of the lockdown in our local park, when I couldn\'t really go any further for bird photography. He was totally ignorant of course, singing his heart out as it was the breeding season. Now that it\'s September I thought it\'s a nice memory to think back of the blooming trees. For that matter it\'s nice to think of spring at any time of the year, so I chose this image as a reference for the new printable gift for newsletter subscribers.',
-    },
-    furcula: {
-      title: 'Furcula the First',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
-      price: 200,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      ship: 'FREE',
-      buyUrl: 'https://www.etsy.com/ie/listing/864105935/furcula-the-first-feathers-of-tales-vii',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"If you get the wishbone on a chicken, catch one end of it and tell somebody else to catch the other end and whoever gets the right side after pulling you may wish for whatever you like." (<a href="http://irisharchaeology.ie/2016/11/animal-sacrifice-and-blood-letting-saint-martins-feast-in-ireland/" target="_blank" rel="noopener noreferrer">Irish superstition</a>)<br/><br/>Chickens might be the most important birds in our lives, yet when it comes to "bird art" I doubt a chicken is what everyone thinks about. Probably most nations in the world have some sort of connection with this animal and hens and roosters are represented in many beliefs and tales. Irish folklore is not an exception, there are many superstitions around chickens, many including the sacrifice of the bird. I just picked one of the less bloody ones as the opening quote, but here\'s another one:<br/><br/>"Some kind of fowl is killed such as chicken or goose and then the blood is sprinkled in the four corners of the kitchen. In some houses there is a cross formed with the blood, or three drops. It is believed if this is done no member of the family will meet with a violent death during the year."<br/><br/>I wanted to show this bird being more than just a wishbone or a sacrifice. If you have different eyes for it, a rooster is a beautiful ornate bird, the king of the yard. He should be portrayed as a king!<br/><br/>This painting is the 7th in my Feathers of Tales series, which features birds of Irish myths and folklore.',
     },
   };
 

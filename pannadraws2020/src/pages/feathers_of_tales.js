@@ -12,6 +12,13 @@ import { breakPoints } from '../resources/breakpoints';
 const FeathersOfTales = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      lirs_daughter: file(relativePath: { eq: "2020/lirs_daughter_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       queen_of_the_wasteland: file(relativePath: { eq: "2020/queen_of_the_wasteland_2020_web.jpg" }) {
         childImageSharp {
           fluid {
