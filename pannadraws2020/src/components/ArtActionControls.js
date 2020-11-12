@@ -269,7 +269,7 @@ const ArtActionControls = (props) => {
       }
       case 'NOTYET': {
         return (
-            <p css={style.pSold}>Prints are not released yet.</p>
+            <p css={style.pSold}>Prints are not available.</p>
         )
       }
       default: {
