@@ -160,6 +160,7 @@ const fantasyArtMeta = {
     price: 50,
     original: 'AVAILABLE',
     prints: 'AVAILABLE',
+    printPrice: 19.95,
     buyUrl: 'https://www.etsy.com/ie/listing/799946282/reindeer-and-dragonflies-original',
     printUrl: 'https://www.etsy.com/ie/listing/818977991/reindeer-and-dragonflies-fantasy-art',
     discount: 0,

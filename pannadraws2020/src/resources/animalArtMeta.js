@@ -223,6 +223,7 @@ const animalArtMeta = {
     price: 120,
     original: 'SOLD',
     prints: 'AVAILABLE',
+    printPrice: 21.95,
     buyUrl: '',
     printUrl: 'https://www.etsy.com/ie/listing/839003450/the-robin-feathers-of-tales-v-matte',
     discount: 0,
