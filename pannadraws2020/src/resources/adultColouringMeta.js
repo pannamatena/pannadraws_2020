@@ -25,6 +25,13 @@ const adultColouringMeta = {
     printUrl: '',
     discount: 0,
     discountPrint: 0,
+    merch: [
+      {
+        name: 'Bookmark Set',
+        url: 'https://www.etsy.com/ie/listing/904511925/dragon-dance-paper-bookmark-with-tassel',
+        price: 3.50
+      },
+    ],
     type: 'adult_colouring',
     subType: 'digital',
     story: 'A Draconic Colouring Adventure!<br /><br />Mighty fire-breathers, mystical Eastern spirits and swift water serpents come together for a dance in this set of colouring pages. Are they fighting? Or is there more to it? Give their dragon dance a mood by colouring the enchanted scenes!<br /><br />You can print the pages on either A3 or A4 sized paper (they are optimised for A3, but it will work with smaller scales and US sizes as well). I would suggest using a thicker, non-glossy paper for the best experience.<br /><br />Original artwork was created using acrylic inks on mixed media paper.',

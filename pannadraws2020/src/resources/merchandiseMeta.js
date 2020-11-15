@@ -1,4 +1,14 @@
 const merchandiseMeta = {
+  dragon_dance_2020_bookmark: {
+    title: 'Dragon Dance Bookmark Set',
+    year: '2020',
+    description: 'Set of 3 paper bookmarks with tassel and feather charm.',
+    price: 3.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/904511925/dragon-dance-paper-bookmark-with-tassel',
+    discount: 0,
+    type: 'merchandise',
+  },
   sparrowhawk_2020_magnet: {
     title: 'Sparrowhawk Fridge Magnet',
     year: '2020',

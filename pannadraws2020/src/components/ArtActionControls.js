@@ -255,7 +255,7 @@ const ArtActionControls = (props) => {
   };
 
   const getPrintSection = () => {
-    if (props.imgMeta.type === 'merchandise') {
+    if (props.imgMeta.type === 'merchandise' || props.imgMeta.subType === 'digital') {
       return null;
     }
 
