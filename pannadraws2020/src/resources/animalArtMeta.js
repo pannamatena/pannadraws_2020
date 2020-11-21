@@ -1,4 +1,40 @@
 const animalArtMeta = {
+  curlew: {
+    title: 'Curlew',
+    year: '2020',
+    description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
+    price: 180,
+    original: 'SOLD',
+    prints: 'AVAILABLE',
+    printPrice: 24.95,
+    buyUrl: '',
+    printUrl: 'https://www.etsy.com/ie/listing/895285512/curlew-bird-art-poster-print-shore-bird',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'I took the reference photo on Bull Island, and I really like the beach vibe this painting radiates, the same feeling I had when I was on the beach photographing the birds. Even though it\'s definitely not summer any more this painting still reminds me of the gentle sea breeze and I can hear the murmur of the waves.',
+  },
+  alfalfa: {
+    title: 'Alfalfa',
+    year: '2020',
+    description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
+    price: 180,
+    original: 'SOLD',
+    prints: 'NOTYET',
+    buyUrl: '',
+    printUrl: '',
+    merch: [
+      {
+        name: 'Women\'s t-shirt',
+        url: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
+        price: 32
+      },
+    ],
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'This is a commissioned t-shirt print for <a href="https://www.instagram.com/max_border_collie27/" target="_blank" rel="noopener noreferrer">Max</a>, a blue merle border collie. The t-shirts are now available at <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
+  },
   lirs_daughter: {
     title: 'Lir\'s Daughter (Feathers of Tales X)',
     year: '2020',

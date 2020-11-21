@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      curlew: file(relativePath: { eq: "2020/curlew_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      alfalfa: file(relativePath: { eq: "2020/alfalfa_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       lirs_daughter: file(relativePath: { eq: "2020/lirs_daughter_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,47 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      queen_of_the_wasteland: file(relativePath: { eq: "2020/queen_of_the_wasteland_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      st_colmans_duck: file(relativePath: { eq: "2020/st_colmans_duck_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    curlew: {
+      title: 'Curlew',
+      year: '2020',
+      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
+      price: 180,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 24.95,
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/895285512/curlew-bird-art-poster-print-shore-bird',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'I took the reference photo on Bull Island, and I really like the beach vibe this painting radiates, the same feeling I had when I was on the beach photographing the birds. Even though it\'s definitely not summer any more this painting still reminds me of the gentle sea breeze and I can hear the murmur of the waves.',
+    },
+    alfalfa: {
+      title: 'Alfalfa',
+      year: '2020',
+      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
+      price: 180,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      buyUrl: '',
+      printUrl: '',
+      merch: [
+        {
+          name: 'Women\'s t-shirt',
+          url: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
+          price: 32
+        },
+      ],
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is a commissioned t-shirt print for <a href="https://www.instagram.com/max_border_collie27/" target="_blank" rel="noopener noreferrer">Max</a>, a blue merle border collie. The t-shirts are now available at <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
+    },
     lirs_daughter: {
       title: 'Lir\'s Daughter (Feathers of Tales X)',
       year: '2020',
@@ -213,38 +249,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'When it\'s summer, you hardly think about the time when nature starts to change colours, and some of the usual habitants of your environment leave for the winter. When I painted this swallow, originally intended it as a t-shirt design, the little birds already left, leaving behind the autumn colours of leaves. I know they\'ll return once it\'s spring time again. Until then, farewell!<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
-    },
-    queen_of_the_wasteland: {
-      title: 'Queen of the Wasteland (Feathers of Tales IX)',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 508 x 405 mm (20 x 16 in), 2020.',
-      price: 200,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      ship: 'FREE',
-      buyUrl: 'https://www.etsy.com/ie/listing/877615323/queen-of-the-wasteland-feathers-of-tales',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '“Wherever there was war, either among gods or men, she, the great queen, was present, either in her own shape or on her favorite disguise, that of a hoodie or carrion crow. An old poem shows her inciting a warrior: Over his head is shrieking, A lean hag, quickly hopping, Over the points of the weapons and shields, She is the grey-haired Morrigii!” (from <a href="https://livinglibraryblog.com/the-raven-and-crow-of-the-celts-part-i-myth-and-legend/" target="_blank" rel="noopener noreferrer">Celtic Myth and Legend</a> by Charles Squires)<br /><br />The Morrigan is maybe the most well-known character of Irish myths. She sometimes appears as a goddess, but sometimes as a trio of goddesses named Macha, Babd and Namain. These badass women took the form a crow or raven and went to battle, leaving a wasteland behind.<br /><br />I\'m not a seaside kid, the largest body of water I was accustomed to as a child was a big lake. Sweet water has a very different environment than the sea, the smells, animals, and the routine is different (lack of tides!). So to me that vast empty flat field left behind after the tide with the smell of fish and seaweed looks like a wasteland: treasure hunter birds are foraging upon it, and there\'s the smell of rot and salt, but it\'s still full of life, shells and driftwood.<br /><br />That\'s where I\'ve seen this hooded crow digging the weeds in search of something to eat, at low tide near Bull Island. That wasteland is like a battlefield after the battle, you don\'t know what treasures you might find among the waste! And this is how this bird became the muse for part 9 of Feathers of Tales, my art series about birds in Irish myth and folklore.',
-    },
-    st_colmans_duck: {
-      title: 'St Colman\'s Duck (Feathers of Tales VIII)',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 180,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      printPrice: 22.50,
-      ship: 'FREE',
-      buyUrl: 'https://www.etsy.com/ie/listing/871888495/st-colmans-duck-feathers-of-tales-viii',
-      printUrl: 'https://www.etsy.com/ie/listing/889392704/st-colmans-duck-feathers-of-tales-viii',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"But as they were so tame, persons fetching water from the pond on a dark night—so the legend goes on to say—sometimes by an unlucky chance brought one of them away in the vessel without knowing it, and threw the contents, bird and all, into a pot over a fire to be boiled. Whenever this happened no matter how the people heaped on wood, or how long the fire was kept up, the water still remained as cold as when it was taken from the pond; and in the end the little duck was found not in the least harmed, swimming about unconcernedly on the top." (the legend of St Colman\'s ducks)<br /><br />If you\'re exploring Irish stories you can\'t avoid a reference to the church. That\'s the case with the duck, the 8th part of my Feathers of Tales series, where I just couldn\'t ignore the story of St Colman\'s ducks.<br /><br />There are many legends around these ducks, all telling about how invincible they were. Some sources even add that they were actually wild ducks, not the domestic ones, so it just fits that I chose this handsome mallard for this picture.<br /><br />Being a common bird (just visit any pond in any park in Dublin) I haven\'t thought too much about ducks before, but painting the wonderful shiny details on this one I realised, as always, how beautiful these birds are. And because they are used to human presence they make a convenient photo subject as well! The reference photo was taken during lockdown and this boy posed quite happily for me. I also love the earth colours this painting required, it turned out to be a nice heartwarming artwork.<br /><br />Part 8 of the series Feathers of Tales.',
-    },
+    }
   };
 
   const style = {

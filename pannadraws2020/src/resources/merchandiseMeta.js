@@ -1,4 +1,14 @@
 const merchandiseMeta = {
+  alfalfa_2020_womens_tee: {
+    title: 'Alfalfa Women\'s Short Sleeved Tee',
+    year: '2020',
+    description: 'Short sleeved women\'s fit t-shirt with my artwork "Farewell" printed on it.',
+    price: 32,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
+    discount: 0,
+    type: 'merchandise',
+  },
   dragon_dance_2020_bookmark: {
     title: 'Dragon Dance Bookmark Set',
     year: '2020',
