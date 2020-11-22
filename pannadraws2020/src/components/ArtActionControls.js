@@ -25,6 +25,10 @@ const ArtActionControls = (props) => {
       text-decoration: line-through;
       padding-right: 3px;
     `,
+    merchDiscount: css`
+      font-weight: bold;
+      color: ${colours.c1};
+    `,
     discountPrint: css`
       text-decoration: line-through;
       padding-right: 3px;
@@ -168,7 +172,7 @@ const ArtActionControls = (props) => {
         }
       }
       
-      span {
+      > span {
         display: block;
         font-size: 0.8em;
       }
@@ -177,11 +181,13 @@ const ArtActionControls = (props) => {
 
   const getPrice = () => {
     const price = props.imgMeta.price;
+    let discountedPrice;
     if (props.imgMeta.discount) {
+      discountedPrice = ((price / 100) * (100 - props.imgMeta.discount)).toFixed(2);
       return (
           <span>
             <span css={style.discount}>€ {price}</span>
-            € {(price / 100) * (100 - props.imgMeta.discount)}
+            € {discountedPrice}
           </span>
       );
     }
@@ -248,6 +254,7 @@ const ArtActionControls = (props) => {
                     </span></a>
           {props.imgMeta.ship && props.imgMeta.ship === 'FREE' && (<span css={style.freeShip}>+ FREE shipping</span>)}
           {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK_USA' && (<span css={style.freeShip}>+ FREE shipping to Ireland, UK, USA</span>)}
+          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK' && (<span css={style.freeShip}>+ FREE shipping to Ireland and UK</span>)}
         </div>
     ) : (
         <p css={style.oSold}>Original is sold.</p>
@@ -280,13 +287,27 @@ const ArtActionControls = (props) => {
     }
   };
 
+  const getMerchPrice = (merch) => {
+    let discountedPrice;
+    if (merch.discount) {
+      discountedPrice = ((merch.price / 100) * (100 - merch.discount)).toFixed(2);
+      return (
+          <span>
+            <span css={style.discount}>€ {merch.price}</span>
+            <span css={style.merchDiscount}>€ {discountedPrice}</span>
+          </span>
+      );
+    }
+    return `€ ${merch.price}`;
+  };
+
   const getMerchSection = () => {
     return (props.imgMeta.merch && props.imgMeta.merch.length > 0) ? (
         <div css={style.merchSection}>
           {props.imgMeta.merch.map(merch => (
               <div css={style.merchItem}>
                 <a href={merch.url} target="_blank" rel="noopener noreferrer" title={`${merch.name} by PannaDraws on Etsy`}>{merch.name} {arrow()}</a>
-                <span>(from € {merch.price} + shipping)</span>
+                <span>(from {getMerchPrice(merch)} + shipping)</span>
               </div>
           ))}
         </div>

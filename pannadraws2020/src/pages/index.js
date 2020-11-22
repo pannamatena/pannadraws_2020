@@ -85,7 +85,7 @@ const App = (props) => {
       buyUrl: '',
       printUrl: 'https://www.etsy.com/ie/listing/895285512/curlew-bird-art-poster-print-shore-bird',
       discount: 0,
-      discountPrint: 0,
+      discountPrint: 20,
       type: 'watercolour_painting',
       story: 'I took the reference photo on Bull Island, and I really like the beach vibe this painting radiates, the same feeling I had when I was on the beach photographing the birds. Even though it\'s definitely not summer any more this painting still reminds me of the gentle sea breeze and I can hear the murmur of the waves.',
     },
@@ -102,7 +102,8 @@ const App = (props) => {
         {
           name: 'Women\'s t-shirt',
           url: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
-          price: 32
+          price: 32,
+          discount: 20,
         },
       ],
       discount: 0,
@@ -137,7 +138,7 @@ const App = (props) => {
       buyUrl: 'https://www.etsy.com/ie/listing/896513203/treasures-original-watercolour-painting',
       printUrl: 'https://www.etsy.com/ie/listing/889404732/treasures-bird-art-poster-print-sea-bird',
       discount: 0,
-      discountPrint: 0,
+      discountPrint: 20,
       type: 'watercolour_painting',
       story: 'While drawing this I was so so tempted to move it towards a contemporary issue and add plastic waste among the seashells and logs. That would have been the reality, this in my painting is the fairy tale guys...<br /><br />I took the reference photo on Bull Island and on some days its shore is a disgrace. Plastic everywhere, bottles, scraps, all the little colourful bits that doesn\'t fit in the greyish green on the shore. Sad.<br /><br />So this piece is kept as an imaginary scene, a dream, without the rubbish, just the natural elements. A bit of comfort and escape from reality.',
     },
@@ -153,7 +154,8 @@ const App = (props) => {
         {
           name: 'Christmas Cards (set of 3 or 6)',
           url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
-          price: 8
+          price: 8,
+          discount: 20,
         },
       ],
       ship: 'FREE_IRL_UK_USA',
@@ -177,7 +179,8 @@ const App = (props) => {
         {
           name: 'Christmas Cards (set of 3 or 6)',
           url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
-          price: 8
+          price: 8,
+          discount: 20,
         },
       ],
       discount: 0,
@@ -197,23 +200,26 @@ const App = (props) => {
         {
           name: 'Artist\'s Sketchbook',
           url: 'https://www.etsy.com/ie/listing/888840913/rascals-artists-sketchbook-spiral',
-          price: 23
+          price: 23,
+          discount: 20,
         },
         {
           name: 'Women\'s t-shirt',
           url: 'https://www.etsy.com/ie/listing/889316355/rascals-womens-short-sleeve-t-shirt-with',
-          price: 32
+          price: 32,
+          discount: 20,
         },
         {
           name: 'Men\'s t-shirt',
           url: 'https://www.etsy.com/ie/listing/875381994/rascals-mens-short-sleeve-t-shirt-with',
-          price: 31.50
+          price: 31.50,
+          discount: 20,
         },
       ],
       buyUrl: '',
       printUrl: 'https://www.etsy.com/ie/listing/870126360/rascals-bird-art-poster-print-garden',
       discount: 0,
-      discountPrint: 0,
+      discountPrint: 20,
       type: 'watercolour_painting',
       story: 'Originally created as at-shirt design, this painting of two mischievous starlings became one of my favourites. If anything, starlings are real characters in the garden. They appear in a group out of nowhere, raid all the bird feeders, then most of them leave. Some might remain, and then you can listen to their chit-chat in the bushes... A pleasant sound I couldn\'t believe was coming from these rascals! In this painting I also wanted to show their beauty, the amazing greenish shine in their plumage with the golden dots along their body.<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
     },
@@ -232,21 +238,24 @@ const App = (props) => {
         {
           name: 'Women\'s t-shirt',
           url: 'https://www.etsy.com/ie/listing/864817848/farewell-womens-short-sleeve-t-shirt',
-          price: 28
+          price: 28,
+          discount: 20,
         },
         {
           name: 'Men\'s t-shirt',
           url: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
-          price: 28.50
+          price: 28.50,
+          discount: 20,
         },
         {
           name: 'Notebook',
           url: 'https://www.etsy.com/ie/listing/895826951/farewell-hardcover-journal-bird-art',
-          price: 14.95
+          price: 14.95,
+          discount: 20,
         },
       ],
       discount: 0,
-      discountPrint: 0,
+      discountPrint: 20,
       type: 'watercolour_painting',
       story: 'When it\'s summer, you hardly think about the time when nature starts to change colours, and some of the usual habitants of your environment leave for the winter. When I painted this swallow, originally intended it as a t-shirt design, the little birds already left, leaving behind the autumn colours of leaves. I know they\'ll return once it\'s spring time again. Until then, farewell!<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
     }
