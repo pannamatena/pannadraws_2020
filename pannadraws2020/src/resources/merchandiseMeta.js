@@ -3,7 +3,7 @@ const merchandiseMeta = {
     title: 'Sparrowhawk Artist\'s Notebook',
     year: '2020',
     description: 'Artist\'s spiral notebook with blank pages for sketching.',
-    price: 19.95,
+    price: 20.95,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/911212429/sparrowhawk-artists-notebook-spiral',
     discount: 20,

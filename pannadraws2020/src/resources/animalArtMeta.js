@@ -294,7 +294,7 @@ const animalArtMeta = {
       {
         name: 'Artist\'s Notebook',
         url: 'https://www.etsy.com/ie/listing/911212429/sparrowhawk-artists-notebook-spiral',
-        price: 19.95,
+        price: 20.95,
         discount: 20,
       },
       {
