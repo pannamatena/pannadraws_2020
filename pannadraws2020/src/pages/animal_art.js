@@ -57,6 +57,13 @@ const AnimalArt = (props) => {
           }
         }
       },
+      queen_of_the_wasteland: file(relativePath: { eq: "2020/queen_of_the_wasteland_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       farewell: file(relativePath: { eq: "2020/farewell_2020_web.jpg" }) {
         childImageSharp {
           fluid {
