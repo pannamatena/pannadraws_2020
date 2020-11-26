@@ -204,8 +204,8 @@ const animalArtMeta = {
   st_colmans_duck: {
     title: 'St Colman\'s Duck (Feathers of Tales VIII)',
     year: '2020',
-    description: 'Ink and watercolour on watercolour paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
-    price: 180,
+    description: 'Ink and watercolour on watercolour paper. 297 x 420 mm (11.69 x 16.53 in), 2020. Framed.',
+    price: 130,
     original: 'AVAILABLE',
     prints: 'AVAILABLE',
     printPrice: 22.50,
@@ -235,8 +235,8 @@ const animalArtMeta = {
   furcula: {
     title: 'Furcula the First (Feathers of Tales VII)',
     year: '2020',
-    description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
-    price: 200,
+    description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020. Framed.',
+    price: 230,
     original: 'AVAILABLE',
     prints: 'AVAILABLE',
     printPrice: 26.95,
