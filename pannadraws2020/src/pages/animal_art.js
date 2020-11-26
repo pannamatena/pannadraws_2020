@@ -78,6 +78,13 @@ const AnimalArt = (props) => {
           }
         }
       },
+      st_colmans_duck: file(relativePath: { eq: "2020/st_colmans_duck_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       furcula: file(relativePath: { eq: "2020/furcula_2020_web.png" }) {
         childImageSharp {
           fluid {
