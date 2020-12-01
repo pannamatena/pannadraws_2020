@@ -6,7 +6,7 @@ const merchandiseMeta = {
     price: 20.95,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/911212429/sparrowhawk-artists-notebook-spiral',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   alfalfa_2020_womens_tee: {
@@ -16,7 +16,7 @@ const merchandiseMeta = {
     price: 32,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   dragon_dance_2020_bookmark: {
@@ -26,7 +26,7 @@ const merchandiseMeta = {
     price: 3.50,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/904511925/dragon-dance-paper-bookmark-with-tassel',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   sparrowhawk_2020_magnet: {
@@ -36,7 +36,7 @@ const merchandiseMeta = {
     price: 5.15,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/882191122/sparrowhawk-fridge-magnet-watercolour',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   farewell_2020_notebook: {
@@ -46,7 +46,7 @@ const merchandiseMeta = {
     price: 14.95,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/895826951/farewell-hardcover-journal-bird-art',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   xmas_cards_2020_6set: {
@@ -56,7 +56,7 @@ const merchandiseMeta = {
     price: 8,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   rascals_2020_sketchbook: {
@@ -66,7 +66,7 @@ const merchandiseMeta = {
     price: 23,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/888840913/rascals-artists-sketchbook-spiral',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   rascals_2020_mens_tee: {
@@ -76,7 +76,7 @@ const merchandiseMeta = {
     price: 31.50,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/875381994/rascals-mens-short-sleeve-t-shirt-with',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   rascals_2020_womens_tee: {
@@ -86,7 +86,7 @@ const merchandiseMeta = {
     price: 32,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/889316355/rascals-womens-short-sleeve-t-shirt-with',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   farewell_2020_mens_tee: {
@@ -96,7 +96,7 @@ const merchandiseMeta = {
     price: 28.50,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
   farewell_2020_womens_tee: {
@@ -106,7 +106,7 @@ const merchandiseMeta = {
     price: 28,
     original: 'AVAILABLE',
     buyUrl: 'https://www.etsy.com/ie/listing/864817848/farewell-womens-short-sleeve-t-shirt',
-    discount: 20,
+    discount: 0,
     type: 'merchandise',
   },
 };
