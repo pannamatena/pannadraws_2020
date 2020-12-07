@@ -171,7 +171,7 @@ const App = (props) => {
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
       price: 110,
-      original: 'AVAILABLE',
+      original: 'SOLD',
       prints: 'NOTYET',
       buyUrl: 'https://www.etsy.com/ie/listing/892422311/holiday-robins-set-of-3-original',
       ship: 'FREE_IRL_UK_USA',
