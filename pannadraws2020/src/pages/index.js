@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      jacks: file(relativePath: { eq: "2020/jacks_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       curlew: file(relativePath: { eq: "2020/curlew_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,26 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      farewell: file(relativePath: { eq: "2020/farewell_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    jacks: {
+      title: 'Jacks',
+      year: '2020',
+      description: 'Ink and watercolour on hot pressed watercolour paper. 400 x 570 mm, 2020.',
+      price: 200,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 25.50,
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/923304031/jacks-bird-art-poster-print-garden-bird',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This artwork is mostly inspired by the magpies that visit my garden every day, but I also incorporated something from tropical natural history illustrations. The character of the birds really reminded me of an Irish tale, "Jack, the cunning thief". The hero of the story can steal anything from anywhere, and outsmarts everyone. Just like these rascals! Thieves they might be, but smart ones. I have to admit I do like magpies, even though I had my share of conflict with them!',
+    },
     curlew: {
       title: 'Curlew',
       year: '2020',
@@ -148,7 +163,7 @@ const App = (props) => {
       year: '2020',
       description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
       price: 110,
-      original: 'AVAILABLE',
+      original: 'SOLD',
       prints: 'NOTYET',
       buyUrl: 'https://www.etsy.com/ie/listing/878489796/holiday-tits-set-of-3-original',
       merch: [
@@ -224,42 +239,6 @@ const App = (props) => {
       type: 'watercolour_painting',
       story: 'Originally created as at-shirt design, this painting of two mischievous starlings became one of my favourites. If anything, starlings are real characters in the garden. They appear in a group out of nowhere, raid all the bird feeders, then most of them leave. Some might remain, and then you can listen to their chit-chat in the bushes... A pleasant sound I couldn\'t believe was coming from these rascals! In this painting I also wanted to show their beauty, the amazing greenish shine in their plumage with the golden dots along their body.<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
     },
-    farewell: {
-      title: 'Farewell',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 115,
-      printPrice: 21.95,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      ship: 'FREE_IRL_UK_USA',
-      buyUrl: 'https://www.etsy.com/ie/listing/871870682/farewell-original-watercolour-painting',
-      printUrl: 'https://www.etsy.com/ie/listing/870127742/farewell-bird-art-poster-print-swallow',
-      merch: [
-        {
-          name: 'Women\'s t-shirt',
-          url: 'https://www.etsy.com/ie/listing/864817848/farewell-womens-short-sleeve-t-shirt',
-          price: 28,
-          discount: 0,
-        },
-        {
-          name: 'Men\'s t-shirt',
-          url: 'https://www.etsy.com/ie/listing/875079870/farewell-mens-short-sleeve-t-shirt-with',
-          price: 28.50,
-          discount: 0,
-        },
-        {
-          name: 'Notebook',
-          url: 'https://www.etsy.com/ie/listing/895826951/farewell-hardcover-journal-bird-art',
-          price: 14.95,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'When it\'s summer, you hardly think about the time when nature starts to change colours, and some of the usual habitants of your environment leave for the winter. When I painted this swallow, originally intended it as a t-shirt design, the little birds already left, leaving behind the autumn colours of leaves. I know they\'ll return once it\'s spring time again. Until then, farewell!<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
-    }
   };
 
   const style = {
@@ -414,7 +393,7 @@ const App = (props) => {
             <p css={style.quoteFrom}>Lizzie, UK</p>
           </div>
           <div css={style.quote}>
-            <p css={style.quoteText}>From first discovering Pannas beautiful work on Facebook, I’ve become an avid follower!!
+            <p css={style.quoteText}>From first discovering Panna's beautiful work on Facebook, I’ve become an avid follower!!
               She has such talent and skill and her work is very much 'all her own'... very unique
               style! I’m happy to say I’m recently the proud owner of her original piece 'Robin'
               from her 'feathersoftales'... and I look forward to seeing more!!</p>

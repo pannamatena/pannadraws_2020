@@ -1,4 +1,19 @@
 const animalArtMeta = {
+  jacks: {
+    title: 'Jacks',
+    year: '2020',
+    description: 'Ink and watercolour on hot pressed watercolour paper. 400 x 570 mm, 2020.',
+    price: 200,
+    original: 'SOLD',
+    prints: 'AVAILABLE',
+    printPrice: 25.50,
+    buyUrl: '',
+    printUrl: 'https://www.etsy.com/ie/listing/923304031/jacks-bird-art-poster-print-garden-bird',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'This artwork is mostly inspired by the magpies that visit my garden every day, but I also incorporated something from tropical natural history illustrations. The character of the birds really reminded me of an Irish tale, "Jack, the cunning thief". The hero of the story can steal anything from anywhere, and outsmarts everyone. Just like these rascals! Thieves they might be, but smart ones. I have to admit I do like magpies, even though I had my share of conflict with them!',
+  },
   curlew: {
     title: 'Curlew',
     year: '2020',
@@ -73,7 +88,7 @@ const animalArtMeta = {
     year: '2020',
     description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
     price: 110,
-    original: 'AVAILABLE',
+    original: 'SOLD',
     prints: 'NOTYET',
     buyUrl: 'https://www.etsy.com/ie/listing/878489796/holiday-tits-set-of-3-original',
     merch: [
