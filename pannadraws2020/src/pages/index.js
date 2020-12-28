@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      we_belong: file(relativePath: { eq: "2020/we_belong_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      muruchaill: file(relativePath: { eq: "2020/muruchaill_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       jacks: file(relativePath: { eq: "2020/jacks_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,42 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      christmas_robins_2020: file(relativePath: { eq: "2020/christmas_robins_2020.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      rascals: file(relativePath: { eq: "2020/rascals_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    we_belong: {
+      title: 'We Belong',
+      year: '2020',
+      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm, 2020.',
+      price: 200,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: '"I will not sell thee indeed," said Ecohaid, "but let him put his arms round thee in the middle of the house as thou art." "It shall be done," said Midir. He takes his weapons in his left hand, and the woman he took under his right arm, and bore her away through the skylight of the house. The hosts rose up in shame around the king. They beheld two swans in flight around Tara. (from the <i>Wooing of Étaín</i>)<br /><br />It\'s hard to summarize this story as it\'s a crazy one, and easily beats any soap opera! So in short, Midir takes Étaín, the most beautiful woman as his wife. But his first wife turns Étaín into a pool of water, from which she evaporates and becomes a fly, and after many adventures she lands in the drink of the wife of Étar, a warrior. She swallows the fly and becomes pregnant, giving birth to Étain again after 1012 years of her first birth. She gets wed to Eochu, high king of Ireland. Meanwhile Midir learns his long lost love is alive, and challenges Eochu in a chess game to get a kiss from Étaín if he wins. Of course he won, and when embracing Étaín they both turn into swans and escape.<br /><br />This painting was commissioned to contain a folklore element and swans, so I chose this love story from Celtic mythology to serve as my inspiration.',
+    },
+    muruchaill: {
+      title: 'Murúchaill',
+      year: '2020',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm, 2020.',
+      price: 120,
+      original: 'AVAILABLE',
+      ship: 'FREE_IRL_UK',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/932337371/muruchaill-original-watercolour-painting',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Cormorants are quite a common view as they are drying themselves on rocks, turning their wings to face the sun, but I still find something exotic in their groups. They were seen as mermaids, and one Irish name I chose as the title of this painting means exactly that: mermaid.<br /><br />I saw this Cormorant drying his wings and grooming at Howth, Dublin.',
+    },
     jacks: {
       title: 'Jacks',
       year: '2020',
@@ -180,65 +211,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'These little tits were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Robin cards). The 3 paintings picture two coal tits and a blue tit showcasing fantastic acrobatic skills!<br /><br />In the picture here you can see the set of holiday greeting cards, but if you head over to my shop (use the link below to the original) you can see the paintings in detail. The cards come with gold envelopes. The paintings are unframed, but mounted in 16 x 20" photo mounts and they fit in standard size frames.',
-    },
-    christmas_robins_2020: {
-      title: 'Christmas Robins 2020',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
-      price: 110,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      buyUrl: 'https://www.etsy.com/ie/listing/892422311/holiday-robins-set-of-3-original',
-      ship: 'FREE_IRL_UK_USA',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Christmas Cards (set of 3 or 6)',
-          url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
-          price: 8,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'These handsome robins were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Tit cards). The 3 paintings picture the birds in different poses, all familiar to those who love these photogenic little birds.<br /><br />In the picture here you can see the set of holiday greeting cards, but if you head over to my shop (use the link below to the original) you can see the paintings in detail. The cards come with gold envelopes. The paintings are unframed, but mounted in 16 x 20" photo mounts and they fit in standard size frames.',
-    },
-    rascals: {
-      title: 'Rascals',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 135,
-      printPrice: 21.95,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      merch: [
-        {
-          name: 'Artist\'s Sketchbook',
-          url: 'https://www.etsy.com/ie/listing/888840913/rascals-artists-sketchbook-spiral',
-          price: 23,
-          discount: 0,
-        },
-        {
-          name: 'Women\'s t-shirt',
-          url: 'https://www.etsy.com/ie/listing/889316355/rascals-womens-short-sleeve-t-shirt-with',
-          price: 32,
-          discount: 0,
-        },
-        {
-          name: 'Men\'s t-shirt',
-          url: 'https://www.etsy.com/ie/listing/875381994/rascals-mens-short-sleeve-t-shirt-with',
-          price: 31.50,
-          discount: 0,
-        },
-      ],
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/870126360/rascals-bird-art-poster-print-garden',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Originally created as at-shirt design, this painting of two mischievous starlings became one of my favourites. If anything, starlings are real characters in the garden. They appear in a group out of nowhere, raid all the bird feeders, then most of them leave. Some might remain, and then you can listen to their chit-chat in the bushes... A pleasant sound I couldn\'t believe was coming from these rascals! In this painting I also wanted to show their beauty, the amazing greenish shine in their plumage with the golden dots along their body.<br /><br />This painting was made as a t-shirt design. T-shirts and notebooks printed with this pattern are available in my <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
-    },
+    }
   };
 
   const style = {

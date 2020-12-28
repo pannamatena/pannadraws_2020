@@ -305,7 +305,7 @@ const ArtActionControls = (props) => {
     return (props.imgMeta.merch && props.imgMeta.merch.length > 0) ? (
         <div css={style.merchSection}>
           {props.imgMeta.merch.map(merch => (
-              <div css={style.merchItem}>
+              <div css={style.merchItem} key={merch.url}>
                 <a href={merch.url} target="_blank" rel="noopener noreferrer" title={`${merch.name} by PannaDraws on Etsy`}>{merch.name} {arrow()}</a>
                 <span>(from {getMerchPrice(merch)} + shipping)</span>
               </div>
