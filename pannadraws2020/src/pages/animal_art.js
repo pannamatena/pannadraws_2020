@@ -204,21 +204,7 @@ const AnimalArt = (props) => {
           }
         }
       },
-      wingspan: file(relativePath: { eq: "2020/wingspan_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       red_pompoms: file(relativePath: { eq: "2019/red_pompoms_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      staring_tiger: file(relativePath: { eq: "2019/staring_tiger_2019_web.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

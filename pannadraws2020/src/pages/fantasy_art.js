@@ -64,13 +64,6 @@ const FantasyArt = (props) => {
           }
         }
       },
-      statement: file(relativePath: { eq: "2020/statement_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       the_dragon_and_the_kirin: file(relativePath: { eq: "2020/the_dragon_and_the_kirin_2020_web.png" }) {
         childImageSharp {
           fluid {
@@ -85,35 +78,7 @@ const FantasyArt = (props) => {
           }
         }
       },
-      reindeer_and_dragonflies: file(relativePath: { eq: "2020/reindeer_and_dragonflies_2020_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      grinning_long: file(relativePath: { eq: "2019/grinning_long_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      the_kirin: file(relativePath: { eq: "2019/the_kirin_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
       unicorn_portrait: file(relativePath: { eq: "2019/unicorn_portrait_2019_web.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      csodaszarvas: file(relativePath: { eq: "2019/csodaszarvas_2019_web.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
