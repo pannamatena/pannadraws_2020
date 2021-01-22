@@ -255,6 +255,7 @@ const ArtActionControls = (props) => {
           {props.imgMeta.ship && props.imgMeta.ship === 'FREE' && (<span css={style.freeShip}>+ FREE shipping</span>)}
           {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK_USA' && (<span css={style.freeShip}>+ FREE shipping to Ireland, UK, USA</span>)}
           {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK' && (<span css={style.freeShip}>+ FREE shipping to Ireland and UK</span>)}
+          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL' && (<span css={style.freeShip}>+ FREE shipping to Ireland</span>)}
         </div>
     ) : (
         <p css={style.oSold}>Original is sold.</p>

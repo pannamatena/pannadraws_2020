@@ -8,6 +8,41 @@ import merchandiseMeta from "../resources/merchandiseMeta";
 const Merchandise = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      greeting_cards_2021_spring: file(relativePath: { eq: "merch/greeting_cards_2021_spring.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      postcards_2021_spring: file(relativePath: { eq: "merch/postcards_2021_spring.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      buttercups_2021_unisex_tee: file(relativePath: { eq: "merch/buttercups_2021_unisex_tee.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      sandworts_2020_unisex_tee: file(relativePath: { eq: "merch/sandworts_2020_unisex_tee.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      cuckooflowers_2020_unisex_tee: file(relativePath: { eq: "merch/cuckooflowers_2020_unisex_tee.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       sparrowhawk_2020_notebook: file(relativePath: { eq: "merch/sparrowhawk_2020_notebook.jpg" }) {
         childImageSharp {
           fluid {

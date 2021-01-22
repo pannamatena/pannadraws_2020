@@ -14,6 +14,34 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      spear: file(relativePath: { eq: "2021/spear_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      buttercups: file(relativePath: { eq: "2021/buttercups_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      sandworts: file(relativePath: { eq: "2020/sandworts_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      cuckooflowers: file(relativePath: { eq: "2020/cuckooflowers_2020_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       we_belong: file(relativePath: { eq: "2020/we_belong_2020_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -41,49 +69,144 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      alfalfa: file(relativePath: { eq: "2020/alfalfa_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      lirs_daughter: file(relativePath: { eq: "2020/lirs_daughter_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      treasures: file(relativePath: { eq: "2020/treasures_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      christmas_tits_2020: file(relativePath: { eq: "2020/christmas_tits_2020.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
-    we_belong: {
-      title: 'We Belong',
-      year: '2020',
-      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm, 2020.',
+    spear: {
+      title: 'Spear',
+      year: '2021',
+      description: 'Ink and watercolour on acrylic paper. 508 x 405 mm, 2021.',
       price: 200,
       original: 'SOLD',
       prints: 'NOTYET',
       printPrice: 0,
       buyUrl: '',
       printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'I never really thought any bird would be scary, at least I\'ve never been scared of any. But look at that eye. I see the beast from horror movies, that frame that gets frozen just before it strikes and you know how it will end. Herons are no cuddly little chicks, and while I was painting this portrait I thought for the first time this bird is scary.<br /><br />I got the chance to have a close look at the beak, too. It\'s full of scratches from all the strikes that went down in water, and probably came out with a catch. This bird is like the old hunter who still has some tricks up in his sleeves!',
+    },
+    buttercups: {
+      title: 'Buttercups',
+      year: '2021',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm, 2021.',
+      price: 94,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      ship: 'FREE_IRL',
+      buyUrl: 'https://www.etsy.com/ie/listing/947459543/buttercups-original-watercolour-painting',
+      printUrl: '',
+      merch: [
+        {
+          name: 'Unisex t-shirt',
+          url: 'https://www.etsy.com/ie/listing/941546699/buttercups-unisex-short-sleeve-t-shirt',
+          price: 32,
+          discount: 0,
+        },
+        {
+          name: 'Greeting cards',
+          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
+          price: 3.50,
+          discount: 0,
+        },
+        {
+          name: 'Postcard set',
+          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
+          price: 5,
+          discount: 0,
+        },
+      ],
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is the third of my spring collection prints: a pair of robins and an Irish wildflower, Buttercups. Also my first artwork in 2021! Inspired by the courting habits of the European Robin: the male offers treats to the female, and feeds her.<br /><br />This painting was created as a t-shirt print, but postcards and greeting cards are also made with it!',
+    },
+    sandworts: {
+      title: 'Sandworts',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm, 2020.',
+      price: 94,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      ship: 'FREE_IRL',
+      buyUrl: 'https://www.etsy.com/ie/listing/933507942/sandworts-original-watercolour-painting',
+      printUrl: '',
+      merch: [
+        {
+          name: 'Unisex t-shirt',
+          url: 'https://www.etsy.com/ie/listing/941546297/sandworts-unisex-short-sleeve-t-shirt',
+          price: 32.50,
+          discount: 0,
+        },
+        {
+          name: 'Greeting cards',
+          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
+          price: 3.50,
+          discount: 0,
+        },
+        {
+          name: 'Postcard set',
+          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
+          price: 5,
+          discount: 0,
+        },
+      ],
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is the second of my spring collection prints: a pair of blue tits and an Irish wildflower, Sandworts. This painting was created as a t-shirt print, but postcards and greeting cards are also made with it!',
+    },
+    cuckooflowers: {
+      title: 'Cuckooflowers',
+      year: '2020',
+      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm, 2020.',
+      price: 144,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      ship: 'FREE_IRL',
+      buyUrl: 'https://www.etsy.com/ie/listing/933499334/cuckooflowers-original-watercolour',
+      printUrl: '',
+      merch: [
+        {
+          name: 'Unisex t-shirt',
+          url: 'https://www.etsy.com/ie/listing/941545811/cuckooflowers-unisex-short-sleeve-t',
+          price: 34.50,
+          discount: 0,
+        },
+        {
+          name: 'Greeting cards',
+          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
+          price: 3.50,
+          discount: 0,
+        },
+        {
+          name: 'Postcard set',
+          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
+          price: 5,
+          discount: 0,
+        },
+      ],
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is the first of my spring collection prints: a pair of grey herons in their courting dance, and some cuckooflowers to get that spring vibe going. Herons start courting in mid-February, taking on their party looks: bright orange beaks and fresh plumage.<br /><br />There are t-shirts, greeting cards and postcards available with this print!',
+    },
+    we_belong: {
+      title: 'We Belong',
+      year: '2020',
+      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm, 2020.',
+      price: 200,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 26.95,
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/925362562/we-belong-swan-pair-poster-print-celtic',
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
@@ -135,83 +258,6 @@ const App = (props) => {
       type: 'watercolour_painting',
       story: 'I took the reference photo on Bull Island, and I really like the beach vibe this painting radiates, the same feeling I had when I was on the beach photographing the birds. Even though it\'s definitely not summer any more this painting still reminds me of the gentle sea breeze and I can hear the murmur of the waves.',
     },
-    alfalfa: {
-      title: 'Alfalfa',
-      year: '2020',
-      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
-      price: 180,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      buyUrl: '',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Women\'s t-shirt',
-          url: 'https://www.etsy.com/ie/listing/906857911/alfalfa-womens-short-sleeve-t-shirt-with',
-          price: 32,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is a commissioned t-shirt print for <a href="https://www.instagram.com/max_border_collie27/" target="_blank" rel="noopener noreferrer">Max</a>, a blue merle border collie. The t-shirts are now available at <a href="https://pannadraws.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy store</a>!',
-    },
-    lirs_daughter: {
-      title: 'Lir\'s Daughter (Feathers of Tales X)',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 405 x 508 mm (16 x 20 in), 2020.',
-      price: 180,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      ship: 'FREE_IRL_UK_USA',
-      buyUrl: 'https://www.etsy.com/ie/listing/902422157/lirs-daughter-feathers-of-tales-x',
-      printUrl: 'https://www.etsy.com/ie/listing/911737817/lirs-daughter-feathers-of-tales-x-bird',
-      printPrice: 26.95,
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"...so she drove the children of Lir into the lake to bathe, and they did as Oifa told them. As soon as they were upon the lake she struck them with a Druid\'s wand of spells and wizardry and put them into the forms of four beautiful, perfectly white swans..." (The Fate of The Children of Lir)<br /><br />So the series ends with this story, one of the most famous ones from Celtic mythology. Oifa, their stepmother, in her jealousy turned Lir\'s children into swans for 900 years just to see the decline of the Tuatha De Danann and their family. When Oifa\'s crime was discovered she was turned into an air-demon, a creature she loathed the most. But that didn\'t break the magic on the children who remained swans with the gift of speech and songs.<br /><br />This painting is the 10th and final piece in Feathers of Tales, my series on birds of Irish folklore.',
-    },
-    treasures: {
-      title: 'Treasures',
-      year: '2020',
-      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
-      price: 120,
-      original: 'AVAILABLE',
-      prints: 'AVAILABLE',
-      printPrice: 21.95,
-      ship: 'FREE_IRL_UK_USA',
-      buyUrl: 'https://www.etsy.com/ie/listing/896513203/treasures-original-watercolour-painting',
-      printUrl: 'https://www.etsy.com/ie/listing/889404732/treasures-bird-art-poster-print-sea-bird',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'While drawing this I was so so tempted to move it towards a contemporary issue and add plastic waste among the seashells and logs. That would have been the reality, this in my painting is the fairy tale guys...<br /><br />I took the reference photo on Bull Island and on some days its shore is a disgrace. Plastic everywhere, bottles, scraps, all the little colourful bits that doesn\'t fit in the greyish green on the shore. Sad.<br /><br />So this piece is kept as an imaginary scene, a dream, without the rubbish, just the natural elements. A bit of comfort and escape from reality.',
-    },
-    christmas_tits_2020: {
-      title: 'Christmas Tits 2020',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm (8.27 x 11.69 in), 2020.',
-      price: 110,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      buyUrl: 'https://www.etsy.com/ie/listing/878489796/holiday-tits-set-of-3-original',
-      merch: [
-        {
-          name: 'Christmas Cards (set of 3 or 6)',
-          url: 'https://www.etsy.com/ie/listing/891942385/robins-and-tits-greeting-card-set',
-          price: 8,
-          discount: 0,
-        },
-      ],
-      ship: 'FREE_IRL_UK_USA',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'These little tits were painted to become prints for a set of Christmas greeting cards. The original paintings are a set of 3 paintings, while the cards can be bought in sets of 3 or 6 (together with the Robin cards). The 3 paintings picture two coal tits and a blue tit showcasing fantastic acrobatic skills!<br /><br />In the picture here you can see the set of holiday greeting cards, but if you head over to my shop (use the link below to the original) you can see the paintings in detail. The cards come with gold envelopes. The paintings are unframed, but mounted in 16 x 20" photo mounts and they fit in standard size frames.',
-    }
   };
 
   const style = {
