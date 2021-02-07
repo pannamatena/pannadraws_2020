@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from "@emotion/core"
+import {Link} from "gatsby";
 import { arrow } from '../resources/icons';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
@@ -240,26 +241,40 @@ const ArtActionControls = (props) => {
       );
     }
 
-    return props.imgMeta.original === 'AVAILABLE' ? (
-        <div css={style.originalBuy}>
-          <a
-              css={style.buyOBtn}
-              href={props.imgMeta.buyUrl}
-              title={`${props.imgMeta.title} original artwork for sale`}
-              target="_blank"
-              rel="noopener noreferrer"
-          >Buy original on Etsy <span css={style.price}>
+    switch (props.imgMeta.original) {
+      case 'AVAILABLE': {
+        return (
+            <div css={style.originalBuy}>
+              <a
+                  css={style.buyOBtn}
+                  href={props.imgMeta.buyUrl}
+                  title={`${props.imgMeta.title} original artwork for sale`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >Buy original on Etsy <span css={style.price}>
                       ({getPrice()})
-            {arrow()}
+                {arrow()}
                     </span></a>
-          {props.imgMeta.ship && props.imgMeta.ship === 'FREE' && (<span css={style.freeShip}>+ FREE shipping</span>)}
-          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK_USA' && (<span css={style.freeShip}>+ FREE shipping to Ireland, UK, USA</span>)}
-          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK' && (<span css={style.freeShip}>+ FREE shipping to Ireland and UK</span>)}
-          {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL' && (<span css={style.freeShip}>+ FREE shipping to Ireland</span>)}
-        </div>
-    ) : (
-        <p css={style.oSold}>Original is sold.</p>
-    );
+              {props.imgMeta.ship && props.imgMeta.ship === 'FREE' && (<span css={style.freeShip}>+ FREE shipping</span>)}
+              {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK_USA' && (<span css={style.freeShip}>+ FREE shipping to Ireland, UK, USA</span>)}
+              {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK' && (<span css={style.freeShip}>+ FREE shipping to Ireland and UK</span>)}
+              {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL' && (<span css={style.freeShip}>+ FREE shipping to Ireland</span>)}
+            </div>
+        )
+      }
+      case 'MSG': {
+        return (
+            <div css={style.originalBuy}>
+              <Link css={style.buyOBtn} to="/contact/">Message me for purchase inquiry</Link>
+            </div>
+        )
+      }
+      default: {
+        return (
+            <p css={style.oSold}>Original is sold.</p>
+        )
+      }
+    }
   };
 
   const getPrintSection = () => {

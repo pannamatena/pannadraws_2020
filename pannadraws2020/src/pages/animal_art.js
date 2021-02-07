@@ -8,6 +8,34 @@ import animalArtMeta from "../resources/animalArtMeta";
 const AnimalArt = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      peregrine: file(relativePath: { eq: "2021/peregrine_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      bistre_doe: file(relativePath: { eq: "2021/bistre_doe_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      the_hug: file(relativePath: { eq: "2021/the_hug_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      low_tide_tale: file(relativePath: { eq: "2021/low_tide_tale_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       spear: file(relativePath: { eq: "2021/spear_2021_web.jpg" }) {
         childImageSharp {
           fluid {

@@ -1,4 +1,14 @@
 const merchandiseMeta = {
+  low_tide_tale_2021_greeting_card: {
+    title: 'Low Tide Tale Greeting Card',
+    year: '2021',
+    description: 'Greeting card with white envelope.',
+    price: 3.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/953617477/low-tide-tale-greeting-card-with',
+    discount: 0,
+    type: 'merchandise',
+  },
   greeting_cards_2021_spring: {
     title: 'Birds in Love Greeting Cards',
     year: '2021',

@@ -8,6 +8,13 @@ import merchandiseMeta from "../resources/merchandiseMeta";
 const Merchandise = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      low_tide_tale_2021_greeting_card: file(relativePath: { eq: "merch/low_tide_tale_2021_greeting_card.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       greeting_cards_2021_spring: file(relativePath: { eq: "merch/greeting_cards_2021_spring.jpg" }) {
         childImageSharp {
           fluid {

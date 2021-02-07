@@ -14,6 +14,34 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      peregrine: file(relativePath: { eq: "2021/peregrine_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      bistre_doe: file(relativePath: { eq: "2021/bistre_doe_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      the_hug: file(relativePath: { eq: "2021/the_hug_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      low_tide_tale: file(relativePath: { eq: "2021/low_tide_tale_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       spear: file(relativePath: { eq: "2021/spear_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -41,39 +69,79 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      we_belong: file(relativePath: { eq: "2020/we_belong_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      muruchaill: file(relativePath: { eq: "2020/muruchaill_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      jacks: file(relativePath: { eq: "2020/jacks_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      curlew: file(relativePath: { eq: "2020/curlew_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    peregrine: {
+      title: 'Peregrine',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 216 x 278 mm, 2021.',
+      price: 85,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'The Peregrine, the fastest bird in the world (and apparently the fastest creature as well).<br /><br />I knew sooner or later I needed to honour this bird, but to capture the personality of a raptor is not easy. You can\'t see them from your window, and observe them while you daydream. You need to go after them, look for them, and hunting a hunter is anything but easy.',
+    },
+    bistre_doe: {
+      title: 'Bistre Doe',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 405 x 508 mm, 2021.',
+      price: 215,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is a doe I saw at Phoenix Park, Dublin. I was there early in the morning when the park was still empty, in early autumn, and the sun was still warm and bright. This dark coloured one caught my eye, as her coat was almost glowing in that morning sunlight.<br /><br />How captivating is that eye? Such a gentle expression, but the light glows in there just the same. The star of the show. How can you stand out from the crowd when you are just a doe, and everyone is looking for those antlers? Just stand up and shine!',
+    },
+    the_hug: {
+      title: 'The Hug',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 112 x 278 mm, 2021.',
+      price: 55,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Mute swans became symbols of love because they mate for years. It might last for life, but the truth is the pair can separate. Doesn\'t that bring them even closer to human relationships?<br /><br />I\'m so amazed by the sight of affection being displayed among animals, especially birds. They are fundamentally so different than us, yet these gestures are so similar. You can immediately tell if those birds form a pair.',
+    },
+    low_tide_tale: {
+      title: 'Low Tide Tale',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 195 x 255 mm, 2021.',
+      price: 75,
+      original: 'MSG',
+      prints: 'NOTYET',
+      merch: [
+        {
+          name: 'Greeting Card',
+          url: 'https://www.etsy.com/ie/listing/953617477/low-tide-tale-greeting-card-with',
+          price: 3.50,
+          discount: 0,
+        },
+      ],
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'When I was working on the drawing, it just started to look more and more like an illustration that reminded me of my childhood adventures in the wilderness of lakes, sneaking in the swampy parts without a care, discovering nests and catching lizards and frogs...<br /><br />I could tell a hundred tales from those times, and maybe subconsciously I illustrated that experience in this painting. When I encounter such a beautiful bird standing like a statue, I dare not move, I just watch, as this white angel is looking for prey.',
+    },
     spear: {
       title: 'Spear',
       year: '2021',
@@ -196,67 +264,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This is the first of my spring collection prints: a pair of grey herons in their courting dance, and some cuckooflowers to get that spring vibe going. Herons start courting in mid-February, taking on their party looks: bright orange beaks and fresh plumage.<br /><br />There are t-shirts, greeting cards and postcards available with this print!',
-    },
-    we_belong: {
-      title: 'We Belong',
-      year: '2020',
-      description: 'Ink and watercolour on acrylic paper. 405 x 508 mm, 2020.',
-      price: 200,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 26.95,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/925362562/we-belong-swan-pair-poster-print-celtic',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: '"I will not sell thee indeed," said Ecohaid, "but let him put his arms round thee in the middle of the house as thou art." "It shall be done," said Midir. He takes his weapons in his left hand, and the woman he took under his right arm, and bore her away through the skylight of the house. The hosts rose up in shame around the king. They beheld two swans in flight around Tara. (from the <i>Wooing of Étaín</i>)<br /><br />It\'s hard to summarize this story as it\'s a crazy one, and easily beats any soap opera! So in short, Midir takes Étaín, the most beautiful woman as his wife. But his first wife turns Étaín into a pool of water, from which she evaporates and becomes a fly, and after many adventures she lands in the drink of the wife of Étar, a warrior. She swallows the fly and becomes pregnant, giving birth to Étain again after 1012 years of her first birth. She gets wed to Eochu, high king of Ireland. Meanwhile Midir learns his long lost love is alive, and challenges Eochu in a chess game to get a kiss from Étaín if he wins. Of course he won, and when embracing Étaín they both turn into swans and escape.<br /><br />This painting was commissioned to contain a folklore element and swans, so I chose this love story from Celtic mythology to serve as my inspiration.',
-    },
-    muruchaill: {
-      title: 'Murúchaill',
-      year: '2020',
-      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm, 2020.',
-      price: 120,
-      original: 'AVAILABLE',
-      ship: 'FREE_IRL_UK',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/932337371/muruchaill-original-watercolour-painting',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Cormorants are quite a common view as they are drying themselves on rocks, turning their wings to face the sun, but I still find something exotic in their groups. They were seen as mermaids, and one Irish name I chose as the title of this painting means exactly that: mermaid.<br /><br />I saw this Cormorant drying his wings and grooming at Howth, Dublin.',
-    },
-    jacks: {
-      title: 'Jacks',
-      year: '2020',
-      description: 'Ink and watercolour on hot pressed watercolour paper. 400 x 570 mm, 2020.',
-      price: 200,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 25.50,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/923304031/jacks-bird-art-poster-print-garden-bird',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This artwork is mostly inspired by the magpies that visit my garden every day, but I also incorporated something from tropical natural history illustrations. The character of the birds really reminded me of an Irish tale, "Jack, the cunning thief". The hero of the story can steal anything from anywhere, and outsmarts everyone. Just like these rascals! Thieves they might be, but smart ones. I have to admit I do like magpies, even though I had my share of conflict with them!',
-    },
-    curlew: {
-      title: 'Curlew',
-      year: '2020',
-      description: 'Ink and watercolour on mixed media paper. 297 x 420 mm (11.7 x 16.5 in), 2020.',
-      price: 180,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 24.95,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/895285512/curlew-bird-art-poster-print-shore-bird',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'I took the reference photo on Bull Island, and I really like the beach vibe this painting radiates, the same feeling I had when I was on the beach photographing the birds. Even though it\'s definitely not summer any more this painting still reminds me of the gentle sea breeze and I can hear the murmur of the waves.',
     },
   };
 
