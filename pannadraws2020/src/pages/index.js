@@ -109,7 +109,7 @@ const App = (props) => {
       year: '2021',
       description: 'Ink and watercolour on paper. 112 x 278 mm, 2021.',
       price: 55,
-      original: 'AVAILABLE',
+      original: 'SOLD',
       prints: 'NOTYET',
       printPrice: 0,
       buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',

@@ -34,7 +34,7 @@ const animalArtMeta = {
     year: '2021',
     description: 'Ink and watercolour on paper. 112 x 278 mm, 2021.',
     price: 55,
-    original: 'AVAILABLE',
+    original: 'SOLD',
     prints: 'NOTYET',
     printPrice: 0,
     buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',
@@ -392,10 +392,10 @@ const animalArtMeta = {
     description: 'Ink and watercolour on watercolour paper. 297 x 420 mm ( 11.69 x 16.53 in), 2020.',
     price: 115,
     printPrice: 21.95,
-    original: 'AVAILABLE',
+    original: 'SOLD',
     prints: 'AVAILABLE',
     ship: 'FREE_IRL_UK_USA',
-    buyUrl: 'https://www.etsy.com/ie/listing/871870682/farewell-original-watercolour-painting',
+    buyUrl: '',
     printUrl: 'https://www.etsy.com/ie/listing/870127742/farewell-bird-art-poster-print-swallow',
     merch: [
       {
