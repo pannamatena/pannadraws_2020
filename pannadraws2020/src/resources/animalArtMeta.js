@@ -1,4 +1,19 @@
 const animalArtMeta = {
+  bone_raven: {
+    title: 'Bone Raven',
+    year: '2021',
+    description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
+    price: 250,
+    original: 'MSG',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: '',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'I had some uneasiness with rooks. Like most corvids in their groups they give a quite haunted feeling to any place, and the rook\'s face resembles the plague masks used in middle ages, so it\'s quite a scary bird. Or rather it was a scary one, as I painted this fluffy one (reference photo taken on a windy day) I saw the intelligence in his eyes and I can\'t really see them as frightening any more.<br /><br />Yes the rook\'s face is not a cuddly one, but the beautiful irridescence in the black feathers and the elegance as they glide and land makes them outstanding. Once a rook landed just beside me on a fence, and didn\'t get scared when I looked him straight in the eyes. What I saw was an intimidating cunning, maybe with some curiosity. It\'s said corvids can recognise human faces! This is a remarkable bird who deserves the credit on a large, A2 sized painting.',
+  },
   peregrine: {
     title: 'Peregrine',
     year: '2021',

@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      bone_raven: file(relativePath: { eq: "2021/bone_raven_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       peregrine: file(relativePath: { eq: "2021/peregrine_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,26 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      cuckooflowers: file(relativePath: { eq: "2020/cuckooflowers_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    bone_raven: {
+      title: 'Bone Raven',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
+      price: 250,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'I had some uneasiness with rooks. Like most corvids in their groups they give a quite haunted feeling to any place, and the rook\'s face resembles the plague masks used in middle ages, so it\'s quite a scary bird. Or rather it was a scary one, as I painted this fluffy one (reference photo taken on a windy day) I saw the intelligence in his eyes and I can\'t really see them as frightening any more.<br /><br />Yes the rook\'s face is not a cuddly one, but the beautiful irridescence in the black feathers and the elegance as they glide and land makes them outstanding. Once a rook landed just beside me on a fence, and didn\'t get scared when I looked him straight in the eyes. What I saw was an intimidating cunning, maybe with some curiosity. It\'s said corvids can recognise human faces! This is a remarkable bird who deserves the credit on a large, A2 sized painting.',
+    },
     peregrine: {
       title: 'Peregrine',
       year: '2021',
@@ -228,43 +243,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This is the second of my spring collection prints: a pair of blue tits and an Irish wildflower, Sandworts. This painting was created as a t-shirt print, but postcards and greeting cards are also made with it!',
-    },
-    cuckooflowers: {
-      title: 'Cuckooflowers',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 297 x 420 mm, 2020.',
-      price: 144,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      ship: 'FREE_IRL',
-      buyUrl: 'https://www.etsy.com/ie/listing/933499334/cuckooflowers-original-watercolour',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Unisex t-shirt',
-          url: 'https://www.etsy.com/ie/listing/941545811/cuckooflowers-unisex-short-sleeve-t',
-          price: 34.50,
-          discount: 0,
-        },
-        {
-          name: 'Greeting cards',
-          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
-          price: 3.50,
-          discount: 0,
-        },
-        {
-          name: 'Postcard set',
-          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
-          price: 5,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is the first of my spring collection prints: a pair of grey herons in their courting dance, and some cuckooflowers to get that spring vibe going. Herons start courting in mid-February, taking on their party looks: bright orange beaks and fresh plumage.<br /><br />There are t-shirts, greeting cards and postcards available with this print!',
-    },
+    }
   };
 
   const style = {
