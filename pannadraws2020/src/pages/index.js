@@ -129,6 +129,14 @@ const App = (props) => {
       printPrice: 0,
       buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',
       printUrl: '',
+      merch: [
+        {
+          name: 'Bookmark Set',
+          url: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
+          price: 3.50,
+          discount: 0,
+        }
+      ],
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',

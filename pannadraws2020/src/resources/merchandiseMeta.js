@@ -1,4 +1,14 @@
 const merchandiseMeta = {
+  swans_of_ireland_2021_bookmark: {
+    title: 'Swans of Ireland Bookmark Set',
+    year: '2021',
+    description: 'Set of 3 paper bookmarks with tassel and rose charm.',
+    price: 3.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
+    discount: 0,
+    type: 'merchandise',
+  },
   low_tide_tale_2021_greeting_card: {
     title: 'Low Tide Tale Greeting Card',
     year: '2021',

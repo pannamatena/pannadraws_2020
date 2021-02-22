@@ -54,6 +54,14 @@ const animalArtMeta = {
     printPrice: 0,
     buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',
     printUrl: '',
+    merch: [
+      {
+        name: 'Bookmark Set',
+        url: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
+        price: 3.50,
+        discount: 0,
+      }
+    ],
     discount: 0,
     discountPrint: 0,
     type: 'watercolour_painting',
@@ -215,6 +223,14 @@ const animalArtMeta = {
     printPrice: 26.95,
     buyUrl: '',
     printUrl: 'https://www.etsy.com/ie/listing/925362562/we-belong-swan-pair-poster-print-celtic',
+    merch: [
+      {
+        name: 'Bookmark Set',
+        url: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
+        price: 3.50,
+        discount: 0,
+      }
+    ],
     discount: 0,
     discountPrint: 0,
     type: 'watercolour_painting',
@@ -299,6 +315,14 @@ const animalArtMeta = {
     buyUrl: 'https://www.etsy.com/ie/listing/902422157/lirs-daughter-feathers-of-tales-x',
     printUrl: 'https://www.etsy.com/ie/listing/911737817/lirs-daughter-feathers-of-tales-x-bird',
     printPrice: 26.95,
+    merch: [
+      {
+        name: 'Bookmark Set',
+        url: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
+        price: 3.50,
+        discount: 0,
+      }
+    ],
     discount: 0,
     discountPrint: 0,
     type: 'watercolour_painting',
@@ -505,7 +529,7 @@ const animalArtMeta = {
     year: '2020',
     description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm (11.69 x 16.53 in), 2020.',
     price: 115,
-    original: 'AVAILABLE',
+    original: 'SOLD',
     prints: 'NOTYET',
     ship: 'FREE_IRL_UK',
     buyUrl: 'https://www.etsy.com/ie/listing/845872130/the-ousel-of-cilgwri-feathers-of-tales',
