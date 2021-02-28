@@ -14,6 +14,27 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      musket: file(relativePath: { eq: "2021/musket_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      hawk_of_st_annes: file(relativePath: { eq: "2021/hawk_of_st_annes_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      the_birdfeeder: file(relativePath: { eq: "2021/the_birdfeeder_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       bone_raven: file(relativePath: { eq: "2021/bone_raven_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -48,32 +69,56 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      spear: file(relativePath: { eq: "2021/spear_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      buttercups: file(relativePath: { eq: "2021/buttercups_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      sandworts: file(relativePath: { eq: "2020/sandworts_2020_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    musket: {
+      title: 'Musket',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021.',
+      price: 85,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Being one of the most seen raptor for me in lockdown, the sparrowhawk had to be included in my small birds of prey portrait series (along with the Peregrine and Red Kite). It\'s amazing how different the face of each bird is. While the Peregrine has almost completely black eyes that gives him a beast-like look, the hawk has bright yellow-red eye with a definite pupil - that kind of hawk eye that gives you the chill with its fierce look.',
+    },
+    hawk_of_st_annes: {
+      title: 'Hawk of St Anne\'s',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 210 x 297 mm, 2021.',
+      price: 120,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 22.95,
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/957620520/hawk-of-st-annes-bird-art-poster-print',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'It\'s amazing how certain birds can adapt to urban life, and while most of us think of pigeons and sparrows, where there is prey, the predators appear. Sparrowhawks are common in city parks, such as St Anne\'s Park in Dublin, and these neighbours inspired this painting.<br /><br />The original painting was a commissioned one. Special thanks to <a href="https://www.futterer-wildlife.com/" target="_blank" rel="noopener noreferrer">Matthias Futterer</a> for letting me use his wonderful photograph of a sparrowhawk as reference.',
+    },
+    the_birdfeeder: {
+      title: 'The Birdfeeder',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 210 x 297 mm, 2021.',
+      price: 90,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 21.95,
+      buyUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/971588331/the-birdfeeder-bird-art-poster-print',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'For many of us who have a birdfeeder in the garden the little visitors are like family: we look at them as one of our own, our friends, who are there every day to cheer up up with their acrobatics around the seeds. Robins and blue tits are favourites everywhere. This painting captures that view that every bird lover wishes to see, a busy feeder with three of the most popular songbirds.<br /><br />The original painting was a commissioned one, a gift for Mother\'s day.',
+    },
     bone_raven: {
       title: 'Bone Raven',
       year: '2021',
@@ -165,93 +210,6 @@ const App = (props) => {
       type: 'watercolour_painting',
       story: 'When I was working on the drawing, it just started to look more and more like an illustration that reminded me of my childhood adventures in the wilderness of lakes, sneaking in the swampy parts without a care, discovering nests and catching lizards and frogs...<br /><br />I could tell a hundred tales from those times, and maybe subconsciously I illustrated that experience in this painting. When I encounter such a beautiful bird standing like a statue, I dare not move, I just watch, as this white angel is looking for prey.',
     },
-    spear: {
-      title: 'Spear',
-      year: '2021',
-      description: 'Ink and watercolour on acrylic paper. 508 x 405 mm, 2021.',
-      price: 200,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'I never really thought any bird would be scary, at least I\'ve never been scared of any. But look at that eye. I see the beast from horror movies, that frame that gets frozen just before it strikes and you know how it will end. Herons are no cuddly little chicks, and while I was painting this portrait I thought for the first time this bird is scary.<br /><br />I got the chance to have a close look at the beak, too. It\'s full of scratches from all the strikes that went down in water, and probably came out with a catch. This bird is like the old hunter who still has some tricks up in his sleeves!',
-    },
-    buttercups: {
-      title: 'Buttercups',
-      year: '2021',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm, 2021.',
-      price: 94,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      ship: 'FREE_IRL',
-      buyUrl: 'https://www.etsy.com/ie/listing/947459543/buttercups-original-watercolour-painting',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Unisex t-shirt',
-          url: 'https://www.etsy.com/ie/listing/941546699/buttercups-unisex-short-sleeve-t-shirt',
-          price: 32,
-          discount: 0,
-        },
-        {
-          name: 'Greeting cards',
-          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
-          price: 3.50,
-          discount: 0,
-        },
-        {
-          name: 'Postcard set',
-          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
-          price: 5,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is the third of my spring collection prints: a pair of robins and an Irish wildflower, Buttercups. Also my first artwork in 2021! Inspired by the courting habits of the European Robin: the male offers treats to the female, and feeds her.<br /><br />This painting was created as a t-shirt print, but postcards and greeting cards are also made with it!',
-    },
-    sandworts: {
-      title: 'Sandworts',
-      year: '2020',
-      description: 'Ink and watercolour on watercolour paper. 210 x 297 mm, 2020.',
-      price: 94,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      ship: 'FREE_IRL',
-      buyUrl: 'https://www.etsy.com/ie/listing/933507942/sandworts-original-watercolour-painting',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Unisex t-shirt',
-          url: 'https://www.etsy.com/ie/listing/941546297/sandworts-unisex-short-sleeve-t-shirt',
-          price: 32.50,
-          discount: 0,
-        },
-        {
-          name: 'Greeting cards',
-          url: 'https://www.etsy.com/ie/listing/943508801/birds-in-love-greeting-card-set-songbird',
-          price: 3.50,
-          discount: 0,
-        },
-        {
-          name: 'Postcard set',
-          url: 'https://www.etsy.com/ie/listing/928314268/birds-in-love-postcard-set-songbird',
-          price: 5,
-          discount: 0,
-        },
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is the second of my spring collection prints: a pair of blue tits and an Irish wildflower, Sandworts. This painting was created as a t-shirt print, but postcards and greeting cards are also made with it!',
-    }
   };
 
   const style = {
