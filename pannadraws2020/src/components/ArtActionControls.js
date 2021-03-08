@@ -70,6 +70,13 @@ const ArtActionControls = (props) => {
         }
       }
     `,
+    subText: css`
+      display: block;
+      color: ${colours.c2};
+      font-family: ${fonts.f2};
+      font-size: 0.8em;
+      text-transform: none;
+    `,
     buyPBtn: css`
       display: block;
       color: ${colours.c2};
@@ -266,6 +273,21 @@ const ArtActionControls = (props) => {
         return (
             <div css={style.originalBuy}>
               <Link css={style.buyOBtn} to="/contact/">Message me for purchase inquiry</Link>
+            </div>
+        )
+      }
+      case 'HAMBLY': {
+        return (
+            <div css={style.originalBuy}>
+              <a
+                  css={style.buyOBtn}
+                  href={'http://hamblyandhambly.com/'}
+                  title={`${props.imgMeta.title} original artwork for sale`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >Original is available <span css={style.price}>{arrow()}</span>
+                <span css={style.subText}>from Hambly & Hambly Art Gallery</span>
+              </a>
             </div>
         )
       }
