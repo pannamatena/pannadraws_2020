@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      caladrius: file(relativePath: { eq: "2021/caladrius_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      sunny_december_day: file(relativePath: { eq: "2021/sunny_december_day_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       musket: file(relativePath: { eq: "2021/musket_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -56,24 +70,40 @@ const App = (props) => {
           }
         }
       },
-      the_hug: file(relativePath: { eq: "2021/the_hug_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      low_tide_tale: file(relativePath: { eq: "2021/low_tide_tale_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `);
 
   const imgMeta = {
+    caladrius: {
+      title: 'Caladrius',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 594 x 420 mm, 2021.',
+      price: 220,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This piece was a donation to the fundraiser art auction of ARC Cancer Support, an organisation that helps people with cancer diagnosis and their families to handle the new situation.<br /><br />I chose the subject of the painting specifically for the occasion, so this epic white bird is Caladrius, the bird of healing. If he sits on the chest of the sick person and turns his head right, the person lives. I took this positive scenario, showing the mythical bird pecking at a dark serpent, the Sickness.<br /><br />I\'m hoping everyone who needs him can reach out for Caladrius!',
+    },
+    sunny_december_day: {
+      title: 'Sunny December Day',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 380 x 280 mm, 2021.',
+      price: 120,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This is a painting I made for Curlew Action, an organisation dedicated to the conservation of Curlews in the UK and Ireland.<br /><br />Curlews are not so rare in my area, but I only see them solitary, and I\'ve spotted a pair only once. The problem, as I\'ve learnt, is the decline of breeding pairs as they can\'t successfully breed here. This artwork was created for the org\'s art and poetry competition. The theme: What does the Curlew mean to you?<br /><br />My answer in short is that I cannot imagine a seashore without them, they are part of the picture I have in mind when I think of these shores. The image I painted here is an illustration of this picture, a lonely curlew foraging in a winter day.',
+    },
     musket: {
       title: 'Musket',
       year: '2021',
@@ -163,52 +193,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This is a doe I saw at Phoenix Park, Dublin. I was there early in the morning when the park was still empty, in early autumn, and the sun was still warm and bright. This dark coloured one caught my eye, as her coat was almost glowing in that morning sunlight.<br /><br />How captivating is that eye? Such a gentle expression, but the light glows in there just the same. The star of the show. How can you stand out from the crowd when you are just a doe, and everyone is looking for those antlers? Just stand up and shine!',
-    },
-    the_hug: {
-      title: 'The Hug',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 112 x 278 mm, 2021.',
-      price: 55,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/944412998/the-hug-original-watercolour-painting',
-      printUrl: '',
-      merch: [
-        {
-          name: 'Bookmark Set',
-          url: 'https://www.etsy.com/ie/listing/964814293/swans-of-ireland-paper-bookmark-with',
-          price: 3.50,
-          discount: 0,
-        }
-      ],
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Mute swans became symbols of love because they mate for years. It might last for life, but the truth is the pair can separate. Doesn\'t that bring them even closer to human relationships?<br /><br />I\'m so amazed by the sight of affection being displayed among animals, especially birds. They are fundamentally so different than us, yet these gestures are so similar. You can immediately tell if those birds form a pair.',
-    },
-    low_tide_tale: {
-      title: 'Low Tide Tale',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 195 x 255 mm, 2021.',
-      price: 75,
-      original: 'HAMBLY',
-      prints: 'NOTYET',
-      merch: [
-        {
-          name: 'Greeting Card',
-          url: 'https://www.etsy.com/ie/listing/953617477/low-tide-tale-greeting-card-with',
-          price: 3.50,
-          discount: 0,
-        },
-      ],
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'When I was working on the drawing, it just started to look more and more like an illustration that reminded me of my childhood adventures in the wilderness of lakes, sneaking in the swampy parts without a care, discovering nests and catching lizards and frogs...<br /><br />I could tell a hundred tales from those times, and maybe subconsciously I illustrated that experience in this painting. When I encounter such a beautiful bird standing like a statue, I dare not move, I just watch, as this white angel is looking for prey.',
     },
   };
 
