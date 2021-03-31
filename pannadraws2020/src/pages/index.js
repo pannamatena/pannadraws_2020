@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      kestrel: file(relativePath: { eq: "2021/kestrel_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       caladrius: file(relativePath: { eq: "2021/caladrius_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,26 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      bistre_doe: file(relativePath: { eq: "2021/bistre_doe_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
+      }
     }
   `);
 
   const imgMeta = {
+    kestrel: {
+      title: 'Kestrel',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
+      price: 170,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Part of my Irish birds of prey portrait study series.<br /><br />He\'s is such a small bird of prey! Like all of their kind, they are masters of their crafts: they can hover to target small rodents from the air. In Hungarian the kestrel has "red" in its name (vörös vércse) referring to that bright coat they have. In my portrait I pictured the bird from the front, but part of that beautiful coat is still visible. This is a pretty bird!',
+    },
     caladrius: {
       title: 'Caladrius',
       year: '2021',
@@ -107,8 +122,8 @@ const App = (props) => {
     musket: {
       title: 'Musket',
       year: '2021',
-      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021.',
-      price: 85,
+      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
+      price: 170,
       original: 'AVAILABLE',
       prints: 'NOTYET',
       printPrice: 0,
@@ -154,11 +169,11 @@ const App = (props) => {
       year: '2021',
       description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
       price: 250,
-      original: 'HAMBLY',
-      prints: 'NOTYET',
-      printPrice: 0,
+      original: 'SOLD',
+      prints: 'AVAILABLE',
+      printPrice: 23.95,
       buyUrl: '',
-      printUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/992037141/bone-raven-bird-art-print-poster',
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
@@ -167,7 +182,7 @@ const App = (props) => {
     peregrine: {
       title: 'Peregrine',
       year: '2021',
-      description: 'Ink and watercolour on paper. 216 x 278 mm, 2021.',
+      description: 'Ink and watercolour on paper. 216 x 278 mm, 2021. Framed.',
       price: 85,
       original: 'HAMBLY',
       prints: 'NOTYET',
@@ -178,21 +193,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'The Peregrine, the fastest bird in the world (and apparently the fastest creature as well).<br /><br />I knew sooner or later I needed to honour this bird, but to capture the personality of a raptor is not easy. You can\'t see them from your window, and observe them while you daydream. You need to go after them, look for them, and hunting a hunter is anything but easy.',
-    },
-    bistre_doe: {
-      title: 'Bistre Doe',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 405 x 508 mm, 2021.',
-      price: 215,
-      original: 'HAMBLY',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is a doe I saw at Phoenix Park, Dublin. I was there early in the morning when the park was still empty, in early autumn, and the sun was still warm and bright. This dark coloured one caught my eye, as her coat was almost glowing in that morning sunlight.<br /><br />How captivating is that eye? Such a gentle expression, but the light glows in there just the same. The star of the show. How can you stand out from the crowd when you are just a doe, and everyone is looking for those antlers? Just stand up and shine!',
     },
   };
 
