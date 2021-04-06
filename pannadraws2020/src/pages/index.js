@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      red_kite: file(relativePath: { eq: "2021/red_kite_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      greyhead: file(relativePath: { eq: "2021/greyhead_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       kestrel: file(relativePath: { eq: "2021/kestrel_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,43 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      bone_raven: file(relativePath: { eq: "2021/bone_raven_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      peregrine: file(relativePath: { eq: "2021/peregrine_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    red_kite: {
+      title: 'Red Kite',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
+      price: 183,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Part of my Irish birds of prey portrait study series.<br /><br />As one of the success stories of reintroducing a species to Ireland, I had to include the Red Kite in my raptor series. This beautiful red coated bird is now quite common in the Eastern part of the isle. An eagle-like bird, but its tail is very distinctive with its V-shape. Most raptors are disliked by some because they take garden birds or pigeons, but the Red Kite prefers cleaning up after road kills, even though they hunt if needed.<br /><br />A fun fact: they like to steal human clothes, especially underwear, to decorate their nests! Who wouldn\'t adore such a bird? :D',
+    },
+    greyhead: {
+      title: 'Greyhead',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
+      price: 250,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Greyhead is an old name for jackdaws. In old times they were referred to as "jacks" or just "daws", but I really liked the name greyhead. It has this reference to an old person who\'s hair had gone grey, like some old wise man. And jackdaws are smart birds indeed.<br /><br />Still what I like the most about them is their funny sound! I can\'t include that in this painting, but whenever I look at it in my head I can hear that high-pitched "caw", like a horn on a kid\'s tricycle!<br /><br />This painting is a follow-up to my rook portrait, "Bone Raven".',
+    },
     kestrel: {
       title: 'Kestrel',
       year: '2021',
@@ -165,36 +197,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'For many of us who have a birdfeeder in the garden the little visitors are like family: we look at them as one of our own, our friends, who are there every day to cheer up up with their acrobatics around the seeds. Robins and blue tits are favourites everywhere. This painting captures that view that every bird lover wishes to see, a busy feeder with three of the most popular songbirds.<br /><br />The original painting was a commissioned one, a gift for Mother\'s day.',
-    },
-    bone_raven: {
-      title: 'Bone Raven',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
-      price: 250,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 23.95,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/992037141/bone-raven-bird-art-print-poster',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'I had some uneasiness with rooks. Like most corvids in their groups they give a quite haunted feeling to any place, and the rook\'s face resembles the plague masks used in middle ages, so it\'s quite a scary bird. Or rather it was a scary one, as I painted this fluffy one (reference photo taken on a windy day) I saw the intelligence in his eyes and I can\'t really see them as frightening any more.<br /><br />Yes the rook\'s face is not a cuddly one, but the beautiful irridescence in the black feathers and the elegance as they glide and land makes them outstanding. Once a rook landed just beside me on a fence, and didn\'t get scared when I looked him straight in the eyes. What I saw was an intimidating cunning, maybe with some curiosity. It\'s said corvids can recognise human faces! This is a remarkable bird who deserves the credit on a large, A2 sized painting.',
-    },
-    peregrine: {
-      title: 'Peregrine',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 216 x 278 mm, 2021. Framed.',
-      price: 85,
-      original: 'HAMBLY',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'The Peregrine, the fastest bird in the world (and apparently the fastest creature as well).<br /><br />I knew sooner or later I needed to honour this bird, but to capture the personality of a raptor is not easy. You can\'t see them from your window, and observe them while you daydream. You need to go after them, look for them, and hunting a hunter is anything but easy.',
     },
   };
 

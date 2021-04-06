@@ -364,6 +364,7 @@ const Header = () => {
             <div css={style.mobileMenu} onClick={() => {setIsMobileMenuOpen(!isMobileMenuOpen)}}>{menu()}</div>
             <nav role="navigation" css={style.mobileMenuContent}>
               <div><Link to="/animal_art/">All Birds & Wildlife Art</Link></div>
+              <div><Link to="/irish_raptors/">Irish Raptors</Link></div>
               <div><Link to="/feathers_of_tales/">Feathers of Tales</Link></div>
               <div><Link to="/adult_colouring/">Adult Colouring</Link></div>
               <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
@@ -379,6 +380,7 @@ const Header = () => {
             <div><span css={style.currentPage}>Art</span>
               <ul>
                 <li><Link to="/animal_art/">All Birds & Wildlife Art</Link></li>
+                <li><Link to="/irish_raptors/">Irish Raptors</Link></li>
                 <li><Link to="/feathers_of_tales/">Feathers of Tales</Link></li>
                 <li><Link to="/adult_colouring/">Adult Colouring</Link></li>
                 <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
