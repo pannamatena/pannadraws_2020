@@ -1,4 +1,44 @@
 const animalArtMeta = {
+  thirsty_chough: {
+    title: 'Thirsty Chough',
+    year: '2021',
+    description: 'Ink and watercolour on paper. 380 x 280 mm, 2021.',
+    price: 100,
+    original: 'SOLD',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: '',
+    ship: 'FREE_IRL',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'This painting came to be because a fellow bird lover offered me to use her lovely photos of a chough drinking from a stream, on the Isle of Man. I loved the vivid colours on the photos, especially the many little pebbles and stones!<br /><br />I love painting corvids and this was the first time I could paint a chough. It\'s not a common bird, here in Dublin I\'ve never seen one. Maybe because of that not too much lore is built around them. But for us birdwatchers it\'s definitely a sight to cheer us up with that bright red beak and legs! This is a wonderful bird.',
+  },
+  ivy_gentleman: {
+    title: 'Ivy Gentleman',
+    year: '2021',
+    description: 'Ink and watercolour on paper. 285 x 285 mm, 2021.',
+    price: 115,
+    original: 'MSG',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: '',
+    ship: 'FREE_IRL',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    merch: [
+      {
+        name: 'Women\'s short sleeved tee',
+        url: 'https://www.etsy.com/ie/listing/1007951583/',
+        price: 30.50,
+        discount: 0,
+      }
+    ],
+    type: 'watercolour_painting',
+    story: 'I promised I would paint more blackbirds, and I was constantly reminded of that promise thanks to the beautiful song they perform every day in the garden. This painting was made as a t-shirt print, and once I made the t-shirt available I asked people if they would have liked to see more background. Well, they wouldn\'t have!<br /><br />I picked the ivy as the floral part of the image. It\'s a common plant, yet it has a real character: I immediately associate it with woodland ground. And to add a little spice to it, why not include some fairy mushrooms?',
+  },
   red_kite: {
     title: 'Red Kite',
     year: '2021',
@@ -135,6 +175,14 @@ const animalArtMeta = {
     printUrl: 'https://www.etsy.com/ie/listing/992037141/',
     discount: 0,
     discountPrint: 0,
+    merch: [
+      {
+        name: 'Women\'s short sleeved tee',
+        url: 'https://www.etsy.com/ie/listing/995282674/',
+        price: 32.50,
+        discount: 0,
+      }
+    ],
     type: 'watercolour_painting',
     story: 'I had some uneasiness with rooks. Like most corvids in their groups they give a quite haunted feeling to any place, and the rook\'s face resembles the plague masks used in middle ages, so it\'s quite a scary bird. Or rather it was a scary one, as I painted this fluffy one (reference photo taken on a windy day) I saw the intelligence in his eyes and I can\'t really see them as frightening any more.<br /><br />Yes the rook\'s face is not a cuddly one, but the beautiful irridescence in the black feathers and the elegance as they glide and land makes them outstanding. Once a rook landed just beside me on a fence, and didn\'t get scared when I looked him straight in the eyes. What I saw was an intimidating cunning, maybe with some curiosity. It\'s said corvids can recognise human faces! This is a remarkable bird who deserves the credit on a large, A2 sized painting.',
   },

@@ -1,4 +1,24 @@
 const merchandiseMeta = {
+  ivy_gentleman_2021_womens_tee: {
+    title: 'Ivy Gentleman Women\'s Short Sleeved Tee',
+    year: '2021',
+    description: 'Short sleeved women\'s fit t-shirt with my artwork "Ivy Gentleman" printed on it.',
+    price: 30.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1007951583/',
+    discount: 0,
+    type: 'merchandise',
+  },
+  bone_raven_2021_womens_tee: {
+    title: 'Bone Raven Women\'s Short Sleeved Tee',
+    year: '2021',
+    description: 'Short sleeved women\'s fit t-shirt with my artwork "Bone Raven" printed on it.',
+    price: 32.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/995282674/',
+    discount: 0,
+    type: 'merchandise',
+  },
   swans_of_ireland_2021_bookmark: {
     title: 'Swans of Ireland Bookmark Set',
     year: '2021',

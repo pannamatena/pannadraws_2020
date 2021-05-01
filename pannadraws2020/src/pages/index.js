@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      thirsty_chough: file(relativePath: { eq: "2021/thirsty_chough_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      ivy_gentleman: file(relativePath: { eq: "2021/ivy_gentleman_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       red_kite: file(relativePath: { eq: "2021/red_kite_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,51 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      hawk_of_st_annes: file(relativePath: { eq: "2021/hawk_of_st_annes_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      the_birdfeeder: file(relativePath: { eq: "2021/the_birdfeeder_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    thirsty_chough: {
+      title: 'Thirsty Chough',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 380 x 280 mm, 2021.',
+      price: 100,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This painting came to be because a fellow bird lover offered me to use her lovely photos of a chough drinking from a stream, on the Isle of Man. I loved the vivid colours on the photos, especially the many little pebbles and stones!<br /><br />I love painting corvids and this was the first time I could paint a chough. It\'s not a common bird, here in Dublin I\'ve never seen one. Maybe because of that not too much lore is built around them. But for us birdwatchers it\'s definitely a sight to cheer us up with that bright red beak and legs! This is a wonderful bird.',
+    },
+    ivy_gentleman: {
+      title: 'Ivy Gentleman',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 285 x 285 mm, 2021.',
+      price: 115,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      merch: [
+        {
+          name: 'Women\'s short sleeved tee',
+          url: 'https://www.etsy.com/ie/listing/1007951583/',
+          price: 30.50,
+          discount: 0,
+        }
+      ],
+      type: 'watercolour_painting',
+      story: 'I promised I would paint more blackbirds, and I was constantly reminded of that promise thanks to the beautiful song they perform every day in the garden. This painting was made as a t-shirt print, and once I made the t-shirt available I asked people if they would have liked to see more background. Well, they wouldn\'t have!<br /><br />I picked the ivy as the floral part of the image. It\'s a common plant, yet it has a real character: I immediately associate it with woodland ground. And to add a little spice to it, why not include some fairy mushrooms?',
+    },
     red_kite: {
       title: 'Red Kite',
       year: '2021',
@@ -167,37 +207,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'Being one of the most seen raptor for me in lockdown, the sparrowhawk had to be included in my small birds of prey portrait series (along with the Peregrine and Red Kite). It\'s amazing how different the face of each bird is. While the Peregrine has almost completely black eyes that gives him a beast-like look, the hawk has bright yellow-red eye with a definite pupil - that kind of hawk eye that gives you the chill with its fierce look.',
-    },
-    hawk_of_st_annes: {
-      title: 'Hawk of St Anne\'s',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 210 x 297 mm, 2021.',
-      price: 120,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 22.95,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/957620520/',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'It\'s amazing how certain birds can adapt to urban life, and while most of us think of pigeons and sparrows, where there is prey, the predators appear. Sparrowhawks are common in city parks, such as St Anne\'s Park in Dublin, and these neighbours inspired this painting.<br /><br />The original painting was a commissioned one. Special thanks to <a href="https://www.futterer-wildlife.com/" target="_blank" rel="noopener noreferrer">Matthias Futterer</a> for letting me use his wonderful photograph of a sparrowhawk as reference.',
-    },
-    the_birdfeeder: {
-      title: 'The Birdfeeder',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 210 x 297 mm, 2021.',
-      price: 90,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 21.95,
-      buyUrl: '',
-      printUrl: 'https://www.etsy.com/ie/listing/971588331/',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'For many of us who have a birdfeeder in the garden the little visitors are like family: we look at them as one of our own, our friends, who are there every day to cheer up up with their acrobatics around the seeds. Robins and blue tits are favourites everywhere. This painting captures that view that every bird lover wishes to see, a busy feeder with three of the most popular songbirds.<br /><br />The original painting was a commissioned one, a gift for Mother\'s day.',
-    },
+    }
   };
 
   const style = {
