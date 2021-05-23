@@ -1,4 +1,24 @@
 const merchandiseMeta = {
+  xmas_tits_2020_printset: {
+    title: 'Tit art print set',
+    year: '2021',
+    description: 'A set of 3 tit watercolours. Available individually or in a set.',
+    price: 15.95,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1022714495/',
+    discount: 0,
+    type: 'merchandise',
+  },
+  xmas_robins_2020_printset: {
+    title: 'Robin art print set',
+    year: '2021',
+    description: 'A set of 3 robin watercolours. Available individually or in a set.',
+    price: 15.95,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1008727456/',
+    discount: 0,
+    type: 'merchandise',
+  },
   ivy_gentleman_2021_womens_tee: {
     title: 'Ivy Gentleman Women\'s Short Sleeved Tee',
     year: '2021',

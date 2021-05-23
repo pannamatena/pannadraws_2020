@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      before_the_explosion: file(relativePath: { eq: "2021/before_the_explosion_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       thirsty_chough: file(relativePath: { eq: "2021/thirsty_chough_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,27 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      musket: file(relativePath: { eq: "2021/musket_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    before_the_explosion: {
+      title: 'Before the Explosion',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 568 x 290 mm, 2021.',
+      price: 220,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'I wanted to represent power and speed here. That energy! Look at this creature, it\'s exploding. At this time the target is a ball, but rewind this a few thousand years and think about how that prey felt... When you have less than a second to spare before that explosion, before this manifested energy burst is at you.<br /><br />Thanks <a href="https://www.instagram.com/max_border_collie27" target="_blank" rel="noopener noreferrer">Max</a> and <a href="https://www.instagram.com/akutyafotos.hu" target="_blank" rel="noopener noreferrer">akutyafotos.hu</a> for the resources!',
+    },
     thirsty_chough: {
       title: 'Thirsty Chough',
       year: '2021',
@@ -94,11 +110,11 @@ const App = (props) => {
       title: 'Ivy Gentleman',
       year: '2021',
       description: 'Ink and watercolour on paper. 285 x 285 mm, 2021.',
-      price: 115,
-      original: 'MSG',
+      price: 125,
+      original: 'AVAILABLE',
       prints: 'NOTYET',
       printPrice: 0,
-      buyUrl: '',
+      buyUrl: 'https://www.etsy.com/ie/listing/1013343201/',
       ship: 'FREE_IRL',
       printUrl: '',
       discount: 0,
@@ -191,22 +207,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This is a painting I made for Curlew Action, an organisation dedicated to the conservation of Curlews in the UK and Ireland.<br /><br />Curlews are not so rare in my area, but I only see them solitary, and I\'ve spotted a pair only once. The problem, as I\'ve learnt, is the decline of breeding pairs as they can\'t successfully breed here. This artwork was created for the org\'s art and poetry competition. The theme: What does the Curlew mean to you?<br /><br />My answer in short is that I cannot imagine a seashore without them, they are part of the picture I have in mind when I think of these shores. The image I painted here is an illustration of this picture, a lonely curlew foraging in a winter day.',
-    },
-    musket: {
-      title: 'Musket',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
-      price: 183,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/964272120/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Being one of the most seen raptor for me in lockdown, the sparrowhawk had to be included in my small birds of prey portrait series (along with the Peregrine and Red Kite). It\'s amazing how different the face of each bird is. While the Peregrine has almost completely black eyes that gives him a beast-like look, the hawk has bright yellow-red eye with a definite pupil - that kind of hawk eye that gives you the chill with its fierce look.',
     }
   };
 
