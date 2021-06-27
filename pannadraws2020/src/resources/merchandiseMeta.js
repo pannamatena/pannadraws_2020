@@ -195,7 +195,7 @@ const merchandiseMeta = {
     description: 'Short sleeved women\'s fit t-shirt with my artwork "Rascals" printed on it.',
     price: 32,
     original: 'AVAILABLE',
-    buyUrl: 'https://www.etsy.com/ie/listing/889316355/',
+    buyUrl: 'https://www.etsy.com/ie/listing/1021281161/',
     discount: 0,
     type: 'merchandise',
   },

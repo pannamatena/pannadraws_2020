@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      hoodie: file(relativePath: { eq: "2021/hoodie_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       before_the_explosion: file(relativePath: { eq: "2021/before_the_explosion_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,27 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      sunny_december_day: file(relativePath: { eq: "2021/sunny_december_day_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    hoodie: {
+      title: 'Hoodie',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 380 x 580 mm, 2021.',
+      price: 265,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/1041416667/',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'The hooded crow, unlike the rook, is associated with misfortune and death. Morrigan or Badhbh the Celtic war goddess takes the form of this bird, and that deity is no joke. To live up to that heritage hooded crows are not like the kind rooks foraging on the ground, meaning harm to no one. They are cunning and dangerous. They hunt (apparently their method includes BEHEADING their prey). And they are large. You\'d better not mess with hoodies.',
+    },
     before_the_explosion: {
       title: 'Before the Explosion',
       year: '2021',
@@ -192,21 +208,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This piece was a donation to the fundraiser art auction of ARC Cancer Support, an organisation that helps people with cancer diagnosis and their families to handle the new situation.<br /><br />I chose the subject of the painting specifically for the occasion, so this epic white bird is Caladrius, the bird of healing. If he sits on the chest of the sick person and turns his head right, the person lives. I took this positive scenario, showing the mythical bird pecking at a dark serpent, the Sickness.<br /><br />I\'m hoping everyone who needs him can reach out for Caladrius!',
-    },
-    sunny_december_day: {
-      title: 'Sunny December Day',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 380 x 280 mm, 2021.',
-      price: 120,
-      original: 'MSG',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This is a painting I made for Curlew Action, an organisation dedicated to the conservation of Curlews in the UK and Ireland.<br /><br />Curlews are not so rare in my area, but I only see them solitary, and I\'ve spotted a pair only once. The problem, as I\'ve learnt, is the decline of breeding pairs as they can\'t successfully breed here. This artwork was created for the org\'s art and poetry competition. The theme: What does the Curlew mean to you?<br /><br />My answer in short is that I cannot imagine a seashore without them, they are part of the picture I have in mind when I think of these shores. The image I painted here is an illustration of this picture, a lonely curlew foraging in a winter day.',
     }
   };
 

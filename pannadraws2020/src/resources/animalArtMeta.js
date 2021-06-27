@@ -1,4 +1,20 @@
 const animalArtMeta = {
+  hoodie: {
+    title: 'Hoodie',
+    year: '2021',
+    description: 'Ink and watercolour on paper. 380 x 580 mm, 2021.',
+    price: 265,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: 'https://www.etsy.com/ie/listing/1041416667/',
+    ship: 'FREE_IRL',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'The hooded crow, unlike the rook, is associated with misfortune and death. Morrigan or Badhbh the Celtic war goddess takes the form of this bird, and that deity is no joke. To live up to that heritage hooded crows are not like the kind rooks foraging on the ground, meaning harm to no one. They are cunning and dangerous. They hunt (apparently their method includes BEHEADING their prey). And they are large. You\'d better not mess with hoodies.',
+  },
   before_the_explosion: {
     title: 'Before the Explosion',
     year: '2021',
@@ -595,7 +611,7 @@ const animalArtMeta = {
       },
       {
         name: 'Women\'s t-shirt',
-        url: 'https://www.etsy.com/ie/listing/889316355/',
+        url: 'https://www.etsy.com/ie/listing/1021281161/',
         price: 32,
         discount: 0,
       },
