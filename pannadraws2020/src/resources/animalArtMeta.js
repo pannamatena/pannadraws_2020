@@ -1,4 +1,20 @@
 const animalArtMeta = {
+  kingfisher: {
+    title: 'Kingfisher',
+    year: '2021',
+    description: 'Ink and watercolour on paper. 297 x 420 mm, 2021.',
+    price: 145,
+    original: 'SOLD',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: '',
+    ship: 'FREE_IRL',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'This piece was a commissioned birthday present. In the background you can see the hints of the ruins by the River Dalyan in Turkey, and the reeds were inspired by that beautiful environment. By painting this I had to realise again what I felt while painting a blackbird and listening to their song was the same connection that this painting means to the receiver: wherever we live, the birds of our childhood, our place of origin connects us to our roots.<br /><br />That won\'t show on these photos, but I used a tiny bit of metallic watercolours on the bird, just to add to its shine, since this bird looks like a jewel. This remains a feature reserved for the original.',
+  },
   hoodie: {
     title: 'Hoodie',
     year: '2021',

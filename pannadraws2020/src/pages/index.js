@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      kingfisher: file(relativePath: { eq: "2021/kingfisher_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       hoodie: file(relativePath: { eq: "2021/hoodie_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,27 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      caladrius: file(relativePath: { eq: "2021/caladrius_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    kingfisher: {
+      title: 'Kingfisher',
+      year: '2021',
+      description: 'Ink and watercolour on paper. 297 x 420 mm, 2021.',
+      price: 145,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This piece was a commissioned birthday present. In the background you can see the hints of the ruins by the River Dalyan in Turkey, and the reeds were inspired by that beautiful environment. By painting this I had to realise again what I felt while painting a blackbird and listening to their song was the same connection that this painting means to the receiver: wherever we live, the birds of our childhood, our place of origin connects us to our roots.<br /><br />That won\'t show on these photos, but I used a tiny bit of metallic watercolours on the bird, just to add to its shine, since this bird looks like a jewel. This remains a feature reserved for the original.',
+    },
     hoodie: {
       title: 'Hoodie',
       year: '2021',
@@ -194,21 +210,6 @@ const App = (props) => {
       type: 'watercolour_painting',
       story: 'Part of my Irish birds of prey portrait study series.<br /><br />He\'s is such a small bird of prey! Like all of their kind, they are masters of their crafts: they can hover to target small rodents from the air. In Hungarian the kestrel has "red" in its name (vörös vércse) referring to that bright coat they have. In my portrait I pictured the bird from the front, but part of that beautiful coat is still visible. This is a pretty bird!',
     },
-    caladrius: {
-      title: 'Caladrius',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 594 x 420 mm, 2021.',
-      price: 220,
-      original: 'MSG',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This piece was a donation to the fundraiser art auction of ARC Cancer Support, an organisation that helps people with cancer diagnosis and their families to handle the new situation.<br /><br />I chose the subject of the painting specifically for the occasion, so this epic white bird is Caladrius, the bird of healing. If he sits on the chest of the sick person and turns his head right, the person lives. I took this positive scenario, showing the mythical bird pecking at a dark serpent, the Sickness.<br /><br />I\'m hoping everyone who needs him can reach out for Caladrius!',
-    }
   };
 
   const style = {
