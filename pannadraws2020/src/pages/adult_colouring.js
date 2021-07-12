@@ -12,6 +12,13 @@ import { breakPoints } from '../resources/breakpoints';
 const AdultColouring = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      dragon_dance_2: file(relativePath: { eq: "2021/dragon_dance_2_p00_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       farewell: file(relativePath: { eq: "2020/farewell_ink_2020_web.jpg" }) {
         childImageSharp {
           fluid {

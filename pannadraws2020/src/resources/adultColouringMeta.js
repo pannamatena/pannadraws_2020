@@ -1,4 +1,19 @@
 const adultColouringMeta = {
+  dragon_dance_2: {
+    title: 'Dragon Dance 2',
+    year: '2021',
+    description: 'A set of 4 printable colouring pages.',
+    price: 11.44,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/1033948904/',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'adult_colouring',
+    subType: 'digital',
+    story: 'The adventure continues! Follow the path of the 4 elements in this new set of dragon coloring pages.<br /><br />Come along on a new journey with mighty dragons born from the four fundamental elements of the world: Air, Water, Earth and Fire!<br /><br />Each element summons its dragon and bird pair:<br /><br />1. Air - Great black-backed gulls<br />2. Water - Whooper swans<br />3. Earth - Ring-necked pheasants<br />4. Fire - Carrion crows<br /><br />You can print the pages on either A3 or A4 sized paper (they are optimised for A3, but it will work with smaller scales and US sizes as well). I would suggest using a thicker, non-glossy paper for the best experience.<br /><br />Original artwork was created using acrylic inks on mixed media paper.',
+  },
   farewell: {
     title: 'Farewell',
     year: '2020',
