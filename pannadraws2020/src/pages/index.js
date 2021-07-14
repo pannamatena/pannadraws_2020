@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      domesticated_nomad: file(relativePath: { eq: "2021/domesticated_nomad_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       kingfisher: file(relativePath: { eq: "2021/kingfisher_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,18 +69,27 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      kestrel: file(relativePath: { eq: "2021/kestrel_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    domesticated_nomad: {
+      title: 'Domesticated Nomad',
+      year: '2021',
+      description: 'Ink and watercolour on Fabriano HP 640g. 297 x 420 mm, 2021.',
+      price: 130,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/1050988933/',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Sometimes I venture away from painting birds because I see something extraordinary in other animals in nature. Such a topic that can make me do that is the search for the wild in all creatures. I believe even the cutest little puppy, humble livestock, and our beloved songbirds have that inner, untamed core deep down that connects them to the wilderness.<br /><br />I see sheep wandering around on any mountain in Ireland. Just when I finish climbing up a steep slope in some drizzle while the wind is constantly making me feel like I\'m freezing, I face these creatures. They don\'t seem to mind the conditions that make me feel so uncomfortable, just stare at me like they\'ve never seen a human being. But certainly they have, I can see the tags in the ears, the marking on the coat... Yet at that moment I cannot name a living thing that is more adapted to that wild environment. The domesticated nomads of Ireland.',
+    },
     kingfisher: {
       title: 'Kingfisher',
       year: '2021',
@@ -193,22 +209,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'Greyhead is an old name for jackdaws. In old times they were referred to as "jacks" or just "daws", but I really liked the name greyhead. It has this reference to an old person who\'s hair had gone grey, like some old wise man. And jackdaws are smart birds indeed.<br /><br />Still what I like the most about them is their funny sound! I can\'t include that in this painting, but whenever I look at it in my head I can hear that high-pitched "caw", like a horn on a kid\'s tricycle!<br /><br />This painting is a follow-up to my rook portrait, "Bone Raven".',
-    },
-    kestrel: {
-      title: 'Kestrel',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
-      price: 183,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/994928233/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Part of my Irish birds of prey portrait study series.<br /><br />He\'s is such a small bird of prey! Like all of their kind, they are masters of their crafts: they can hover to target small rodents from the air. In Hungarian the kestrel has "red" in its name (vörös vércse) referring to that bright coat they have. In my portrait I pictured the bird from the front, but part of that beautiful coat is still visible. This is a pretty bird!',
     },
   };
 

@@ -1,4 +1,24 @@
 const merchandiseMeta = {
+  raptors_of_ireland_2021_womens_tank: {
+    title: 'Raptors of Ireland Women\'s Racerback Tank',
+    year: '2021',
+    description: 'Racerback tank top with a print made from my Irish Raptors series.',
+    price: 26,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1030477080/',
+    discount: 0,
+    type: 'merchandise',
+  },
+  raptors_of_ireland_2021_mens_tee: {
+    title: 'Raptors of Ireland Men\'s Tee',
+    year: '2021',
+    description: 'Short sleeved men\'s or unisex t-shirt with a print made from my Irish Raptors series.',
+    price: 32,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1030480114/',
+    discount: 0,
+    type: 'merchandise',
+  },
   xmas_tits_2020_printset: {
     title: 'Tit art print set',
     year: '2021',

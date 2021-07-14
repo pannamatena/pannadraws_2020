@@ -1,4 +1,20 @@
 const animalArtMeta = {
+  domesticated_nomad: {
+    title: 'Domesticated Nomad',
+    year: '2021',
+    description: 'Ink and watercolour on Fabriano HP 640g. 297 x 420 mm, 2021.',
+    price: 130,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    printPrice: 0,
+    buyUrl: 'https://www.etsy.com/ie/listing/1050988933/',
+    ship: 'FREE_IRL',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'watercolour_painting',
+    story: 'Sometimes I venture away from painting birds because I see something extraordinary in other animals in nature. Such a topic that can make me do that is the search for the wild in all creatures. I believe even the cutest little puppy, humble livestock, and our beloved songbirds have that inner, untamed core deep down that connects them to the wilderness.<br /><br />I see sheep wandering around on any mountain in Ireland. Just when I finish climbing up a steep slope in some drizzle while the wind is constantly making me feel like I\'m freezing, I face these creatures. They don\'t seem to mind the conditions that make me feel so uncomfortable, just stare at me like they\'ve never seen a human being. But certainly they have, I can see the tags in the ears, the marking on the coat... Yet at that moment I cannot name a living thing that is more adapted to that wild environment. The domesticated nomads of Ireland.',
+  },
   kingfisher: {
     title: 'Kingfisher',
     year: '2021',
