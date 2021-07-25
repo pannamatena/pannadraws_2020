@@ -79,7 +79,7 @@ const App = (props) => {
       year: '2021',
       description: 'Ink and watercolour on Fabriano HP 640g. 297 x 420 mm, 2021.',
       price: 130,
-      original: 'AVAILABLE',
+      original: 'SOLD',
       prints: 'NOTYET',
       printPrice: 0,
       buyUrl: 'https://www.etsy.com/ie/listing/1050988933/',
