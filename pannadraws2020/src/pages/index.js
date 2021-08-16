@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      wood_screecher: file(relativePath: { eq: "2021/wood_screecher_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       domesticated_nomad: file(relativePath: { eq: "2021/domesticated_nomad_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,22 +69,31 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      greyhead: file(relativePath: { eq: "2021/greyhead_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    wood_screecher: {
+      title: 'Wood Screecher',
+      year: '2021',
+      description: 'Ink and watercolour on hot-pressed watercolour paper. 297 x 420 mm, 2021.',
+      price: 130,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/1068745539/',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Although jays are secretive birds, they visit the feeders in many garden. As for being considered a passerine, well... The latin name "Garrulus Glandarius" roughly means "noisy acorn bird". Jays love stashing acorns, and their singing capabilities you can guess from the latin name, and also from the title of my painting, which is based on their Irish name, Scréachóg choille.<br /><br />This painting is part of my Corvid series along with the Rook, Jackdaw and the Hooded Crow!',
+    },
     domesticated_nomad: {
       title: 'Domesticated Nomad',
       year: '2021',
-      description: 'Ink and watercolour on Fabriano HP 640g. 297 x 420 mm, 2021.',
+      description: 'Ink and watercolour on Fabriano HP 640g. 280 x 380 mm, 2021.',
       price: 130,
       original: 'SOLD',
       prints: 'NOTYET',
@@ -193,22 +209,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'Part of my Irish birds of prey portrait study series.<br /><br />As one of the success stories of reintroducing a species to Ireland, I had to include the Red Kite in my raptor series. This beautiful red coated bird is now quite common in the Eastern part of the isle. An eagle-like bird, but its tail is very distinctive with its V-shape. Most raptors are disliked by some because they take garden birds or pigeons, but the Red Kite prefers cleaning up after road kills, even though they hunt if needed.<br /><br />A fun fact: they like to steal human clothes, especially underwear, to decorate their nests! Who wouldn\'t adore such a bird? :D',
-    },
-    greyhead: {
-      title: 'Greyhead',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 420 x 594 mm, 2021.',
-      price: 250,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/1003113817/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Greyhead is an old name for jackdaws. In old times they were referred to as "jacks" or just "daws", but I really liked the name greyhead. It has this reference to an old person who\'s hair had gone grey, like some old wise man. And jackdaws are smart birds indeed.<br /><br />Still what I like the most about them is their funny sound! I can\'t include that in this painting, but whenever I look at it in my head I can hear that high-pitched "caw", like a horn on a kid\'s tricycle!<br /><br />This painting is a follow-up to my rook portrait, "Bone Raven".',
     },
   };
 

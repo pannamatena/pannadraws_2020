@@ -8,6 +8,13 @@ import animalArtMeta from "../resources/animalArtMeta";
 const AnimalArt = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      wood_screecher: file(relativePath: { eq: "2021/wood_screecher_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       domesticated_nomad: file(relativePath: { eq: "2021/domesticated_nomad_2021_web.jpg" }) {
         childImageSharp {
           fluid {
