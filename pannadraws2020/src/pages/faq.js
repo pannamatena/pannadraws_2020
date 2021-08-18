@@ -142,10 +142,10 @@ const FAQPage = () => {
               of Ireland</a>.</p>
 
           <h3>Is the artwork framed?</h3>
-          <p>All artwork ships unmounted and ready to be framed, they fit in standard sized frames.</p>
+          <p>All artwork ships unmounted and ready to be framed, unless stated otherwise. Some paintings have the option to be mounted before shipping, please choose the option at checkout if it's available.</p>
 
           <h3>What if I want the artwork framed?</h3>
-          <p>I can arrange framing for you. Please  <Link css={style.faqLink} to="/contact">message me</Link> and we can discuss the cost of framing and what type of frame you want.</p>
+          <p>I can arrange framing for you. Please  <Link css={style.faqLink} to="/contact">message me</Link> and we can discuss the cost of framing and what type of frame you want. Framing takes 2-3 business days.</p>
 
           <h3>The artwork I received doesn't look the same as on the website!</h3>
           <p>A slight difference in tones is possible when digitalising traditional artwork. I try my best to stick to the appearance of the original,
@@ -159,14 +159,7 @@ const FAQPage = () => {
           <h2>Art Print Related Questions</h2>
 
           <h3>Who makes the prints?</h3>
-          <p>Art prints are produced by Printful, a print-on-demand company (they print per order, so I don't have to preorder a big batch). They have several
-          offices worldwide, so when you order, they aim to print and ship from the closest HQ to your delivery address. In Europe this is usually Spain or Latvia,
-          but they work in the USA, Japan, Australia and Mexico as well.</p>
-
-          <h3>Some prints are not available in larger sizes!</h3>
-          <p>When I'm painting something I choose the size of the painting to make it work with the subject. Therefore when I paint a smaller picture, I don't
-          find it appropriate to have it printed in a much larger scale, it would look unnatural. This is a personal, artistic decision on my side, but I still
-          try to keep flexible and offer at least 3-4 size options for each print.</p>
+          <p>Art prints, postcards, greeting cards and bookmarks are printed by me, here in Dublin. I use a 10 colour pigment based professional printer and archival quality photo paper for art prints.</p>
 
           <h2>Merchandise Related Questions</h2>
 
@@ -180,8 +173,8 @@ const FAQPage = () => {
 
           <h2>Payments</h2>
 
-          <h3>Does the price include VAT and shipping?</h3>
-          <p>The prices displayed for each piece are in Euro and include VAT and shipping.</p>
+          <h3>Does the price include taxes and shipping?</h3>
+          <p>The prices displayed for each piece are in Euro. Taxes may differ per country, you can see all added taxes (if there's any) when you check out at Etsy. The prices I list here are valid for Irish orders.</p>
 
           <h3>What payment methods do you accept?</h3>
           <p>Payments are made through my <a css={style.faqLink} href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" title="PannaDraws on Etsy" rel="noopener noreferrer">my Etsy shop</a>. For accepted payment methods please refer to <a css={style.faqLink} href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" title="PannaDraws on Etsy" rel="noopener noreferrer">my Etsy shop's</a> "Payment Options" section.</p>
@@ -190,20 +183,20 @@ const FAQPage = () => {
 
           <h3>What size the package will be?</h3>
           <p>Smaller artwork (A4 size) is packed between cardboard sheets and ships in a standard
-            A4 size envelope. Pieces larger than A4 size are sent as a package. Watercolour paintings are always
-            packed flat. Dry media artwork larger than A4 is rolled up in a tube and sent as a package.</p>
+            A4 size envelope. Pieces larger than A4 size are sent as a package. Watercolour paintings are
+            packed flat if mounted, larger unmounted pieces are rolled up in a posting tube. Framed artwork is wrapped in bubble wrap and then boxed in cardboard to ensure the frame doesn't get damaged.</p>
 
           <h3>Is my order insured?</h3>
-          <p>Insurance and tracking (if available to your country) is added to each parcel.</p>
+          <p>Insurance and tracking (if available to your country) is added to each original artwork. Other items are posted using standard post, without tracking.</p>
 
           <h3>How long will it take for my order to arrive?</h3>
-          <p>Except for shirts and art prints I post from Ireland. In Ireland the usual handling time is 1-2 business days. To the UK
+          <p>Except for garments I post from Ireland. In Ireland the usual handling time is 1-2 business days. To the UK
           it takes 2-3, while to the United States and to most EU countries it can take up to 5-7 business days.</p>
-          <p>In case of t-shirts and art prints the posting origin depends on your location. I use a print-on-demand service called Printful. They have
+          <p>In case of t-shirts the posting origin depends on your location. I use a print-on-demand service called Printful. They have
            offices worldwide and post from the closest location to you.</p>
 
           <h3>How much does shipping cost?</h3>
-          <p>For most of the originals I offer free shipping. For smaller originals I usually offer free shipping to Ireland, UK and USA. In other cases postage is
+          <p>For most of the originals I offer free shipping in Ireland. In other cases postage is
             calculated on checkout, based on your destination.</p>
 
           <h2>Returns</h2>
@@ -221,11 +214,6 @@ const FAQPage = () => {
           <h3>The painting is curled.</h3>
           <p>There is a natural curl to paintings created with water based media. Once framed it's
             not visible.</p>
-
-          <h3>The painting has a white margin around it.</h3>
-          <p>This is the blank space masked by the tape I use to hold the paper in place when
-            working with wet media. It provides some extra space to hold the picture
-            behind a mount.</p>
 
         </div>
       </Layout>
