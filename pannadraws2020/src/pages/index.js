@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      flamingo: file(relativePath: { eq: "2021/flamingo_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      queen_of_hearts: file(relativePath: { eq: "2021/queen_of_hearts_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       wood_screecher: file(relativePath: { eq: "2021/wood_screecher_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,25 +69,43 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      ivy_gentleman: file(relativePath: { eq: "2021/ivy_gentleman_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      red_kite: file(relativePath: { eq: "2021/red_kite_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    flamingo: {
+      title: 'Flamingo',
+      year: '2021',
+      description: 'Ink and watercolour on Arches HP 300gsm paper. 420 x 297 mm, 2021.',
+      price: 130,
+      original: 'MSG',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'The idea of the flamingo came from an Instagram pollI ran back in the spring of 2021 to ask what people\'s favourite birds were. And the flamingo was among the answers. I saw that, and thought yay, that would be fun! But I had to wait until I could get a really good reference (due to Covid I couldn\'t get into the flamingo enclosure in Dublin Zoo) but I finally managed to get some from FOTA in Cork. Awesome, I thought, it was time to use pinks!<br /><br />And emerald green, rose, crimson red and scarlet... Very unusual colour choices for me. But it was such a great change to paint a not very Irish, but exciting bird. Working on this piece inspired me to plan some macaws or other colourful bird paintings. And because it was so different in the colours, I really feel like I was on an exotic holiday as far as you can get when you\'re submerged in art.',
+    },
+    queen_of_hearts: {
+      title: 'Queen of Hearts',
+      year: '2021',
+      description: 'Ink and watercolour on Arches HP 300gsm paper. 380 x 580 mm, 2021.',
+      price: 350,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/1076496289/',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'This painting is a record breaker. To date, it spent far the most time stretched on my drawing board as it\'s one of the most complex paintings I\'ve done.<br /><br />The concept is based on a dream I had about swans under cherry blossoms. I don\'t remember too much of the whole thing, but I liked the feeling of the scene. I started sketching it, and since all the details were so blurry I thought maybe something abstract would work here. Dreams are pretty abstract anyway, most of the time they don\'t really make any sense! So I said all right, let\'s paint the feeling.<br /><br />And what was that feeling? The feeling is mostly the only thing that remains after dreams, after all the details are lost. And it was just simply pleasant. Something beautiful, something that doesn\'t want to be more than that. I had the idea of the two swans circling each other first, and started adding the blossoms. But the picture was still so empty (it\'s a big sheet of paper!) and at that point I decided to go crazy with details. I wanted something that was difficult, challenging to paint. So I added the roses and swallows, because why not? Anything goes that\'s pretty!',
+    },
     wood_screecher: {
       title: 'Wood Screecher',
       year: '2021',
@@ -169,46 +201,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This painting came to be because a fellow bird lover offered me to use her lovely photos of a chough drinking from a stream, on the Isle of Man. I loved the vivid colours on the photos, especially the many little pebbles and stones!<br /><br />I love painting corvids and this was the first time I could paint a chough. It\'s not a common bird, here in Dublin I\'ve never seen one. Maybe because of that not too much lore is built around them. But for us birdwatchers it\'s definitely a sight to cheer us up with that bright red beak and legs! This is a wonderful bird.',
-    },
-    ivy_gentleman: {
-      title: 'Ivy Gentleman',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 285 x 285 mm, 2021.',
-      price: 125,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/1013343201/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      merch: [
-        {
-          name: 'Women\'s short sleeved tee',
-          url: 'https://www.etsy.com/ie/listing/1007951583/',
-          price: 30.50,
-          discount: 0,
-        }
-      ],
-      type: 'watercolour_painting',
-      story: 'I promised I would paint more blackbirds, and I was constantly reminded of that promise thanks to the beautiful song they perform every day in the garden. This painting was made as a t-shirt print, and once I made the t-shirt available I asked people if they would have liked to see more background. Well, they wouldn\'t have!<br /><br />I picked the ivy as the floral part of the image. It\'s a common plant, yet it has a real character: I immediately associate it with woodland ground. And to add a little spice to it, why not include some fairy mushrooms?',
-    },
-    red_kite: {
-      title: 'Red Kite',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 190 x 280 mm, 2021. Framed.',
-      price: 183,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/1003130725/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Part of my Irish birds of prey portrait study series.<br /><br />As one of the success stories of reintroducing a species to Ireland, I had to include the Red Kite in my raptor series. This beautiful red coated bird is now quite common in the Eastern part of the isle. An eagle-like bird, but its tail is very distinctive with its V-shape. Most raptors are disliked by some because they take garden birds or pigeons, but the Red Kite prefers cleaning up after road kills, even though they hunt if needed.<br /><br />A fun fact: they like to steal human clothes, especially underwear, to decorate their nests! Who wouldn\'t adore such a bird? :D',
     },
   };
 
