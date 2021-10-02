@@ -1,4 +1,19 @@
 const adultColouringMeta = {
+  unicorns: {
+    title: 'Unicorns',
+    year: '2021',
+    description: 'A set of 3 printable colouring pages.',
+    price: 8.61,
+    original: 'AVAILABLE',
+    prints: 'NOTYET',
+    buyUrl: 'https://www.etsy.com/ie/listing/1079458108/',
+    printUrl: '',
+    discount: 0,
+    discountPrint: 0,
+    type: 'adult_colouring',
+    subType: 'digital',
+    story: 'Colour the mysterious unicorns of the world!<br /><br />Come and bring these magical creatures to life with colours! This colouring page set challenges you with 3 beautiful scenes with unicorns, all ready to get some magic with your help.<br /><br />You can print the pages on either A3 or A4 sized paper (they are optimised for A3, but it will work with smaller scales and US sizes as well). I would suggest using a thicker, non-glossy paper for the best experience.<br /><br />Original artwork was created using acrylic inks on mixed media paper.',
+  },
   dragon_dance_2: {
     title: 'Dragon Dance 2',
     year: '2021',
@@ -10,6 +25,13 @@ const adultColouringMeta = {
     printUrl: '',
     discount: 0,
     discountPrint: 0,
+    merch: [
+      {
+        name: 'Printed version',
+        url: 'https://www.etsy.com/ie/listing/1035856004/',
+        price: 11.30
+      },
+    ],
     type: 'adult_colouring',
     subType: 'digital',
     story: 'The adventure continues! Follow the path of the 4 elements in this new set of dragon coloring pages.<br /><br />Come along on a new journey with mighty dragons born from the four fundamental elements of the world: Air, Water, Earth and Fire!<br /><br />Each element summons its dragon and bird pair:<br /><br />1. Air - Great black-backed gulls<br />2. Water - Whooper swans<br />3. Earth - Ring-necked pheasants<br />4. Fire - Carrion crows<br /><br />You can print the pages on either A3 or A4 sized paper (they are optimised for A3, but it will work with smaller scales and US sizes as well). I would suggest using a thicker, non-glossy paper for the best experience.<br /><br />Original artwork was created using acrylic inks on mixed media paper.',
@@ -33,7 +55,7 @@ const adultColouringMeta = {
     title: 'Dragon Dance',
     year: '2020',
     description: 'A set of 3 printable colouring pages.',
-    price: 8.47,
+    price: 8.61,
     original: 'AVAILABLE',
     prints: 'NOTYET',
     buyUrl: 'https://www.etsy.com/ie/listing/838640143/',
@@ -41,6 +63,11 @@ const adultColouringMeta = {
     discount: 0,
     discountPrint: 0,
     merch: [
+      {
+        name: 'Printed version',
+        url: 'https://www.etsy.com/ie/listing/1049820219/',
+        price: 9
+      },
       {
         name: 'Bookmark Set',
         url: 'https://www.etsy.com/ie/listing/904511925/',

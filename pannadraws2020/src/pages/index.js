@@ -14,6 +14,13 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      black_swan: file(relativePath: { eq: "2021/black_swan_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       flamingo: file(relativePath: { eq: "2021/flamingo_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -62,27 +69,36 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      thirsty_chough: file(relativePath: { eq: "2021/thirsty_chough_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    black_swan: {
+      title: 'Black Swan',
+      year: '2021',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm, 2021.',
+      price: 120,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'Another example of my mantra, "black is never black, white is never white". There are so many shades and colours in here as the light is reflected on the feathers.<br /><br />For this painting I used my oldest reference to date, a photo I took in London with a super old phone, at least 5-6 years ago. The image was quite blurry, so I had to come up with most of the details by myself. So this painting is half imagination!<br /><br />I think this is my most elegant painting so far. Quite minimalist, yet full of details. The simple beauty of a bird.',
+    },
     flamingo: {
       title: 'Flamingo',
       year: '2021',
       description: 'Ink and watercolour on Arches HP 300gsm paper. 420 x 297 mm, 2021.',
       price: 130,
-      original: 'MSG',
+      original: 'AVAILABLE',
       prints: 'NOTYET',
       printPrice: 0,
-      buyUrl: '',
+      buyUrl: 'https://www.etsy.com/ie/listing/1069020336/',
       ship: 'FREE_IRL',
       printUrl: '',
       discount: 0,
@@ -185,23 +201,7 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'I wanted to represent power and speed here. That energy! Look at this creature, it\'s exploding. At this time the target is a ball, but rewind this a few thousand years and think about how that prey felt... When you have less than a second to spare before that explosion, before this manifested energy burst is at you.<br /><br />Thanks <a href="https://www.instagram.com/max_border_collie27" target="_blank" rel="noopener noreferrer">Max</a> and <a href="https://www.instagram.com/akutyafotos.hu" target="_blank" rel="noopener noreferrer">akutyafotos.hu</a> for the resources!',
-    },
-    thirsty_chough: {
-      title: 'Thirsty Chough',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 380 x 280 mm, 2021.',
-      price: 100,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This painting came to be because a fellow bird lover offered me to use her lovely photos of a chough drinking from a stream, on the Isle of Man. I loved the vivid colours on the photos, especially the many little pebbles and stones!<br /><br />I love painting corvids and this was the first time I could paint a chough. It\'s not a common bird, here in Dublin I\'ve never seen one. Maybe because of that not too much lore is built around them. But for us birdwatchers it\'s definitely a sight to cheer us up with that bright red beak and legs! This is a wonderful bird.',
-    },
+    }
   };
 
   const style = {
