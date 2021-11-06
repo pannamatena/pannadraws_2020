@@ -120,6 +120,16 @@ const ArtActionControls = (props) => {
       margin: 0 -10px;
       padding: 0 10px;
     `,
+    oSoon: css`
+      color: ${colours.c2};
+      font-family: ${fonts.f1};
+      font-size: 1em;
+      text-transform: uppercase;
+      
+      background: ${colours.c5};
+      margin: 0 -10px;
+      padding: 0 10px;
+    `,
     pSold: css`
       color: ${colours.c4};
       font-family: ${fonts.f1};
@@ -267,6 +277,11 @@ const ArtActionControls = (props) => {
               {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL_UK' && (<span css={style.freeShip}>+ FREE shipping to Ireland and UK</span>)}
               {props.imgMeta.ship && props.imgMeta.ship === 'FREE_IRL' && (<span css={style.freeShip}>+ FREE shipping to Ireland</span>)}
             </div>
+        )
+      }
+      case 'NOTYET': {
+        return (
+            <p css={style.oSoon}>Original is soon available!</p>
         )
       }
       case 'MSG': {

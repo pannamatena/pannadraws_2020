@@ -14,6 +14,20 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      wicklows_eldest: file(relativePath: { eq: "2021/wicklows_eldest_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      winter_birds_2021: file(relativePath: { eq: "2021/winter_birds_2021_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       black_swan: file(relativePath: { eq: "2021/black_swan_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -55,36 +69,62 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      hoodie: file(relativePath: { eq: "2021/hoodie_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      before_the_explosion: file(relativePath: { eq: "2021/before_the_explosion_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    wicklows_eldest: {
+      title: 'Wicklow\'s Eldest',
+      year: '2021',
+      description: 'Ink, watercolour, gauche and acrylics on acrylic paper. 405 x 508 mm, 2021.',
+      price: 206,
+      original: 'AVAILABLE',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: 'https://www.etsy.com/ie/listing/1097952734/',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'There are some creatures in this world who don\'t have to do a thing to give the impression of a deity. Or some kind of godfather of the mountains. Here\'s this old goat surrounded by the younger generation. He\'s half blind, and limping. If I step closer he tries to crawl away, but he would make an easy catch.<br /><br />Yet when he raises that head with his crown, I still see the patriarch, the beast that still demands respect. Time left its mark on him, but he\'s still there, still the eldest of the mountain!',
+    },
+    winter_birds_2021: {
+      title: 'Winter Birds 2021',
+      year: '2021',
+      description: 'Ink and watercolour on watercolour paper. 210 x 210 mm each, 2021.',
+      price: 135,
+      original: 'NOTYET',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      merch: [
+        {
+          name: 'Christmas Cards',
+          url: 'https://www.etsy.com/ie/listing/1114482253/',
+          price: 3.50,
+          discount: 0,
+        }
+      ],
+      type: 'watercolour_painting',
+      story: 'Artworks for my 2021 Christmas card collection. The set consists of 4 bird paintings: the bullfinch, the robin, the chaffinch and the wren.<br /><br />I wanted to pick garden birds that I haven\'t painted before, that\'s why my choice fell upon these less commonly known garden visitors. But of course you can\'t have a Christmas collection without the Robin Redbreast!',
+    },
     black_swan: {
       title: 'Black Swan',
       year: '2021',
       description: 'Ink and watercolour on cold-pressed watercolour paper. 297 x 420 mm, 2021.',
       price: 120,
       original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
+      prints: 'AVAILABLE',
+      printPrice: 21.95,
       buyUrl: '',
       ship: 'FREE_IRL',
-      printUrl: '',
+      printUrl: 'https://www.etsy.com/ie/listing/1098620588/',
       discount: 0,
       discountPrint: 0,
       type: 'watercolour_painting',
@@ -169,38 +209,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This piece was a commissioned birthday present. In the background you can see the hints of the ruins by the River Dalyan in Turkey, and the reeds were inspired by that beautiful environment. By painting this I had to realise again what I felt while painting a blackbird and listening to their song was the same connection that this painting means to the receiver: wherever we live, the birds of our childhood, our place of origin connects us to our roots.<br /><br />That won\'t show on these photos, but I used a tiny bit of metallic watercolours on the bird, just to add to its shine, since this bird looks like a jewel. This remains a feature reserved for the original.',
-    },
-    hoodie: {
-      title: 'Hoodie',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 380 x 580 mm, 2021.',
-      price: 265,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/1041416667/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'The hooded crow, unlike the rook, is associated with misfortune and death. Morrigan or Badhbh the Celtic war goddess takes the form of this bird, and that deity is no joke. To live up to that heritage hooded crows are not like the kind rooks foraging on the ground, meaning harm to no one. They are cunning and dangerous. They hunt (apparently their method includes BEHEADING their prey). And they are large. You\'d better not mess with hoodies.',
-    },
-    before_the_explosion: {
-      title: 'Before the Explosion',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 568 x 290 mm, 2021.',
-      price: 220,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'I wanted to represent power and speed here. That energy! Look at this creature, it\'s exploding. At this time the target is a ball, but rewind this a few thousand years and think about how that prey felt... When you have less than a second to spare before that explosion, before this manifested energy burst is at you.<br /><br />Thanks <a href="https://www.instagram.com/max_border_collie27" target="_blank" rel="noopener noreferrer">Max</a> and <a href="https://www.instagram.com/akutyafotos.hu" target="_blank" rel="noopener noreferrer">akutyafotos.hu</a> for the resources!',
     }
   };
 
