@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    `gatsby-theme-gallery`,
+    // `gatsby-theme-gallery`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

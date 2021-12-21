@@ -368,7 +368,7 @@ const Header = () => {
               <div><Link to="/feathers_of_tales/">Feathers of Tales</Link></div>
               <div><Link to="/adult_colouring/">Adult Colouring</Link></div>
               <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
-              <div><Link to="/sketchbook/">Sketchbook</Link></div>
+              {/*<div><Link to="/sketchbook/">Sketchbook</Link></div>*/}
               <div><Link to="/merchandise/">Merch</Link></div>
               <div><Link to="/about/">About</Link></div>
               <div><Link to="/contact/">Contact</Link></div>
@@ -384,7 +384,7 @@ const Header = () => {
                 <li><Link to="/feathers_of_tales/">Feathers of Tales</Link></li>
                 <li><Link to="/adult_colouring/">Adult Colouring</Link></li>
                 <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
-                <li><Link to="/sketchbook/">Sketchbook</Link></li>
+                {/*<li><Link to="/sketchbook/">Sketchbook</Link></li>*/}
               </ul>
             </div>
             <div><Link to="/merchandise/">Merch</Link></div>
