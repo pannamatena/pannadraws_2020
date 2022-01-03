@@ -71,7 +71,7 @@ const adultColouringMeta = {
       {
         name: 'Bookmark Set',
         url: 'https://www.etsy.com/ie/listing/904511925/',
-        price: 3.50
+        price: 4.50
       },
     ],
     type: 'adult_colouring',

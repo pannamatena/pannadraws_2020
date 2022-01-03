@@ -398,7 +398,7 @@ const animalArtMeta = {
       {
         name: 'Bookmark Set',
         url: 'https://www.etsy.com/ie/listing/964814293/',
-        price: 3.50,
+        price: 4.50,
         discount: 0,
       }
     ],
@@ -567,7 +567,7 @@ const animalArtMeta = {
       {
         name: 'Bookmark Set',
         url: 'https://www.etsy.com/ie/listing/964814293/',
-        price: 3.50,
+        price: 4.50,
         discount: 0,
       }
     ],
@@ -657,7 +657,7 @@ const animalArtMeta = {
       {
         name: 'Bookmark Set',
         url: 'https://www.etsy.com/ie/listing/964814293/',
-        price: 3.50,
+        price: 4.50,
         discount: 0,
       }
     ],
