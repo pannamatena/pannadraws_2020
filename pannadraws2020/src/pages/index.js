@@ -14,6 +14,27 @@ import NewsLetter from '../components/Newsletter';
 const App = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      the_five_ladies: file(relativePath: { eq: "2021/the_five_ladies_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      swan_and_dipper_ii: file(relativePath: { eq: "2021/swan_and_dipper_ii_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      swan_and_dipper_i: file(relativePath: { eq: "2021/swan_and_dipper_i_2021_web.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       wicklows_eldest: file(relativePath: { eq: "2021/wicklows_eldest_2021_web.jpg" }) {
         childImageSharp {
           fluid {
@@ -48,32 +69,59 @@ const App = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
-      wood_screecher: file(relativePath: { eq: "2021/wood_screecher_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      domesticated_nomad: file(relativePath: { eq: "2021/domesticated_nomad_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      kingfisher: file(relativePath: { eq: "2021/kingfisher_2021_web.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `);
 
   const imgMeta = {
+    the_five_ladies: {
+      title: 'The Five Ladies',
+      year: '2021',
+      description: 'Ink and watercolour on Arches HP 300gsm watercolour paper. 580 x 380 mm, 2021.',
+      price: 260,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'These ladies are Dorothy, Mary-Lou, Pinky, Borris and Potty, 5 pet sheep I had the pleasure to paint!<br /><br />The painting was commissioned as a birthday gift. The five ladies are living at a farm in Ireland, and they each have their own personalities. This determined the composition of the picture: Borris is the leader, Potty and Pinky are usually side by side, Mary-Lou is right behind Borris, and Dorothy wisely remains in the background, observing.',
+    },
+    swan_and_dipper_ii: {
+      title: 'Swan and Dipper II - Dipper',
+      year: '2021',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 150 x 240 mm, 2021.',
+      price: 80,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'A commissioned painting that was part of a set: two paintings of the same size, one portraying a dipper, the other one a mute swan.<br /><br />For this piece the commissioner described deep greens along with the depth of river waters, as the dipper lives by this rushing streams. The vegetation is different, it\'s denser and instead of reeds you see more trees, bushes and ivy.',
+    },
+    swan_and_dipper_i: {
+      title: 'Swan and Dipper I - Mute Swan',
+      year: '2021',
+      description: 'Ink and watercolour on cold-pressed watercolour paper. 150 x 240 mm, 2021.',
+      price: 80,
+      original: 'SOLD',
+      prints: 'NOTYET',
+      printPrice: 0,
+      buyUrl: '',
+      ship: 'FREE_IRL',
+      printUrl: '',
+      discount: 0,
+      discountPrint: 0,
+      type: 'watercolour_painting',
+      story: 'A commissioned painting that was part of a set: two paintings of the same size, one portraying a dipper, the other a mute swan.<br /><br />The commissioner wanted bright colours for this one, inspired by the lake and local swans at Cork city. Lots of blue and the sparkle of sunshine makes this painting a fresh, sunny view of this majestic bird!',
+    },
     wicklows_eldest: {
       title: 'Wicklow\'s Eldest',
       year: '2021',
@@ -161,54 +209,6 @@ const App = (props) => {
       discountPrint: 0,
       type: 'watercolour_painting',
       story: 'This painting is a record breaker. To date, it spent far the most time stretched on my drawing board as it\'s one of the most complex paintings I\'ve done.<br /><br />The concept is based on a dream I had about swans under cherry blossoms. I don\'t remember too much of the whole thing, but I liked the feeling of the scene. I started sketching it, and since all the details were so blurry I thought maybe something abstract would work here. Dreams are pretty abstract anyway, most of the time they don\'t really make any sense! So I said all right, let\'s paint the feeling.<br /><br />And what was that feeling? The feeling is mostly the only thing that remains after dreams, after all the details are lost. And it was just simply pleasant. Something beautiful, something that doesn\'t want to be more than that. I had the idea of the two swans circling each other first, and started adding the blossoms. But the picture was still so empty (it\'s a big sheet of paper!) and at that point I decided to go crazy with details. I wanted something that was difficult, challenging to paint. So I added the roses and swallows, because why not? Anything goes that\'s pretty!',
-    },
-    wood_screecher: {
-      title: 'Wood Screecher',
-      year: '2021',
-      description: 'Ink and watercolour on hot-pressed watercolour paper. 297 x 420 mm, 2021.',
-      price: 130,
-      original: 'AVAILABLE',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: 'https://www.etsy.com/ie/listing/1068745539/',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Although jays are secretive birds, they visit the feeders in many garden. As for being considered a passerine, well... The latin name "Garrulus Glandarius" roughly means "noisy acorn bird". Jays love stashing acorns, and their singing capabilities you can guess from the latin name, and also from the title of my painting, which is based on their Irish name, Scréachóg choille.<br /><br />This painting is part of my Corvid series along with the Rook, Jackdaw and the Hooded Crow!',
-    },
-    domesticated_nomad: {
-      title: 'Domesticated Nomad',
-      year: '2021',
-      description: 'Ink and watercolour on Fabriano HP 640g. 280 x 380 mm, 2021.',
-      price: 130,
-      original: 'SOLD',
-      prints: 'AVAILABLE',
-      printPrice: 21.95,
-      buyUrl: 'https://www.etsy.com/ie/listing/1050988933/',
-      ship: 'FREE_IRL',
-      printUrl: 'https://www.etsy.com/ie/listing/1098629694/',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'Sometimes I venture away from painting birds because I see something extraordinary in other animals in nature. Such a topic that can make me do that is the search for the wild in all creatures. I believe even the cutest little puppy, humble livestock, and our beloved songbirds have that inner, untamed core deep down that connects them to the wilderness.<br /><br />I see sheep wandering around on any mountain in Ireland. Just when I finish climbing up a steep slope in some drizzle while the wind is constantly making me feel like I\'m freezing, I face these creatures. They don\'t seem to mind the conditions that make me feel so uncomfortable, just stare at me like they\'ve never seen a human being. But certainly they have, I can see the tags in the ears, the marking on the coat... Yet at that moment I cannot name a living thing that is more adapted to that wild environment. The domesticated nomads of Ireland.',
-    },
-    kingfisher: {
-      title: 'Kingfisher',
-      year: '2021',
-      description: 'Ink and watercolour on paper. 297 x 420 mm, 2021.',
-      price: 145,
-      original: 'SOLD',
-      prints: 'NOTYET',
-      printPrice: 0,
-      buyUrl: '',
-      ship: 'FREE_IRL',
-      printUrl: '',
-      discount: 0,
-      discountPrint: 0,
-      type: 'watercolour_painting',
-      story: 'This piece was a commissioned birthday present. In the background you can see the hints of the ruins by the River Dalyan in Turkey, and the reeds were inspired by that beautiful environment. By painting this I had to realise again what I felt while painting a blackbird and listening to their song was the same connection that this painting means to the receiver: wherever we live, the birds of our childhood, our place of origin connects us to our roots.<br /><br />That won\'t show on these photos, but I used a tiny bit of metallic watercolours on the bird, just to add to its shine, since this bird looks like a jewel. This remains a feature reserved for the original.',
     }
   };
 

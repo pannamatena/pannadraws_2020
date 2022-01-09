@@ -8,6 +8,13 @@ import merchandiseMeta from "../resources/merchandiseMeta";
 const Merchandise = (props) => {
   const imgData = useStaticQuery(graphql`
     query {
+      birds_of_ireland_2021_stickers: file(relativePath: { eq: "merch/birds_of_ireland_2021_stickers.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       raptors_of_ireland_2021_womens_tank: file(relativePath: { eq: "merch/raptors_of_ireland_2021_womens_tank.jpg" }) {
         childImageSharp {
           fluid {

@@ -1,4 +1,14 @@
 const merchandiseMeta = {
+  birds_of_ireland_2021_stickers: {
+    title: 'Birds of Ireland Sticker Sheet',
+    year: '2021',
+    description: 'A set of 6 vinyl bird stickers',
+    price: 5.50,
+    original: 'AVAILABLE',
+    buyUrl: 'https://www.etsy.com/ie/listing/1104312816/',
+    discount: 0,
+    type: 'merchandise',
+  },
   raptors_of_ireland_2021_womens_tank: {
     title: 'Raptors of Ireland Women\'s Racerback Tank',
     year: '2021',
