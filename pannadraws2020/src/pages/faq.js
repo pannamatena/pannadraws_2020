@@ -191,7 +191,7 @@ const FAQPage = () => {
 
           <h3>How long will it take for my order to arrive?</h3>
           <p>Except for garments I post from Ireland. In Ireland the usual handling time is 1-2 business days. To the UK
-          it takes 2-3, while to the United States and to most EU countries it can take up to 5-7 business days.</p>
+          it takes 4-5, while to the United States and to most EU countries it can take up to 15 business days.</p>
           <p>In case of t-shirts the posting origin depends on your location. I use a print-on-demand service called Printful. They have
            offices worldwide and post from the closest location to you.</p>
 

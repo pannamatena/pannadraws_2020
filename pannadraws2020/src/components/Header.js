@@ -109,6 +109,7 @@ const Header = () => {
       transition: all 0.5s ease;
       transform: translateX(${isMobileMenuOpen ? '0' : '-100%'});
       background: ${colours.c2};
+      overflow: auto;
       
       top: ${topPos > 0 ? '61px' : '76px'};
       padding: 10px;
@@ -121,7 +122,42 @@ const Header = () => {
       @media ${breakPoints.desktopSmall} {
         display: none;
       }
+
+      div {
+        display: block;
+        transition-duration: 0.5s;
+      }
       
+      ul {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 0;
+        overflow: hidden;
+        
+        padding: 0 0 0 10px;
+      }
+      
+      div:hover > ul,
+      div:focus-within > ul,
+      div ul:hover {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
+      
+      div ul li {
+        clear: both;
+        width: 100%;
+        
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+        
+        padding-bottom: 10px;
+      }
+      
+      span,
       a {
         color: ${colours.c3};
         text-transform: uppercase;
@@ -134,7 +170,12 @@ const Header = () => {
         }
         
         &.printShop {
-          color: ${colours.c1};
+          span {
+            color: ${colours.c1};
+            margin: 0;
+            padding-right: 5px;
+            transform: rotate(-45deg);
+          }
         }
         
         &[aria-current="page"] {
@@ -226,6 +267,7 @@ const Header = () => {
         transition: all 0.5s ease;
         left: 0;
         background: ${colours.c3};
+        min-width: 250px;
         
         padding: 10px;
         @media ${breakPoints.tabletPortrait} {
@@ -259,6 +301,9 @@ const Header = () => {
           padding-bottom: 20px;
         }
       }
+    `,
+    dropdownMenu: css`
+      position: relative;
     `,
     currentPage: css`
       border-bottom-color: ${colours.c1};
@@ -363,21 +408,31 @@ const Header = () => {
           <div css={style.mobileMenuContainer}>
             <div css={style.mobileMenu} onClick={() => {setIsMobileMenuOpen(!isMobileMenuOpen)}}>{menu()}</div>
             <nav role="navigation" css={style.mobileMenuContent}>
-              <div><Link to="/animal_art/">All Birds & Wildlife Art</Link></div>
-              <div><Link to="/irish_raptors/">Irish Raptors</Link></div>
-              <div><Link to="/feathers_of_tales/">Feathers of Tales</Link></div>
-              <div><Link to="/adult_colouring/">Adult Colouring</Link></div>
-              <div><Link to="/fantasy_art/">Fantasy Art</Link></div>
-              {/*<div><Link to="/sketchbook/">Sketchbook</Link></div>*/}
-              <div><Link to="/merchandise/">Merch</Link></div>
+              <div><span>Art</span>
+                <ul>
+                  <li><Link to="/animal_art/">All Birds & Wildlife Art</Link></li>
+                  <li><Link to="/irish_raptors/">Irish Raptors</Link></li>
+                  <li><Link to="/feathers_of_tales/">Feathers of Tales</Link></li>
+                  <li><Link to="/adult_colouring/">Adult Colouring</Link></li>
+                  <li><Link to="/fantasy_art/">Fantasy Art</Link></li>
+                </ul>
+              </div>
+              <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy"><span>></span>Shop</a></div>
+              <div><span>Merch</span>
+                <ul>
+                  <li><Link to="/merchandise_cards/">Cards</Link></li>
+                  <li><Link to="/merchandise_clothing/">Clothing</Link></li>
+                  <li><Link to="/merchandise_bookmarks/">Bookmarks</Link></li>
+                  <li><Link to="/merchandise_misc/">Misc</Link></li>
+                </ul>
+              </div>
               <div><Link to="/about/">About</Link></div>
               <div><Link to="/contact/">Contact</Link></div>
               <div><Link to="/faq/">FAQ</Link></div>
-              <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy">Shop</a></div>
             </nav>
           </div>
           <nav role="navigation" css={style.menuLeft}>
-            <div><span css={style.currentPage}>Art</span>
+            <div css={style.dropdownMenu}><span css={style.currentPage}>Art</span>
               <ul>
                 <li><Link to="/animal_art/">All Birds & Wildlife Art</Link></li>
                 <li><Link to="/irish_raptors/">Irish Raptors</Link></li>
@@ -387,11 +442,18 @@ const Header = () => {
                 {/*<li><Link to="/sketchbook/">Sketchbook</Link></li>*/}
               </ul>
             </div>
-            <div><Link to="/merchandise/">Merch</Link></div>
+            <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy">Shop</a></div>
+            <div css={style.dropdownMenu}><span>Merch</span>
+              <ul>
+                <li><Link to="/merchandise_cards/">Cards</Link></li>
+                <li><Link to="/merchandise_clothing/">Clothing</Link></li>
+                <li><Link to="/merchandise_bookmarks/">Bookmarks</Link></li>
+                <li><Link to="/merchandise_misc/">Misc</Link></li>
+              </ul>
+            </div>
             <div><Link to="/about/">About</Link></div>
             <div><Link to="/contact/">Contact</Link></div>
             <div><Link to="/faq/">FAQ</Link></div>
-            <div><a className="printShop" href="https://www.etsy.com/ie/shop/PannaDraws" target="_blank" rel="noopener noreferrer" title="PannaDraws on Etsy">Shop</a></div>
           </nav>
           <div css={style.logoContainer}>
             <Link to="/">

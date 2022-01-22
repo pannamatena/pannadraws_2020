@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from "@emotion/core"
+import { Link } from 'gatsby';
 import { breakPoints } from '../resources/breakpoints';
 import { colours } from '../resources/colors';
 import { fonts } from '../resources/fonts';
@@ -113,10 +114,14 @@ const Banner = () => {
       }
       
     `,
+    commissionBtn: css``,
   };
 
   return (
       <div id="bannerContainer" css={style.bannerContainer}>
+        {/*<div css={style.commissionBtn}>
+            <Link to="/commissions/">Commission Artwork</Link>
+        </div>*/}
         <div css={style.bannerText}>
           <h1>Transcendent watercolour</h1>
         <h2>other-worldly birds and creatures as fine art</h2>
